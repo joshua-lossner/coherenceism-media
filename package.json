@@ -1,0 +1,34 @@
+{
+  "name": "coherenceism-media",
+  "version": "1.0.0",
+  "description": "Music library site for Coherenceism - browse albums, songs, and lyrics from the CORA network",
+  "type": "module",
+  "main": "scripts/build.js",
+  "scripts": {
+    "sync": "node scripts/sync-content.js",
+    "sync:suno": "node scripts/sync-suno-urls.js",
+    "download:suno": "node scripts/download-from-suno.js",
+    "upload:blob": "node scripts/upload-to-blob.js",
+    "upload:manual": "node scripts/upload-manual-assets.js",
+    "build": "node scripts/sync-content.js && node scripts/build.js",
+    "dev": "npm run build && npm run watch",
+    "watch": "node scripts/build.js --watch",
+    "preview": "cd public && python3 -m http.server 8001"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.0.0",
+    "chokidar": "^3.5.3",
+    "gray-matter": "^4.0.3",
+    "marked": "^11.1.1",
+    "puppeteer": "^24.15.0"
+  },
+  "keywords": [
+    "coherenceism",
+    "music",
+    "album",
+    "lyrics",
+    "cora"
+  ],
+  "author": "CORA Network",
+  "license": "MIT"
+}

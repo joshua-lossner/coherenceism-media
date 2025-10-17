@@ -1,0 +1,6 @@
+node_modules/
+.suno-session.json
+.DS_Store
+.vercel
+assets/
+.env
