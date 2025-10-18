@@ -16,6 +16,7 @@
     "preview": "cd public && python3 -m http.server 8001"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
     "@vercel/blob": "^2.0.0",
     "chokidar": "^3.5.3",
     "gray-matter": "^4.0.3",

@@ -289,10 +289,11 @@ function build() {
     const tracks = album.frontmatter.tracks || [];
 
     // Extract inspiration from the album content
-    const inspirationMatch = album.html.match(/<h1>Inspiration<\/h1>\s*<p>(.*?)<\/p>/s) ||
-                             album.html.match(/<h1>Concept<\/h1>\s*<p>(.*?)<\/p>/s);
+    const inspirationMatch = album.html.match(/<h1>Inspiration<\/h1>\s*<p>(.*?)<\/p>/s);
+    const conceptMatch = album.html.match(/<h1>Concept<\/h1>([\s\S]*?)(?:<h1>|$)/);
+    const conceptHtml = conceptMatch ? conceptMatch[1].trim() : null;
     const inspiration = inspirationMatch ? inspirationMatch[1] : null;
-
+    const conceptDisplay = conceptHtml || (inspiration ? `<p>${inspiration}</p>` : null);
     const albumContent = `
       <div class="album-detail-page">
         <a href="/" class="home-button" title="Back to albums">
@@ -308,7 +309,7 @@ function build() {
             </div>
             <div class="album-detail-info">
               <h1>${album.frontmatter.title}</h1>
-              ${inspiration ? `<p class="album-inspiration">${inspiration}</p>` : ''}
+              ${conceptDisplay ? `<div class="album-concept">${conceptDisplay}</div>` : ''}
             </div>
           </div>
 
@@ -335,12 +336,12 @@ function build() {
             </div>
             <div class="track-hover-controls">
               ${track.suno_url ? `
-                <button class="track-play-btn" data-track-url="${track.suno_url}" data-track-title="${track.title}" data-album-title="${album.frontmatter.title}" data-cover-url="${album.frontmatter.cover_image || ''}" data-style-prompt="${stylePrompt.replace(/"/g, '&quot;')}" data-lyrics="${lyrics.replace(/"/g, '&quot;')}">
+                <button class="track-play-btn" data-track-url="${track.suno_url}" data-track-title="${track.title}" data-album-title="${album.frontmatter.title}" data-album-slug="${album.slug}" data-cover-url="${album.frontmatter.cover_image || ''}" data-style-prompt="${stylePrompt.replace(/"/g, '&quot;')}" data-lyrics="${lyrics.replace(/"/g, '&quot;')}">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="${track.suno_url}" data-track-title="${track.title}" data-album-title="${album.frontmatter.title}" data-cover-url="${album.frontmatter.cover_image || ''}" data-style-prompt="${stylePrompt.replace(/"/g, '&quot;')}" data-lyrics="${lyrics.replace(/"/g, '&quot;')}">
+                <button class="track-queue-btn" data-track-url="${track.suno_url}" data-track-title="${track.title}" data-album-title="${album.frontmatter.title}" data-album-slug="${album.slug}" data-cover-url="${album.frontmatter.cover_image || ''}" data-style-prompt="${stylePrompt.replace(/"/g, '&quot;')}" data-lyrics="${lyrics.replace(/"/g, '&quot;')}">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
                   </svg>

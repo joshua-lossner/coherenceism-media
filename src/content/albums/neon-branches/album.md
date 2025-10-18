@@ -3,7 +3,8 @@ kind: album
 title: Neon Branches
 slug: neon-branches
 created: 2025-10-06T00:00:00.000Z
-cover_image: https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png
+cover_image: >-
+  https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png
 language: English
 genre: 80s alternative (post‑punk + jangle + dream‑pop)
 mood:
@@ -19,7 +20,7 @@ instrumentation:
   - melodic chorus‑bass
   - plate/room reverbs; tape‑ish saturation
 vocals:
-  on: true
+  'on': true
   style: baritone or androgynous; close‑mic’d; doubled choruses
 negatives:
   - no modern trap hats
@@ -35,31 +36,40 @@ references:
 tracks:
   - title: Carrier in the Sky
     slug: carrier-in-the-sky
-    suno_url: https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--carrier-in-the-sky.mp3
+    suno_url: >-
+      https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--carrier-in-the-sky.mp3
   - title: The Long Fade
     slug: the-long-fade
-    suno_url: https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--the-long-fade.mp3
+    suno_url: >-
+      https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--the-long-fade.mp3
   - title: Angle into the Wind
     slug: angle-into-the-wind
-    suno_url: https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--angle-into-the-wind.mp3
+    suno_url: >-
+      https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--angle-into-the-wind.mp3
   - title: Library Without Rules
     slug: library-without-rules
-    suno_url: https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--library-without-rules.mp3
+    suno_url: >-
+      https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--library-without-rules.mp3
   - title: Clean Lines
     slug: clean-lines
-    suno_url: https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--clean-lines.mp3
+    suno_url: >-
+      https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--clean-lines.mp3
   - title: Small Rituals
     slug: small-rituals
-    suno_url: https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--small-rituals.mp3
+    suno_url: >-
+      https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--small-rituals.mp3
   - title: Warm Machines
     slug: warm-machines
-    suno_url: https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--warm-machines.mp3
+    suno_url: >-
+      https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--warm-machines.mp3
   - title: Rooms of Air
     slug: rooms-of-air
-    suno_url: https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--rooms-of-air.mp3
+    suno_url: >-
+      https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--rooms-of-air.mp3
   - title: Stitch the Noise
     slug: stitch-the-noise
-    suno_url: https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--stitch-the-noise.mp3
+    suno_url: >-
+      https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--stitch-the-noise.mp3
 ---
 
 ---

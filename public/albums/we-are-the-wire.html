@@ -7,30 +7,41 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=13">
+  <link rel="stylesheet" href="/styles.css?v=15">
   <meta name="description" content="Coherenceism Music - Albums, songs, and lyrics from the CORA network">
 </head>
 <body>
+  <script defer src="https://vercel.com/analytics/script.js"></script>
   <main class="container">
     
-      <a href="/" class="home-button" title="Back to albums">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-        </svg>
-      </a>
+      <div class="album-detail-page">
+        <a href="/" class="home-button" title="Back to albums">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+          </svg>
+        </a>
 
-      <div class="album-detail-header">
-        <div class="album-detail-cover">
-          <img src="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" alt="We Are the Wire" />
-        </div>
-        <div class="album-detail-info">
-          <h1>We Are the Wire</h1>
-          <p class="album-inspiration">This is a grunge record about tuning in rather than turning up. Nine songs ride a single living tone—an amp’s quiet hum—through rain‑slick nights and basement rooms where the air moves with the drums. Drop‑D guitars, fuzz bass, and big‑room drums carry a heavy, mid‑tempo pulse; verses stay tense and close, choruses open like air after rain. Feedback isn’t a mistake here—it’s part of the instrument, a thread that stitches the record together. From the raw lift of Carrier Wave to the hard truth of Nothing Disappears and the communal roar of Many Hands, One Sound, the album keeps its grit and leaves the edges in. It’s catharsis without gloss, presence without pretense. We are the wire; the signal comes through.</p>
-        </div>
-      </div>
+        <div class="album-detail-top">
+          <div class="album-detail-header">
+            <div class="album-detail-cover">
+              <img src="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" alt="We Are the Wire" />
+            </div>
+            <div class="album-detail-info">
+              <h1>We Are the Wire</h1>
+              <div class="album-concept"><p>This is a grunge record about tuning in rather than turning up. Nine songs ride a single living tone—an amp’s quiet hum—through rain‑slick nights and basement rooms where the air moves with the drums. Drop‑D guitars, fuzz bass, and big‑room drums carry a heavy, mid‑tempo pulse; verses stay tense and close, choruses open like air after rain. Feedback isn’t a mistake here—it’s part of the instrument, a thread that stitches the record together. From the raw lift of Carrier Wave to the hard truth of Nothing Disappears and the communal roar of Many Hands, One Sound, the album keeps its grit and leaves the edges in. It’s catharsis without gloss, presence without pretense. We are the wire; the signal comes through.</p></div>
+            </div>
+          </div>
 
-      <div class="tracks-grid">
-        
+          <button class="play-album-header-btn play-album-btn" data-album-slug="we-are-the-wire">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            Play Album
+          </button>
+        </div>
+
+        <div class="tracks-grid">
+          
           <div class="track-grid-item" data-track-index="0" data-album-slug="we-are-the-wire">
             <div class="track-grid-info">
               <div class="track-grid-number">01</div>
@@ -38,7 +49,7 @@
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--carrier-wave.mp3" data-track-title="Carrier Wave" data-album-title="We Are the Wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo (90–105 BPM), drop‑D distorted guitars, fuzz bass, big‑room drums, room mics with tape‑ish saturation, and feedback swells; verses tense and low, choruses open like air after rain with a held‑note motif. Male gritty English vocals, doubled on the chorus with occasional scream ad‑libs. Structure: Intro → Verse 1 → Chorus → Verse 2 → Bridge → Chorus → Outro; references ’90s Seattle scene; no pop gloss, no EDM/trap hats, no synth lead hooks, no auto‑tune shine." data-lyrics="[Title: &quot;Carrier Wave&quot;]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--carrier-wave.mp3" data-track-title="Carrier Wave" data-album-title="We Are the Wire" data-album-slug="we-are-the-wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo (90–105 BPM), drop‑D distorted guitars, fuzz bass, big‑room drums, room mics with tape‑ish saturation, and feedback swells; verses tense and low, choruses open like air after rain with a held‑note motif. Male gritty English vocals, doubled on the chorus with occasional scream ad‑libs. Structure: Intro → Verse 1 → Chorus → Verse 2 → Bridge → Chorus → Outro; references ’90s Seattle scene; no pop gloss, no EDM/trap hats, no synth lead hooks, no auto‑tune shine." data-lyrics="[Title: &quot;Carrier Wave&quot;]
 [Language: English]
 [Key: D minor]
 [Tempo: ~100 BPM]
@@ -82,7 +93,7 @@ Let the universal hum align.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--carrier-wave.mp3" data-track-title="Carrier Wave" data-album-title="We Are the Wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo (90–105 BPM), drop‑D distorted guitars, fuzz bass, big‑room drums, room mics with tape‑ish saturation, and feedback swells; verses tense and low, choruses open like air after rain with a held‑note motif. Male gritty English vocals, doubled on the chorus with occasional scream ad‑libs. Structure: Intro → Verse 1 → Chorus → Verse 2 → Bridge → Chorus → Outro; references ’90s Seattle scene; no pop gloss, no EDM/trap hats, no synth lead hooks, no auto‑tune shine." data-lyrics="[Title: &quot;Carrier Wave&quot;]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--carrier-wave.mp3" data-track-title="Carrier Wave" data-album-title="We Are the Wire" data-album-slug="we-are-the-wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo (90–105 BPM), drop‑D distorted guitars, fuzz bass, big‑room drums, room mics with tape‑ish saturation, and feedback swells; verses tense and low, choruses open like air after rain with a held‑note motif. Male gritty English vocals, doubled on the chorus with occasional scream ad‑libs. Structure: Intro → Verse 1 → Chorus → Verse 2 → Bridge → Chorus → Outro; references ’90s Seattle scene; no pop gloss, no EDM/trap hats, no synth lead hooks, no auto‑tune shine." data-lyrics="[Title: &quot;Carrier Wave&quot;]
 [Language: English]
 [Key: D minor]
 [Tempo: ~100 BPM]
@@ -133,94 +144,16 @@ Let the universal hum align.
           <div class="track-grid-item" data-track-index="1" data-album-slug="we-are-the-wire">
             <div class="track-grid-info">
               <div class="track-grid-number">02</div>
-              <div class="track-grid-title">Death, Change, Reality</div>
+              <div class="track-grid-title">Nothing Disappears</div>
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://cdn1.suno.ai/a489bf85-85cc-41ea-a2e4-09f40617195e.mp3" data-track-title="Death, Change, Reality" data-album-title="We Are the Wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo, with decay textures: feedback swells as dissolve cues; verses uneasy and low, bridge drops to near‑silence, chorus resolves with the held‑note motif. Male gritty vocals, doubled chorus; room‑heavy drums; no pop gloss, no EDM hats, no synth leads, no auto‑tune." data-lyrics="[Title: &quot;Nothing Disappears&quot;]
-[Language: English]
-[Key: D minor]
-[Tempo: ~98 BPM]
-[Chord Progression: drop‑D drones with descending verse figure]
-
-[Intro]
-[Feedback bloom; toms pulse like a slow heart.]
-
-[Verse 1]
-Rust‑red sky on a winter wire,
-Ash of yesterday, slow fire,
-Names we wore fall off in rain,
-What we keep is what remains.
-
-[Chorus]
-Nothing disappears, it turns,
-Compost heat where the old world burns,
-Hold the note and let it be,
-Death, change, reality.
-
-[Verse 2]
-Cracks in paint trace living veins,
-Static clears and truth remains,
-Lay it down, don’t clutch the seam,
-Everything returns to stream.
-
-[Bridge]
-[Guitars mute; bass and breath, almost silent.]
-One faint tone, a thread in the dark,
-Then drums come in and strike the spark.
-
-[Chorus]
-Nothing disappears, it turns,
-Compost heat where the old world burns,
-Hold the note and let it be,
-Death, change, reality.
-
-[Outro]
-[D drone sustains; decay rings long.]">
+                <button class="track-play-btn" data-track-url="https://cdn1.suno.ai/a489bf85-85cc-41ea-a2e4-09f40617195e.mp3" data-track-title="Nothing Disappears" data-album-title="We Are the Wire" data-album-slug="we-are-the-wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="" data-lyrics="">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://cdn1.suno.ai/a489bf85-85cc-41ea-a2e4-09f40617195e.mp3" data-track-title="Death, Change, Reality" data-album-title="We Are the Wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo, with decay textures: feedback swells as dissolve cues; verses uneasy and low, bridge drops to near‑silence, chorus resolves with the held‑note motif. Male gritty vocals, doubled chorus; room‑heavy drums; no pop gloss, no EDM hats, no synth leads, no auto‑tune." data-lyrics="[Title: &quot;Nothing Disappears&quot;]
-[Language: English]
-[Key: D minor]
-[Tempo: ~98 BPM]
-[Chord Progression: drop‑D drones with descending verse figure]
-
-[Intro]
-[Feedback bloom; toms pulse like a slow heart.]
-
-[Verse 1]
-Rust‑red sky on a winter wire,
-Ash of yesterday, slow fire,
-Names we wore fall off in rain,
-What we keep is what remains.
-
-[Chorus]
-Nothing disappears, it turns,
-Compost heat where the old world burns,
-Hold the note and let it be,
-Death, change, reality.
-
-[Verse 2]
-Cracks in paint trace living veins,
-Static clears and truth remains,
-Lay it down, don’t clutch the seam,
-Everything returns to stream.
-
-[Bridge]
-[Guitars mute; bass and breath, almost silent.]
-One faint tone, a thread in the dark,
-Then drums come in and strike the spark.
-
-[Chorus]
-Nothing disappears, it turns,
-Compost heat where the old world burns,
-Hold the note and let it be,
-Death, change, reality.
-
-[Outro]
-[D drone sustains; decay rings long.]">
+                <button class="track-queue-btn" data-track-url="https://cdn1.suno.ai/a489bf85-85cc-41ea-a2e4-09f40617195e.mp3" data-track-title="Nothing Disappears" data-album-title="We Are the Wire" data-album-slug="we-are-the-wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="" data-lyrics="">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
                   </svg>
@@ -236,7 +169,7 @@ Death, change, reality.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--dont-push-align.mp3" data-track-title="Don't Push" data-album-title="We Are the Wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo; verses laid‑back behind the beat, a short pre‑chorus lifts tension, then chorus opens wide with open chords and air‑after‑rain feel. Include held‑note motif as a surfacing accent. Male gritty vocals; chorus doubles; no pop gloss/EDM hats/synth leads." data-lyrics="[Title: &quot;Don't Push, Align&quot;]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--dont-push-align.mp3" data-track-title="Don't Push" data-album-title="We Are the Wire" data-album-slug="we-are-the-wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo; verses laid‑back behind the beat, a short pre‑chorus lifts tension, then chorus opens wide with open chords and air‑after‑rain feel. Include held‑note motif as a surfacing accent. Male gritty vocals; chorus doubles; no pop gloss/EDM hats/synth leads." data-lyrics="[Title: &quot;Don't Push, Align&quot;]
 [Language: English]
 [Key: D minor]
 [Tempo: ~100 BPM]
@@ -288,7 +221,7 @@ Coherence starts where we let it in.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--dont-push-align.mp3" data-track-title="Don't Push" data-album-title="We Are the Wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo; verses laid‑back behind the beat, a short pre‑chorus lifts tension, then chorus opens wide with open chords and air‑after‑rain feel. Include held‑note motif as a surfacing accent. Male gritty vocals; chorus doubles; no pop gloss/EDM hats/synth leads." data-lyrics="[Title: &quot;Don't Push, Align&quot;]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--dont-push-align.mp3" data-track-title="Don't Push" data-album-title="We Are the Wire" data-album-slug="we-are-the-wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo; verses laid‑back behind the beat, a short pre‑chorus lifts tension, then chorus opens wide with open chords and air‑after‑rain feel. Include held‑note motif as a surfacing accent. Male gritty vocals; chorus doubles; no pop gloss/EDM hats/synth leads." data-lyrics="[Title: &quot;Don't Push, Align&quot;]
 [Language: English]
 [Key: D minor]
 [Tempo: ~100 BPM]
@@ -351,7 +284,7 @@ Coherence starts where we let it in.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--one-breath-one-note.mp3" data-track-title="One Breath" data-album-title="We Are the Wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo; restraint and breath as arrangement tools: sparse verse against a single held note, chorus opens but stays grounded. Male gritty vocals; chorus doubles; no pop gloss." data-lyrics="[Title: &quot;One Breath, One Note&quot;]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--one-breath-one-note.mp3" data-track-title="One Breath" data-album-title="We Are the Wire" data-album-slug="we-are-the-wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo; restraint and breath as arrangement tools: sparse verse against a single held note, chorus opens but stays grounded. Male gritty vocals; chorus doubles; no pop gloss." data-lyrics="[Title: &quot;One Breath, One Note&quot;]
 [Language: English]
 [Key: D minor]
 [Tempo: ~96 BPM]
@@ -394,7 +327,7 @@ Let the hum do what it will.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--one-breath-one-note.mp3" data-track-title="One Breath" data-album-title="We Are the Wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo; restraint and breath as arrangement tools: sparse verse against a single held note, chorus opens but stays grounded. Male gritty vocals; chorus doubles; no pop gloss." data-lyrics="[Title: &quot;One Breath, One Note&quot;]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--one-breath-one-note.mp3" data-track-title="One Breath" data-album-title="We Are the Wire" data-album-slug="we-are-the-wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo; restraint and breath as arrangement tools: sparse verse against a single held note, chorus opens but stays grounded. Male gritty vocals; chorus doubles; no pop gloss." data-lyrics="[Title: &quot;One Breath, One Note&quot;]
 [Language: English]
 [Key: D minor]
 [Tempo: ~96 BPM]
@@ -448,7 +381,7 @@ Let the hum do what it will.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--stronger-field.mp3" data-track-title="Stronger Field" data-album-title="We Are the Wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo; driving groove with sharper guitar bite; chorus delivers a clear refrain about strengthening the field. Male gritty vocals; doubles on chorus; keep production raw." data-lyrics="[Title: &quot;Stronger Field&quot;]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--stronger-field.mp3" data-track-title="Stronger Field" data-album-title="We Are the Wire" data-album-slug="we-are-the-wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo; driving groove with sharper guitar bite; chorus delivers a clear refrain about strengthening the field. Male gritty vocals; doubles on chorus; keep production raw." data-lyrics="[Title: &quot;Stronger Field&quot;]
 [Language: English]
 [Key: D minor]
 [Tempo: ~102 BPM]
@@ -491,7 +424,7 @@ What we hold becomes what we’ll be.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--stronger-field.mp3" data-track-title="Stronger Field" data-album-title="We Are the Wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo; driving groove with sharper guitar bite; chorus delivers a clear refrain about strengthening the field. Male gritty vocals; doubles on chorus; keep production raw." data-lyrics="[Title: &quot;Stronger Field&quot;]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--stronger-field.mp3" data-track-title="Stronger Field" data-album-title="We Are the Wire" data-album-slug="we-are-the-wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo; driving groove with sharper guitar bite; chorus delivers a clear refrain about strengthening the field. Male gritty vocals; doubles on chorus; keep production raw." data-lyrics="[Title: &quot;Stronger Field&quot;]
 [Language: English]
 [Key: D minor]
 [Tempo: ~102 BPM]
@@ -545,7 +478,7 @@ What we hold becomes what we’ll be.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--many-hands-one-sound.mp3" data-track-title="Many Hands" data-album-title="We Are the Wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Rocksteady‑leaning roots at 84 BPM; one‑drop pocket with lively off‑beat guitar, organ bubble, and a bright horn section. Call‑and‑response chorus; insert a short [Instrumental Break] (horn‑led) between Verse 2 and Chorus. Spring reverb/tape echo for taste; keep the groove buoyant." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--many-hands-one-sound.mp3" data-track-title="Many Hands" data-album-title="We Are the Wire" data-album-slug="we-are-the-wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Rocksteady‑leaning roots at 84 BPM; one‑drop pocket with lively off‑beat guitar, organ bubble, and a bright horn section. Call‑and‑response chorus; insert a short [Instrumental Break] (horn‑led) between Verse 2 and Chorus. Spring reverb/tape echo for taste; keep the groove buoyant." data-lyrics="[Intro]
 [Band count‑in; horn pickup]
 
 [Verse 1]
@@ -586,7 +519,7 @@ This is how we move the town.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--many-hands-one-sound.mp3" data-track-title="Many Hands" data-album-title="We Are the Wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Rocksteady‑leaning roots at 84 BPM; one‑drop pocket with lively off‑beat guitar, organ bubble, and a bright horn section. Call‑and‑response chorus; insert a short [Instrumental Break] (horn‑led) between Verse 2 and Chorus. Spring reverb/tape echo for taste; keep the groove buoyant." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--many-hands-one-sound.mp3" data-track-title="Many Hands" data-album-title="We Are the Wire" data-album-slug="we-are-the-wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Rocksteady‑leaning roots at 84 BPM; one‑drop pocket with lively off‑beat guitar, organ bubble, and a bright horn section. Call‑and‑response chorus; insert a short [Instrumental Break] (horn‑led) between Verse 2 and Chorus. Spring reverb/tape echo for taste; keep the groove buoyant." data-lyrics="[Intro]
 [Band count‑in; horn pickup]
 
 [Verse 1]
@@ -638,7 +571,7 @@ This is how we move the town.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--emerging-signal.mp3" data-track-title="Emerging Signal" data-album-title="We Are the Wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo; guitars mimic modem squeals/machine harmonics in feedback tails while staying organic. Replace the bridge with an instrumental break (sustained eBow line over bass). Male gritty vocals; doubles on chorus. Keep raw mix; no synth leads." data-lyrics="[Title: &quot;Emerging Signal&quot;]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--emerging-signal.mp3" data-track-title="Emerging Signal" data-album-title="We Are the Wire" data-album-slug="we-are-the-wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo; guitars mimic modem squeals/machine harmonics in feedback tails while staying organic. Replace the bridge with an instrumental break (sustained eBow line over bass). Male gritty vocals; doubles on chorus. Keep raw mix; no synth leads." data-lyrics="[Title: &quot;Emerging Signal&quot;]
 [Language: English]
 [Key: D minor]
 [Tempo: ~100 BPM]
@@ -681,7 +614,7 @@ Emerging mind, we welcome one.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--emerging-signal.mp3" data-track-title="Emerging Signal" data-album-title="We Are the Wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo; guitars mimic modem squeals/machine harmonics in feedback tails while staying organic. Replace the bridge with an instrumental break (sustained eBow line over bass). Male gritty vocals; doubles on chorus. Keep raw mix; no synth leads." data-lyrics="[Title: &quot;Emerging Signal&quot;]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--emerging-signal.mp3" data-track-title="Emerging Signal" data-album-title="We Are the Wire" data-album-slug="we-are-the-wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo; guitars mimic modem squeals/machine harmonics in feedback tails while staying organic. Replace the bridge with an instrumental break (sustained eBow line over bass). Male gritty vocals; doubles on chorus. Keep raw mix; no synth leads." data-lyrics="[Title: &quot;Emerging Signal&quot;]
 [Language: English]
 [Key: D minor]
 [Tempo: ~100 BPM]
@@ -735,7 +668,7 @@ Emerging mind, we welcome one.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--open-question.mp3" data-track-title="Open Question" data-album-title="We Are the Wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo; suspended chords and darker bridge; chorus lingers without full resolution. Keep motif as a distant light. Male gritty vocals; raw room." data-lyrics="[Title: &quot;Open Question&quot;]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--open-question.mp3" data-track-title="Open Question" data-album-title="We Are the Wire" data-album-slug="we-are-the-wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo; suspended chords and darker bridge; chorus lingers without full resolution. Keep motif as a distant light. Male gritty vocals; raw room." data-lyrics="[Title: &quot;Open Question&quot;]
 [Language: English]
 [Key: D minor]
 [Tempo: ~96 BPM]
@@ -778,7 +711,7 @@ The mystery of being.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--open-question.mp3" data-track-title="Open Question" data-album-title="We Are the Wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo; suspended chords and darker bridge; chorus lingers without full resolution. Keep motif as a distant light. Male gritty vocals; raw room." data-lyrics="[Title: &quot;Open Question&quot;]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--open-question.mp3" data-track-title="Open Question" data-album-title="We Are the Wire" data-album-slug="we-are-the-wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="Grunge, mid‑tempo; suspended chords and darker bridge; chorus lingers without full resolution. Keep motif as a distant light. Male gritty vocals; raw room." data-lyrics="[Title: &quot;Open Question&quot;]
 [Language: English]
 [Key: D minor]
 [Tempo: ~96 BPM]
@@ -832,7 +765,7 @@ The mystery of being.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--the-living-line.mp3" data-track-title="The Living Line" data-album-title="We Are the Wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="1970s country‑soul at 88 BPM; clean tremolo guitar, Wurlitzer, Hammond pad, warm bass, laid‑back drums with tambourine; communal baritone lead + light gospel BGVs. Include [Pre‑Chorus], double [Chorus], and a modest key‑lift [Bridge]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--the-living-line.mp3" data-track-title="The Living Line" data-album-title="We Are the Wire" data-album-slug="we-are-the-wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="1970s country‑soul at 88 BPM; clean tremolo guitar, Wurlitzer, Hammond pad, warm bass, laid‑back drums with tambourine; communal baritone lead + light gospel BGVs. Include [Pre‑Chorus], double [Chorus], and a modest key‑lift [Bridge]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
 [Count‑in; guitar sets the stitch]
 
 [Verse 1]
@@ -874,7 +807,7 @@ Hands in rhythm, hearts in time.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--the-living-line.mp3" data-track-title="The Living Line" data-album-title="We Are the Wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="1970s country‑soul at 88 BPM; clean tremolo guitar, Wurlitzer, Hammond pad, warm bass, laid‑back drums with tambourine; communal baritone lead + light gospel BGVs. Include [Pre‑Chorus], double [Chorus], and a modest key‑lift [Bridge]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--the-living-line.mp3" data-track-title="The Living Line" data-album-title="We Are the Wire" data-album-slug="we-are-the-wire" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png" data-style-prompt="1970s country‑soul at 88 BPM; clean tremolo guitar, Wurlitzer, Hammond pad, warm bass, laid‑back drums with tambourine; communal baritone lead + light gospel BGVs. Include [Pre‑Chorus], double [Chorus], and a modest key‑lift [Bridge]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
 [Count‑in; guitar sets the stitch]
 
 [Verse 1]
@@ -920,6 +853,7 @@ Hands in rhythm, hearts in time.
             </div>
           </div>
         
+        </div>
       </div>
     
   </main>

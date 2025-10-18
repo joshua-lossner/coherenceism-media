@@ -19,6 +19,9 @@ class GlobalMusicPlayer {
     this.isPlaying = false;
     this.isShuffled = false;
     this.isRepeating = false;
+    this.activeTab = 'queue';
+    this.currentAlbumSlug = null;
+    this.currentAlbumTitle = null;
 
     // Load previous state
     this.loadState();
@@ -148,25 +151,31 @@ class GlobalMusicPlayer {
               <h2 id="panel-title">Song Title</h2>
               <h3 id="panel-album">Album Name</h3>
             </div>
-            <div class="slide-up-panel-style">
-              <h4>Style Prompt</h4>
-              <p id="panel-style-text">No style information available</p>
-            </div>
+          <div class="slide-up-panel-style">
+            <h4>Style Prompt</h4>
+            <p id="panel-style-text">No style prompt available</p>
+          </div>
           </div>
           <div class="slide-up-panel-right">
             <div class="slide-up-panel-tabs">
-              <button class="slide-up-tab active" data-tab="lyrics">Lyrics</button>
-              <button class="slide-up-tab" data-tab="queue">Queue</button>
+              <button class="slide-up-tab active" data-tab="queue">Tracks</button>
+              <button class="slide-up-tab" data-tab="prompt">Prompt</button>
+              <button class="slide-up-tab" data-tab="lyrics">Lyrics</button>
             </div>
             <div class="slide-up-panel-tab-content">
-              <div id="panel-lyrics-content" class="slide-up-tab-panel active">
-                <div class="slide-up-panel-lyrics" id="panel-lyrics-text">
-                  <pre>No lyrics available</pre>
-                </div>
-              </div>
-              <div id="panel-queue-content" class="slide-up-tab-panel">
+              <div id="panel-queue-content" class="slide-up-tab-panel active">
                 <div id="panel-queue-list" class="slide-up-panel-queue">
                   <p>No tracks in queue</p>
+                </div>
+              </div>
+              <div id="panel-prompt-content" class="slide-up-tab-panel">
+                <div class="slide-up-panel-prompt" id="panel-prompt-text">
+                  <p>No style prompt available</p>
+                </div>
+              </div>
+              <div id="panel-lyrics-content" class="slide-up-tab-panel">
+                <div class="slide-up-panel-lyrics" id="panel-lyrics-text">
+                  <pre>No lyrics available</pre>
                 </div>
               </div>
             </div>
@@ -257,6 +266,34 @@ class GlobalMusicPlayer {
       this.panelMinimizeBtn.addEventListener('click', () => this.hidePanel());
       this.panelMinimizeBtn.dataset.listenerAdded = 'true';
     }
+    if (this.playerElement && !this.playerElement.dataset.panelListenerAdded) {
+      const handleMiniPlayerTap = (event) => {
+        console.log('[GlobalPlayer] mini player tapped', event.type, event.target);
+        // Ignore clicks on playback controls or progress bar
+        if (event.type === 'touchend') {
+          event.preventDefault();
+        }
+
+        // Only open the panel when a track is loaded
+        if (window.matchMedia('(max-width: 900px)').matches && this.currentTrack) {
+          console.log('[GlobalPlayer] opening slide-up panel from mini player tap');
+          this.showPanel();
+        }
+      };
+
+      const tapTargets = [
+        this.playerElement,
+        this.playerElement.querySelector('.global-player-content'),
+        this.playerElement.querySelector('.global-player-info'),
+        document.getElementById('player-album-art'),
+      ].filter(Boolean);
+
+      tapTargets.forEach(target => {
+        target.addEventListener('click', handleMiniPlayerTap);
+        target.addEventListener('touchend', handleMiniPlayerTap, { passive: false });
+      });
+      this.playerElement.dataset.panelListenerAdded = 'true';
+    }
     // Tab switching
     document.querySelectorAll('.slide-up-tab').forEach(tab => {
       if (!tab.dataset.listenerAdded) {
@@ -287,9 +324,13 @@ class GlobalMusicPlayer {
     this.audio.addEventListener('playing', () => this.saveState());
   }
 
-  playTrack(track, album = null) {
+  playTrack(track, album = null, albumSlug = null) {
     console.log('playTrack called with:', track, album);
-    this.currentTrack = { ...track, album: album || track.album };
+    const resolvedAlbumTitle = album || track.album || this.currentAlbumTitle;
+    const resolvedAlbumSlug = albumSlug || track.albumSlug || this.currentAlbumSlug;
+    this.currentTrack = { ...track, album: resolvedAlbumTitle, albumSlug: resolvedAlbumSlug };
+    this.currentAlbumSlug = resolvedAlbumSlug || null;
+    this.currentAlbumTitle = resolvedAlbumTitle || null;
     this.audio.src = track.url;
     console.log('Set audio src to:', track.url);
     this.updateTrackInfo();
@@ -321,12 +362,16 @@ class GlobalMusicPlayer {
 
         // Clear queue and add all tracks
         this.queue = [];
+        this.currentAlbumSlug = albumSlug;
+        this.currentAlbumTitle = albumTitle;
+        this.activeTab = 'queue';
         tracks.forEach(track => {
           if (track.url) {
             this.queue.push({
               url: track.url,
               title: track.title,
               album: albumTitle,
+              albumSlug: albumSlug,
               coverUrl: track.coverUrl || '',
               stylePrompt: track.stylePrompt || '',
               lyrics: track.lyrics || ''
@@ -398,8 +443,10 @@ class GlobalMusicPlayer {
     }
   }
 
-  addToQueue(track, album = null) {
-    this.queue.push({ ...track, album: album || track.album });
+  addToQueue(track, album = null, albumSlug = null) {
+    const resolvedAlbumTitle = album || track.album || this.currentAlbumTitle;
+    const resolvedAlbumSlug = albumSlug || track.albumSlug || this.currentAlbumSlug;
+    this.queue.push({ ...track, album: resolvedAlbumTitle, albumSlug: resolvedAlbumSlug });
     this.updateQueueDisplay();
     // Show some feedback that track was added to queue
     this.showQueueFeedback();
@@ -665,6 +712,7 @@ class GlobalMusicPlayer {
     const panelCover = document.getElementById('panel-cover');
     const panelStyleText = document.getElementById('panel-style-text');
     const panelLyricsText = document.getElementById('panel-lyrics-text');
+    const panelPromptText = document.getElementById('panel-prompt-text');
 
     if (panelTitle) panelTitle.textContent = this.currentTrack.title;
     if (panelAlbum) panelAlbum.textContent = this.currentTrack.album || 'Coherenceism Music';
@@ -683,7 +731,7 @@ class GlobalMusicPlayer {
       if (this.currentTrack.stylePrompt) {
         panelStyleText.textContent = this.currentTrack.stylePrompt;
       } else {
-        panelStyleText.textContent = 'No style information available';
+        panelStyleText.textContent = 'No style prompt available';
       }
     }
 
@@ -696,11 +744,22 @@ class GlobalMusicPlayer {
       }
     }
 
+    if (panelPromptText) {
+      if (this.currentTrack.stylePrompt) {
+        panelPromptText.textContent = this.currentTrack.stylePrompt;
+      } else {
+        panelPromptText.textContent = 'No style prompt available';
+      }
+    }
+
     // Update panel queue
     this.updatePanelQueue();
 
     // Show panel
     this.slideUpPanel.classList.add('active');
+    document.body.classList.add('panel-open');
+    this.switchTab(this.activeTab || 'queue');
+
 
     // Update lyrics button icon to down arrow
     this.updateLyricsButtonIcon(true);
@@ -708,6 +767,7 @@ class GlobalMusicPlayer {
 
   hidePanel() {
     this.slideUpPanel.classList.remove('active');
+    document.body.classList.remove('panel-open');
 
     // Update lyrics button icon to up arrow
     this.updateLyricsButtonIcon(false);
@@ -733,6 +793,7 @@ class GlobalMusicPlayer {
   }
 
   switchTab(tabName) {
+    this.activeTab = tabName;
     // Update tab buttons
     document.querySelectorAll('.slide-up-tab').forEach(tab => {
       if (tab.dataset.tab === tabName) {
@@ -749,6 +810,8 @@ class GlobalMusicPlayer {
 
     if (tabName === 'lyrics') {
       document.getElementById('panel-lyrics-content').classList.add('active');
+    } else if (tabName === 'prompt') {
+      document.getElementById('panel-prompt-content').classList.add('active');
     } else if (tabName === 'queue') {
       document.getElementById('panel-queue-content').classList.add('active');
       this.updatePanelQueue();
@@ -766,69 +829,23 @@ class GlobalMusicPlayer {
 
     const queueHTML = this.queue.map((track, index) => `
       <div class="slide-up-queue-item ${index === this.currentIndex ? 'current' : ''}" data-index="${index}">
+        <div class="slide-up-queue-number">${(index + 1).toString().padStart(2, '0')}</div>
         <div class="slide-up-queue-info">
           <div class="slide-up-queue-title">${track.title}</div>
           <div class="slide-up-queue-album">${track.album || 'Unknown Album'}</div>
-        </div>
-        <div class="slide-up-queue-controls">
-          ${index > 0 ? `
-            <button class="slide-up-queue-move-up" data-index="${index}" title="Move up">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7 14l5-5 5 5z"/>
-              </svg>
-            </button>
-          ` : '<span class="queue-spacer"></span>'}
-          ${index < this.queue.length - 1 ? `
-            <button class="slide-up-queue-move-down" data-index="${index}" title="Move down">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7 10l5 5 5-5z"/>
-              </svg>
-            </button>
-          ` : '<span class="queue-spacer"></span>'}
-          <button class="slide-up-queue-play" data-index="${index}" title="Play now">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M8 5v14l11-7z"/>
-            </svg>
-          </button>
-          <button class="slide-up-queue-remove" data-index="${index}" title="Remove from queue">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
-            </svg>
-          </button>
         </div>
       </div>
     `).join('');
 
     panelQueueList.innerHTML = queueHTML;
 
-    // Add click listeners
-    panelQueueList.querySelectorAll('.slide-up-queue-play').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const index = parseInt(e.target.closest('button').dataset.index);
+    // Allow tapping a queue item to jump to that track
+    panelQueueList.querySelectorAll('.slide-up-queue-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const index = parseInt(item.dataset.index, 10);
         this.currentIndex = index;
         this.playTrack(this.queue[index]);
         this.updatePanelQueue();
-      });
-    });
-
-    panelQueueList.querySelectorAll('.slide-up-queue-remove').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const index = parseInt(e.target.closest('button').dataset.index);
-        this.removeFromQueue(index);
-      });
-    });
-
-    panelQueueList.querySelectorAll('.slide-up-queue-move-up').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const index = parseInt(e.target.closest('button').dataset.index);
-        this.moveQueueItem(index, index - 1);
-      });
-    });
-
-    panelQueueList.querySelectorAll('.slide-up-queue-move-down').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const index = parseInt(e.target.closest('button').dataset.index);
-        this.moveQueueItem(index, index + 1);
       });
     });
   }
@@ -871,6 +888,9 @@ class GlobalMusicPlayer {
         isShuffled: this.isShuffled,
         isRepeating: this.isRepeating,
         currentTime: this.audio.currentTime,
+        currentAlbumSlug: this.currentAlbumSlug,
+        currentAlbumTitle: this.currentAlbumTitle,
+        activeTab: this.activeTab,
         timestamp: Date.now()
       };
       localStorage.setItem('coherenceism-player-state', JSON.stringify(state));
@@ -893,6 +913,9 @@ class GlobalMusicPlayer {
           this.currentIndex = state.currentIndex || 0;
           this.isShuffled = state.isShuffled || false;
           this.isRepeating = state.isRepeating || false;
+          this.currentAlbumSlug = state.currentAlbumSlug || (this.queue[this.currentIndex]?.albumSlug) || null;
+          this.currentAlbumTitle = state.currentAlbumTitle || (this.queue[this.currentIndex]?.album) || null;
+          this.activeTab = state.activeTab || 'queue';
 
           // Restore the track
           if (this.currentTrack) {
@@ -1005,13 +1028,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const track = {
         url: btn.dataset.trackUrl,
         title: btn.dataset.trackTitle,
+        albumSlug: btn.dataset.albumSlug || '',
         coverUrl: btn.dataset.coverUrl || '',
         stylePrompt: btn.dataset.stylePrompt || '',
         lyrics: btn.dataset.lyrics || ''
       };
       const album = btn.dataset.albumTitle;
+      const albumSlug = btn.dataset.albumSlug || '';
 
-      globalPlayer.playTrack(track, album);
+      globalPlayer.playTrack(track, album, albumSlug);
     }
 
     // Track queue buttons
@@ -1023,13 +1048,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const track = {
         url: btn.dataset.trackUrl,
         title: btn.dataset.trackTitle,
+        albumSlug: btn.dataset.albumSlug || '',
         coverUrl: btn.dataset.coverUrl || '',
         stylePrompt: btn.dataset.stylePrompt || '',
         lyrics: btn.dataset.lyrics || ''
       };
       const album = btn.dataset.albumTitle;
+      const albumSlug = btn.dataset.albumSlug || '';
 
-      globalPlayer.addToQueue(track, album);
+      globalPlayer.addToQueue(track, album, albumSlug);
     }
 
     // Album cover clicks (navigate to album page)

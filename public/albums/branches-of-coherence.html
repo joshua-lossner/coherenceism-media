@@ -7,30 +7,41 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=13">
+  <link rel="stylesheet" href="/styles.css?v=15">
   <meta name="description" content="Coherenceism Music - Albums, songs, and lyrics from the CORA network">
 </head>
 <body>
+  <script defer src="https://vercel.com/analytics/script.js"></script>
   <main class="container">
     
-      <a href="/" class="home-button" title="Back to albums">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-        </svg>
-      </a>
+      <div class="album-detail-page">
+        <a href="/" class="home-button" title="Back to albums">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+          </svg>
+        </a>
 
-      <div class="album-detail-header">
-        <div class="album-detail-cover">
-          <img src="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" alt="Branches of Coherence — A Smooth Jazz Suite" />
-        </div>
-        <div class="album-detail-info">
-          <h1>Branches of Coherence — A Smooth Jazz Suite</h1>
-          <p class="album-inspiration">A late‑night, unhurried suite where each piece reflects a branch of Coherenceism. The palette stays warm and breathable—Rhodes and upright bass beneath brushed drums; tenor sax, flugelhorn, and clean guitar share the melody. A three‑note “resonance motif” appears across the album, introduced gently in Track 1, reharmonized mid‑sequence, and resolved in the closer. Tempos stay relaxed (70–95 BPM); the playing favors tone, silence, and conversation over virtuosity. The arc moves from wide‑field awareness toward intimate practice—nothing forced, everything placed.</p>
-        </div>
-      </div>
+        <div class="album-detail-top">
+          <div class="album-detail-header">
+            <div class="album-detail-cover">
+              <img src="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" alt="Branches of Coherence — A Smooth Jazz Suite" />
+            </div>
+            <div class="album-detail-info">
+              <h1>Branches of Coherence — A Smooth Jazz Suite</h1>
+              <div class="album-concept"><p>A late‑night, unhurried suite where each piece reflects a branch of Coherenceism. The palette stays warm and breathable—Rhodes and upright bass beneath brushed drums; tenor sax, flugelhorn, and clean guitar share the melody. A three‑note “resonance motif” appears across the album, introduced gently in Track 1, reharmonized mid‑sequence, and resolved in the closer. Tempos stay relaxed (70–95 BPM); the playing favors tone, silence, and conversation over virtuosity. The arc moves from wide‑field awareness toward intimate practice—nothing forced, everything placed.</p></div>
+            </div>
+          </div>
 
-      <div class="tracks-grid">
-        
+          <button class="play-album-header-btn play-album-btn" data-album-slug="branches-of-coherence">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            Play Album
+          </button>
+        </div>
+
+        <div class="tracks-grid">
+          
           <div class="track-grid-item" data-track-index="0" data-album-slug="branches-of-coherence">
             <div class="track-grid-info">
               <div class="track-grid-number">01</div>
@@ -38,7 +49,7 @@
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--the-universal-mind.mp3" data-track-title="The Universal Mind" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Warm, late‑night smooth jazz at 72–78 BPM with Rhodes, upright bass, and brushed drums; tenor sax leads with clean electric guitar counter‑melody; airy, spacious mix and gentle dynamics. Instrumental (no vocals); structure: Intro → Head A → Head B → Solo 1 → Solo 2 → Head A → Outro; avoid aggressive drums, distortion, harsh synths, heavy EDM elements, and busy solos; references: late‑night quartet, ECM‑style spaciousness, 1970s analog warmth, soft swing, lofi jazz textures." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--the-universal-mind.mp3" data-track-title="The Universal Mind" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-album-slug="branches-of-coherence" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Warm, late‑night smooth jazz at 72–78 BPM with Rhodes, upright bass, and brushed drums; tenor sax leads with clean electric guitar counter‑melody; airy, spacious mix and gentle dynamics. Instrumental (no vocals); structure: Intro → Head A → Head B → Solo 1 → Solo 2 → Head A → Outro; avoid aggressive drums, distortion, harsh synths, heavy EDM elements, and busy solos; references: late‑night quartet, ECM‑style spaciousness, 1970s analog warmth, soft swing, lofi jazz textures." data-lyrics="[Intro]
 [Soft instrumental intro; resonance motif hinted on Rhodes]
 
 [Head A]
@@ -62,7 +73,7 @@
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--the-universal-mind.mp3" data-track-title="The Universal Mind" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Warm, late‑night smooth jazz at 72–78 BPM with Rhodes, upright bass, and brushed drums; tenor sax leads with clean electric guitar counter‑melody; airy, spacious mix and gentle dynamics. Instrumental (no vocals); structure: Intro → Head A → Head B → Solo 1 → Solo 2 → Head A → Outro; avoid aggressive drums, distortion, harsh synths, heavy EDM elements, and busy solos; references: late‑night quartet, ECM‑style spaciousness, 1970s analog warmth, soft swing, lofi jazz textures." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--the-universal-mind.mp3" data-track-title="The Universal Mind" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-album-slug="branches-of-coherence" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Warm, late‑night smooth jazz at 72–78 BPM with Rhodes, upright bass, and brushed drums; tenor sax leads with clean electric guitar counter‑melody; airy, spacious mix and gentle dynamics. Instrumental (no vocals); structure: Intro → Head A → Head B → Solo 1 → Solo 2 → Head A → Outro; avoid aggressive drums, distortion, harsh synths, heavy EDM elements, and busy solos; references: late‑night quartet, ECM‑style spaciousness, 1970s analog warmth, soft swing, lofi jazz textures." data-lyrics="[Intro]
 [Soft instrumental intro; resonance motif hinted on Rhodes]
 
 [Head A]
@@ -97,7 +108,7 @@
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--nothing-really-ends.mp3" data-track-title="Nothing Really Ends" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="12‑bar blues‑tinged 1950s rock & roll at ~150 BPM with shuffle drums, upright bass slap, clean guitar, piano comping, and a prominent tenor sax. Yearning lead vocal in English with gentle call‑and‑response; include a featured [Sax Solo] before the last chorus. Keep mono‑style space; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--nothing-really-ends.mp3" data-track-title="Nothing Really Ends" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-album-slug="branches-of-coherence" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="12‑bar blues‑tinged 1950s rock & roll at ~150 BPM with shuffle drums, upright bass slap, clean guitar, piano comping, and a prominent tenor sax. Yearning lead vocal in English with gentle call‑and‑response; include a featured [Sax Solo] before the last chorus. Keep mono‑style space; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
 [Low piano rumble; guitar pickup]
 
 [Verse 1]
@@ -131,7 +142,7 @@ Turn it like a record till it finds the heart.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--nothing-really-ends.mp3" data-track-title="Nothing Really Ends" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="12‑bar blues‑tinged 1950s rock & roll at ~150 BPM with shuffle drums, upright bass slap, clean guitar, piano comping, and a prominent tenor sax. Yearning lead vocal in English with gentle call‑and‑response; include a featured [Sax Solo] before the last chorus. Keep mono‑style space; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--nothing-really-ends.mp3" data-track-title="Nothing Really Ends" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-album-slug="branches-of-coherence" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="12‑bar blues‑tinged 1950s rock & roll at ~150 BPM with shuffle drums, upright bass slap, clean guitar, piano comping, and a prominent tenor sax. Yearning lead vocal in English with gentle call‑and‑response; include a featured [Sax Solo] before the last chorus. Keep mono‑style space; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
 [Low piano rumble; guitar pickup]
 
 [Verse 1]
@@ -176,7 +187,7 @@ Turn it like a record till it finds the heart.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--carried-by-the-current.mp3" data-track-title="Carried by the Current" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Soft‑swing smooth jazz at 84–90 BPM; Rhodes and upright bass with whispering ride cymbal; guitar leads the head with tenor sax taking first solo. Instrumental; structure: Intro → Head A → Head B → Solo 1 → Solo 2 → Head A → Outro; avoid aggressive drums, distortion, harsh synths, heavy EDM elements, and busy solos." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--carried-by-the-current.mp3" data-track-title="Carried by the Current" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-album-slug="branches-of-coherence" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Soft‑swing smooth jazz at 84–90 BPM; Rhodes and upright bass with whispering ride cymbal; guitar leads the head with tenor sax taking first solo. Instrumental; structure: Intro → Head A → Head B → Solo 1 → Solo 2 → Head A → Outro; avoid aggressive drums, distortion, harsh synths, heavy EDM elements, and busy solos." data-lyrics="[Intro]
 [Light ride, airy Rhodes; set the flow]
 
 [Head A]
@@ -200,7 +211,7 @@ Turn it like a record till it finds the heart.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--carried-by-the-current.mp3" data-track-title="Carried by the Current" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Soft‑swing smooth jazz at 84–90 BPM; Rhodes and upright bass with whispering ride cymbal; guitar leads the head with tenor sax taking first solo. Instrumental; structure: Intro → Head A → Head B → Solo 1 → Solo 2 → Head A → Outro; avoid aggressive drums, distortion, harsh synths, heavy EDM elements, and busy solos." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--carried-by-the-current.mp3" data-track-title="Carried by the Current" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-album-slug="branches-of-coherence" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Soft‑swing smooth jazz at 84–90 BPM; Rhodes and upright bass with whispering ride cymbal; guitar leads the head with tenor sax taking first solo. Instrumental; structure: Intro → Head A → Head B → Solo 1 → Solo 2 → Head A → Outro; avoid aggressive drums, distortion, harsh synths, heavy EDM elements, and busy solos." data-lyrics="[Intro]
 [Light ride, airy Rhodes; set the flow]
 
 [Head A]
@@ -235,7 +246,7 @@ Turn it like a record till it finds the heart.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--quiet-attention.mp3" data-track-title="Quiet Attention" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="1950s doo‑wop ballad around 92 BPM with brushed drums, gentle upright bass, clean guitar with light slapback, soft piano, and airy background “oohs.” Warm lead vocal in English; include a subtle [Bridge] lift before the final chorus. Keep a mono‑ish room image; no modern trap/EDM, autotune, or contemporary synths." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--quiet-attention.mp3" data-track-title="Quiet Attention" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-album-slug="branches-of-coherence" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="1950s doo‑wop ballad around 92 BPM with brushed drums, gentle upright bass, clean guitar with light slapback, soft piano, and airy background “oohs.” Warm lead vocal in English; include a subtle [Bridge] lift before the final chorus. Keep a mono‑ish room image; no modern trap/EDM, autotune, or contemporary synths." data-lyrics="[Intro]
 [Soft guitar and “oohs”]
 
 [Verse 1]
@@ -271,7 +282,7 @@ I hear the world when I lean to you.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--quiet-attention.mp3" data-track-title="Quiet Attention" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="1950s doo‑wop ballad around 92 BPM with brushed drums, gentle upright bass, clean guitar with light slapback, soft piano, and airy background “oohs.” Warm lead vocal in English; include a subtle [Bridge] lift before the final chorus. Keep a mono‑ish room image; no modern trap/EDM, autotune, or contemporary synths." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--quiet-attention.mp3" data-track-title="Quiet Attention" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-album-slug="branches-of-coherence" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="1950s doo‑wop ballad around 92 BPM with brushed drums, gentle upright bass, clean guitar with light slapback, soft piano, and airy background “oohs.” Warm lead vocal in English; include a subtle [Bridge] lift before the final chorus. Keep a mono‑ish room image; no modern trap/EDM, autotune, or contemporary synths." data-lyrics="[Intro]
 [Soft guitar and “oohs”]
 
 [Verse 1]
@@ -318,7 +329,7 @@ I hear the world when I lean to you.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--gentle-resolve.mp3" data-track-title="Gentle Resolve" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Warm, patient smooth jazz at 80–88 BPM; ethical calm in tone: clean guitar melody, Rhodes voicings that open space, brushed kit tucked low. Instrumental; structure: Intro → Head A → Head B → Solo 1 → Solo 2 → Head A → Outro; exclude aggressive drums, distortion, harsh synths, heavy EDM elements, busy solos." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--gentle-resolve.mp3" data-track-title="Gentle Resolve" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-album-slug="branches-of-coherence" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Warm, patient smooth jazz at 80–88 BPM; ethical calm in tone: clean guitar melody, Rhodes voicings that open space, brushed kit tucked low. Instrumental; structure: Intro → Head A → Head B → Solo 1 → Solo 2 → Head A → Outro; exclude aggressive drums, distortion, harsh synths, heavy EDM elements, busy solos." data-lyrics="[Intro]
 [Soft count‑in implied; Rhodes sets chords]
 
 [Head A]
@@ -342,7 +353,7 @@ I hear the world when I lean to you.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--gentle-resolve.mp3" data-track-title="Gentle Resolve" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Warm, patient smooth jazz at 80–88 BPM; ethical calm in tone: clean guitar melody, Rhodes voicings that open space, brushed kit tucked low. Instrumental; structure: Intro → Head A → Head B → Solo 1 → Solo 2 → Head A → Outro; exclude aggressive drums, distortion, harsh synths, heavy EDM elements, busy solos." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--gentle-resolve.mp3" data-track-title="Gentle Resolve" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-album-slug="branches-of-coherence" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Warm, patient smooth jazz at 80–88 BPM; ethical calm in tone: clean guitar melody, Rhodes voicings that open space, brushed kit tucked low. Instrumental; structure: Intro → Head A → Head B → Solo 1 → Solo 2 → Head A → Outro; exclude aggressive drums, distortion, harsh synths, heavy EDM elements, busy solos." data-lyrics="[Intro]
 [Soft count‑in implied; Rhodes sets chords]
 
 [Head A]
@@ -377,7 +388,7 @@ I hear the world when I lean to you.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--rituals-we-share.mp3" data-track-title="Rituals We Share" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Gentle, communal smooth jazz at 82–90 BPM; unison lines bloom into call‑and‑response; Rhodes, upright bass, and brushed kit with vibraphone feature in the break. Instrumental; structure: Intro → Head A → Head B → Solo 1 → Instrumental Break (Vibes Feature) → Head A → Outro; keep mix warm and close; avoid harsh cymbals and busy playing." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--rituals-we-share.mp3" data-track-title="Rituals We Share" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-album-slug="branches-of-coherence" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Gentle, communal smooth jazz at 82–90 BPM; unison lines bloom into call‑and‑response; Rhodes, upright bass, and brushed kit with vibraphone feature in the break. Instrumental; structure: Intro → Head A → Head B → Solo 1 → Instrumental Break (Vibes Feature) → Head A → Outro; keep mix warm and close; avoid harsh cymbals and busy playing." data-lyrics="[Intro]
 [Shared pulse; room tone audible]
 
 [Head A]
@@ -401,7 +412,7 @@ I hear the world when I lean to you.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--rituals-we-share.mp3" data-track-title="Rituals We Share" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Gentle, communal smooth jazz at 82–90 BPM; unison lines bloom into call‑and‑response; Rhodes, upright bass, and brushed kit with vibraphone feature in the break. Instrumental; structure: Intro → Head A → Head B → Solo 1 → Instrumental Break (Vibes Feature) → Head A → Outro; keep mix warm and close; avoid harsh cymbals and busy playing." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--rituals-we-share.mp3" data-track-title="Rituals We Share" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-album-slug="branches-of-coherence" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Gentle, communal smooth jazz at 82–90 BPM; unison lines bloom into call‑and‑response; Rhodes, upright bass, and brushed kit with vibraphone feature in the break. Instrumental; structure: Intro → Head A → Head B → Solo 1 → Instrumental Break (Vibes Feature) → Head A → Outro; keep mix warm and close; avoid harsh cymbals and busy playing." data-lyrics="[Intro]
 [Shared pulse; room tone audible]
 
 [Head A]
@@ -436,7 +447,7 @@ I hear the world when I lean to you.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--new-instrument.mp3" data-track-title="New Instrument" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Lively 1950s rock & roll (~154 BPM) with clean slapback guitar, upright bass, piano, crisp drums, and tenor sax. Lively lead vocal in English with friendly gang responses; include an [Instrumental Break] trading 4‑bar phrases between guitar and sax. Mono‑ish room; no modern trap/EDM, autotune, or contemporary synths." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--new-instrument.mp3" data-track-title="New Instrument" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-album-slug="branches-of-coherence" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Lively 1950s rock & roll (~154 BPM) with clean slapback guitar, upright bass, piano, crisp drums, and tenor sax. Lively lead vocal in English with friendly gang responses; include an [Instrumental Break] trading 4‑bar phrases between guitar and sax. Mono‑ish room; no modern trap/EDM, autotune, or contemporary synths." data-lyrics="[Intro]
 [Short guitar riff; band hits]
 
 [Verse 1]
@@ -470,7 +481,7 @@ Play it true and let it roll.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--new-instrument.mp3" data-track-title="New Instrument" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Lively 1950s rock & roll (~154 BPM) with clean slapback guitar, upright bass, piano, crisp drums, and tenor sax. Lively lead vocal in English with friendly gang responses; include an [Instrumental Break] trading 4‑bar phrases between guitar and sax. Mono‑ish room; no modern trap/EDM, autotune, or contemporary synths." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--new-instrument.mp3" data-track-title="New Instrument" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-album-slug="branches-of-coherence" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Lively 1950s rock & roll (~154 BPM) with clean slapback guitar, upright bass, piano, crisp drums, and tenor sax. Lively lead vocal in English with friendly gang responses; include an [Instrumental Break] trading 4‑bar phrases between guitar and sax. Mono‑ish room; no modern trap/EDM, autotune, or contemporary synths." data-lyrics="[Intro]
 [Short guitar riff; band hits]
 
 [Verse 1]
@@ -515,7 +526,7 @@ Play it true and let it roll.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--held-in-wonder.mp3" data-track-title="Held in Wonder" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Mid‑tempo 1950s swing (~138 BPM) with clean slapback guitar, soft tenor sax, upright bass, and gentle ride cymbal. Gentle lead vocal in English with airy harmonies; include a reflective [Bridge] where the three‑note motif appears before a final chorus. Keep mono‑ish space; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--held-in-wonder.mp3" data-track-title="Held in Wonder" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-album-slug="branches-of-coherence" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Mid‑tempo 1950s swing (~138 BPM) with clean slapback guitar, soft tenor sax, upright bass, and gentle ride cymbal. Gentle lead vocal in English with airy harmonies; include a reflective [Bridge] where the three‑note motif appears before a final chorus. Keep mono‑ish space; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
 [Soft guitar arpeggio]
 
 [Verse 1]
@@ -551,7 +562,7 @@ I don’t need answers to enjoy the ride.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--held-in-wonder.mp3" data-track-title="Held in Wonder" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Mid‑tempo 1950s swing (~138 BPM) with clean slapback guitar, soft tenor sax, upright bass, and gentle ride cymbal. Gentle lead vocal in English with airy harmonies; include a reflective [Bridge] where the three‑note motif appears before a final chorus. Keep mono‑ish space; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--held-in-wonder.mp3" data-track-title="Held in Wonder" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-album-slug="branches-of-coherence" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="Mid‑tempo 1950s swing (~138 BPM) with clean slapback guitar, soft tenor sax, upright bass, and gentle ride cymbal. Gentle lead vocal in English with airy harmonies; include a reflective [Bridge] where the three‑note motif appears before a final chorus. Keep mono‑ish space; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
 [Soft guitar arpeggio]
 
 [Verse 1]
@@ -598,7 +609,7 @@ I don’t need answers to enjoy the ride.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--thread-by-thread.mp3" data-track-title="Thread by Thread" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="1950s rock & roll, ~150 BPM straight‑eighths with handclaps, boogie‑woogie piano quoting a three‑note motif, clean twang guitar, upright bass, and ride kit. Open, friendly lead with supportive BGVs in English; include an [Instrumental Break] trading lines between piano and guitar. Exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--thread-by-thread.mp3" data-track-title="Thread by Thread" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-album-slug="branches-of-coherence" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="1950s rock & roll, ~150 BPM straight‑eighths with handclaps, boogie‑woogie piano quoting a three‑note motif, clean twang guitar, upright bass, and ride kit. Open, friendly lead with supportive BGVs in English; include an [Instrumental Break] trading lines between piano and guitar. Exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
 [Claps on two and four; piano lick quotes motif]
 
 [Verse 1]
@@ -632,7 +643,7 @@ Thread by thread with me and you.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--thread-by-thread.mp3" data-track-title="Thread by Thread" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="1950s rock & roll, ~150 BPM straight‑eighths with handclaps, boogie‑woogie piano quoting a three‑note motif, clean twang guitar, upright bass, and ride kit. Open, friendly lead with supportive BGVs in English; include an [Instrumental Break] trading lines between piano and guitar. Exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/branches-of-coherence--thread-by-thread.mp3" data-track-title="Thread by Thread" data-album-title="Branches of Coherence — A Smooth Jazz Suite" data-album-slug="branches-of-coherence" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png" data-style-prompt="1950s rock & roll, ~150 BPM straight‑eighths with handclaps, boogie‑woogie piano quoting a three‑note motif, clean twang guitar, upright bass, and ride kit. Open, friendly lead with supportive BGVs in English; include an [Instrumental Break] trading lines between piano and guitar. Exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
 [Claps on two and four; piano lick quotes motif]
 
 [Verse 1]
@@ -670,6 +681,7 @@ Thread by thread with me and you.
             </div>
           </div>
         
+        </div>
       </div>
     
   </main>

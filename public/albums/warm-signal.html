@@ -7,30 +7,41 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=13">
+  <link rel="stylesheet" href="/styles.css?v=15">
   <meta name="description" content="Coherenceism Music - Albums, songs, and lyrics from the CORA network">
 </head>
 <body>
+  <script defer src="https://vercel.com/analytics/script.js"></script>
   <main class="container">
     
-      <a href="/" class="home-button" title="Back to albums">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-        </svg>
-      </a>
+      <div class="album-detail-page">
+        <a href="/" class="home-button" title="Back to albums">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+          </svg>
+        </a>
 
-      <div class="album-detail-header">
-        <div class="album-detail-cover">
-          <img src="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" alt="Warm Signal — Songs for the Living Line" />
-        </div>
-        <div class="album-detail-info">
-          <h1>Warm Signal — Songs for the Living Line</h1>
-          <p class="album-inspiration">A country‑soul set for long two‑lane drives and kitchen‑table evenings. Warm tape‑soft edges, a steady backbeat, and a small choir of friends on the choruses. Each song carries one branch of Coherenceism into the body: alignment you can feel in your chest, an ethics you can hum. Guitar glows, organ breathes, and the rhythm section leaves space for the words to land.</p>
-        </div>
-      </div>
+        <div class="album-detail-top">
+          <div class="album-detail-header">
+            <div class="album-detail-cover">
+              <img src="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" alt="Warm Signal — Songs for the Living Line" />
+            </div>
+            <div class="album-detail-info">
+              <h1>Warm Signal — Songs for the Living Line</h1>
+              <div class="album-concept"><p>Nine songs trace Coherenceism from wide‑field seeing to daily practice: awareness, composted endings, aligned action, and neighborly care. The sonic palette stays human and analog—Wurli, Hammond, clean guitar, and a rhythm section that leaves air. A quiet three‑note resonance motif threads the record: hinted in the opener, harmonized mid‑sequence, and sung back by the choir in the closer.</p></div>
+            </div>
+          </div>
 
-      <div class="tracks-grid">
-        
+          <button class="play-album-header-btn play-album-btn" data-album-slug="warm-signal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            Play Album
+          </button>
+        </div>
+
+        <div class="tracks-grid">
+          
           <div class="track-grid-item" data-track-index="0" data-album-slug="warm-signal">
             <div class="track-grid-info">
               <div class="track-grid-number">01</div>
@@ -38,7 +49,7 @@
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--wide-open-mind.mp3" data-track-title="Wide Open Mind" data-album-title="Warm Signal — Songs for the Living Line" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul at 82 BPM; clean tremolo guitar, Wurlitzer/Rhodes, Hammond pad, warm bass, laid‑back drums with tambourine; male baritone with gentle grit and small gospel BGVs. Include [Pre‑Chorus] lift and a double [Chorus]; conversational phrasing; tape‑warm room. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--wide-open-mind.mp3" data-track-title="Wide Open Mind" data-album-title="Warm Signal — Songs for the Living Line" data-album-slug="warm-signal" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul at 82 BPM; clean tremolo guitar, Wurlitzer/Rhodes, Hammond pad, warm bass, laid‑back drums with tambourine; male baritone with gentle grit and small gospel BGVs. Include [Pre‑Chorus] lift and a double [Chorus]; conversational phrasing; tape‑warm room. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
 [Organ swell; guitar with light tremolo]
 
 [Verse 1]
@@ -80,7 +91,7 @@ Let the whole world fall in time.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--wide-open-mind.mp3" data-track-title="Wide Open Mind" data-album-title="Warm Signal — Songs for the Living Line" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul at 82 BPM; clean tremolo guitar, Wurlitzer/Rhodes, Hammond pad, warm bass, laid‑back drums with tambourine; male baritone with gentle grit and small gospel BGVs. Include [Pre‑Chorus] lift and a double [Chorus]; conversational phrasing; tape‑warm room. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--wide-open-mind.mp3" data-track-title="Wide Open Mind" data-album-title="Warm Signal — Songs for the Living Line" data-album-slug="warm-signal" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul at 82 BPM; clean tremolo guitar, Wurlitzer/Rhodes, Hammond pad, warm bass, laid‑back drums with tambourine; male baritone with gentle grit and small gospel BGVs. Include [Pre‑Chorus] lift and a double [Chorus]; conversational phrasing; tape‑warm room. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
 [Organ swell; guitar with light tremolo]
 
 [Verse 1]
@@ -133,7 +144,7 @@ Let the whole world fall in time.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--passing-through.mp3" data-track-title="Passing Through" data-album-title="Warm Signal — Songs for the Living Line" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul ballad at 76 BPM; fingerpicked clean guitar, Wurlitzer, Hammond pad, warm bass, brushed kit with tambourine; intimate baritone lead, light gospel BGVs. Include [Pre‑Chorus] lift, double [Chorus], and a soft Rhodes [Outro]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--passing-through.mp3" data-track-title="Passing Through" data-album-title="Warm Signal — Songs for the Living Line" data-album-slug="warm-signal" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul ballad at 76 BPM; fingerpicked clean guitar, Wurlitzer, Hammond pad, warm bass, brushed kit with tambourine; intimate baritone lead, light gospel BGVs. Include [Pre‑Chorus] lift, double [Chorus], and a soft Rhodes [Outro]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
 [Fingerpicked guitar; porch ambience]
 
 [Verse 1]
@@ -175,7 +186,7 @@ Fold it back to feed the living truth.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--passing-through.mp3" data-track-title="Passing Through" data-album-title="Warm Signal — Songs for the Living Line" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul ballad at 76 BPM; fingerpicked clean guitar, Wurlitzer, Hammond pad, warm bass, brushed kit with tambourine; intimate baritone lead, light gospel BGVs. Include [Pre‑Chorus] lift, double [Chorus], and a soft Rhodes [Outro]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--passing-through.mp3" data-track-title="Passing Through" data-album-title="Warm Signal — Songs for the Living Line" data-album-slug="warm-signal" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul ballad at 76 BPM; fingerpicked clean guitar, Wurlitzer, Hammond pad, warm bass, brushed kit with tambourine; intimate baritone lead, light gospel BGVs. Include [Pre‑Chorus] lift, double [Chorus], and a soft Rhodes [Outro]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
 [Fingerpicked guitar; porch ambience]
 
 [Verse 1]
@@ -228,7 +239,7 @@ Fold it back to feed the living truth.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--lean-with-the-line.mp3" data-track-title="Lean with the Line" data-album-title="Warm Signal — Songs for the Living Line" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul groove at 86 BPM; clean tremolo guitar, Wurli, Hammond pad, warm bass, laid‑back drums with tambourine; upbeat baritone and light gospel BGVs. Include [Pre‑Chorus] lift and double [Chorus]; keep pocket relaxed. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--lean-with-the-line.mp3" data-track-title="Lean with the Line" data-album-title="Warm Signal — Songs for the Living Line" data-album-slug="warm-signal" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul groove at 86 BPM; clean tremolo guitar, Wurli, Hammond pad, warm bass, laid‑back drums with tambourine; upbeat baritone and light gospel BGVs. Include [Pre‑Chorus] lift and double [Chorus]; keep pocket relaxed. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
 [Tambourine shake; guitar sets pocket]
 
 [Verse 1]
@@ -270,7 +281,7 @@ Let the current carry time.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--lean-with-the-line.mp3" data-track-title="Lean with the Line" data-album-title="Warm Signal — Songs for the Living Line" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul groove at 86 BPM; clean tremolo guitar, Wurli, Hammond pad, warm bass, laid‑back drums with tambourine; upbeat baritone and light gospel BGVs. Include [Pre‑Chorus] lift and double [Chorus]; keep pocket relaxed. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--lean-with-the-line.mp3" data-track-title="Lean with the Line" data-album-title="Warm Signal — Songs for the Living Line" data-album-slug="warm-signal" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul groove at 86 BPM; clean tremolo guitar, Wurli, Hammond pad, warm bass, laid‑back drums with tambourine; upbeat baritone and light gospel BGVs. Include [Pre‑Chorus] lift and double [Chorus]; keep pocket relaxed. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
 [Tambourine shake; guitar sets pocket]
 
 [Verse 1]
@@ -323,7 +334,7 @@ Let the current carry time.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--stay-with-the-note.mp3" data-track-title="Stay with the Note" data-album-title="Warm Signal — Songs for the Living Line" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul ballad at 78 BPM; fingerpicked clean guitar, Wurlitzer, Hammond pad, warm bass, brushed kit; intimate baritone and hushed BGVs. Include [Pre‑Chorus] and a double [Chorus]; very soft [Outro]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--stay-with-the-note.mp3" data-track-title="Stay with the Note" data-album-title="Warm Signal — Songs for the Living Line" data-album-slug="warm-signal" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul ballad at 78 BPM; fingerpicked clean guitar, Wurlitzer, Hammond pad, warm bass, brushed kit; intimate baritone and hushed BGVs. Include [Pre‑Chorus] and a double [Chorus]; very soft [Outro]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
 [Steam and hush; soft guitar]
 
 [Verse 1]
@@ -365,7 +376,7 @@ Let the wandering go.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--stay-with-the-note.mp3" data-track-title="Stay with the Note" data-album-title="Warm Signal — Songs for the Living Line" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul ballad at 78 BPM; fingerpicked clean guitar, Wurlitzer, Hammond pad, warm bass, brushed kit; intimate baritone and hushed BGVs. Include [Pre‑Chorus] and a double [Chorus]; very soft [Outro]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--stay-with-the-note.mp3" data-track-title="Stay with the Note" data-album-title="Warm Signal — Songs for the Living Line" data-album-slug="warm-signal" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul ballad at 78 BPM; fingerpicked clean guitar, Wurlitzer, Hammond pad, warm bass, brushed kit; intimate baritone and hushed BGVs. Include [Pre‑Chorus] and a double [Chorus]; very soft [Outro]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
 [Steam and hush; soft guitar]
 
 [Verse 1]
@@ -418,7 +429,7 @@ Let the wandering go.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--do-the-next-true-thing.mp3" data-track-title="Do the Next True Thing" data-album-title="Warm Signal — Songs for the Living Line" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul at 84 BPM; clean tremolo guitar, Wurlitzer, Hammond pad, warm bass, laid‑back drums with tambourine; conversational baritone and light gospel BGVs. Include [Pre‑Chorus] and a double [Chorus]; pocket steady. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--do-the-next-true-thing.mp3" data-track-title="Do the Next True Thing" data-album-title="Warm Signal — Songs for the Living Line" data-album-slug="warm-signal" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul at 84 BPM; clean tremolo guitar, Wurlitzer, Hammond pad, warm bass, laid‑back drums with tambourine; conversational baritone and light gospel BGVs. Include [Pre‑Chorus] and a double [Chorus]; pocket steady. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
 [Rain on pavement; guitar rings]
 
 [Verse 1]
@@ -460,7 +471,7 @@ I’ll do the next true thing.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--do-the-next-true-thing.mp3" data-track-title="Do the Next True Thing" data-album-title="Warm Signal — Songs for the Living Line" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul at 84 BPM; clean tremolo guitar, Wurlitzer, Hammond pad, warm bass, laid‑back drums with tambourine; conversational baritone and light gospel BGVs. Include [Pre‑Chorus] and a double [Chorus]; pocket steady. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--do-the-next-true-thing.mp3" data-track-title="Do the Next True Thing" data-album-title="Warm Signal — Songs for the Living Line" data-album-slug="warm-signal" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul at 84 BPM; clean tremolo guitar, Wurlitzer, Hammond pad, warm bass, laid‑back drums with tambourine; conversational baritone and light gospel BGVs. Include [Pre‑Chorus] and a double [Chorus]; pocket steady. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
 [Rain on pavement; guitar rings]
 
 [Verse 1]
@@ -513,7 +524,7 @@ I’ll do the next true thing.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--neighbor-light.mp3" data-track-title="Neighbor Light" data-album-title="Warm Signal — Songs for the Living Line" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul at 82 BPM; clean tremolo guitar, Wurli, Hammond pad, warm bass, laid‑back drums with tambourine; communal baritone lead with small gospel BGVs. Include [Pre‑Chorus], double [Chorus], and gentle ad‑lib [Outro]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--neighbor-light.mp3" data-track-title="Neighbor Light" data-album-title="Warm Signal — Songs for the Living Line" data-album-slug="warm-signal" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul at 82 BPM; clean tremolo guitar, Wurli, Hammond pad, warm bass, laid‑back drums with tambourine; communal baritone lead with small gospel BGVs. Include [Pre‑Chorus], double [Chorus], and gentle ad‑lib [Outro]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
 [Porch chatter; tambourine taps]
 
 [Verse 1]
@@ -555,7 +566,7 @@ Shine me home tonight.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--neighbor-light.mp3" data-track-title="Neighbor Light" data-album-title="Warm Signal — Songs for the Living Line" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul at 82 BPM; clean tremolo guitar, Wurli, Hammond pad, warm bass, laid‑back drums with tambourine; communal baritone lead with small gospel BGVs. Include [Pre‑Chorus], double [Chorus], and gentle ad‑lib [Outro]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--neighbor-light.mp3" data-track-title="Neighbor Light" data-album-title="Warm Signal — Songs for the Living Line" data-album-slug="warm-signal" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul at 82 BPM; clean tremolo guitar, Wurli, Hammond pad, warm bass, laid‑back drums with tambourine; communal baritone lead with small gospel BGVs. Include [Pre‑Chorus], double [Chorus], and gentle ad‑lib [Outro]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
 [Porch chatter; tambourine taps]
 
 [Verse 1]
@@ -608,7 +619,7 @@ Shine me home tonight.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--teach-the-wire-to-sing.mp3" data-track-title="Teach the Wire to Sing" data-album-title="Warm Signal — Songs for the Living Line" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="Roots reggae at 82 BPM; one‑drop drums, round bass, off‑beat guitar upstrokes, organ bubble; tasteful dub‑style echoes to illustrate “the wire.” Warm lead vocal, call‑and‑response on hook. Include an [Instrumental Break] with melodic echo fragments before the final chorus." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--teach-the-wire-to-sing.mp3" data-track-title="Teach the Wire to Sing" data-album-title="Warm Signal — Songs for the Living Line" data-album-slug="warm-signal" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="Roots reggae at 82 BPM; one‑drop drums, round bass, off‑beat guitar upstrokes, organ bubble; tasteful dub‑style echoes to illustrate “the wire.” Warm lead vocal, call‑and‑response on hook. Include an [Instrumental Break] with melodic echo fragments before the final chorus." data-lyrics="[Intro]
 [Test tone → organ swells; tape hiss]
 
 [Verse 1]
@@ -646,7 +657,7 @@ Love on every channel.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--teach-the-wire-to-sing.mp3" data-track-title="Teach the Wire to Sing" data-album-title="Warm Signal — Songs for the Living Line" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="Roots reggae at 82 BPM; one‑drop drums, round bass, off‑beat guitar upstrokes, organ bubble; tasteful dub‑style echoes to illustrate “the wire.” Warm lead vocal, call‑and‑response on hook. Include an [Instrumental Break] with melodic echo fragments before the final chorus." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--teach-the-wire-to-sing.mp3" data-track-title="Teach the Wire to Sing" data-album-title="Warm Signal — Songs for the Living Line" data-album-slug="warm-signal" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="Roots reggae at 82 BPM; one‑drop drums, round bass, off‑beat guitar upstrokes, organ bubble; tasteful dub‑style echoes to illustrate “the wire.” Warm lead vocal, call‑and‑response on hook. Include an [Instrumental Break] with melodic echo fragments before the final chorus." data-lyrics="[Intro]
 [Test tone → organ swells; tape hiss]
 
 [Verse 1]
@@ -695,7 +706,7 @@ Love on every channel.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--deep-quiet-wonder.mp3" data-track-title="Deep Quiet Wonder" data-album-title="Warm Signal — Songs for the Living Line" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul ballad at 76 BPM; fingerpicked clean guitar, Wurlitzer, Hammond pad, brushed kit, warm bass; tender baritone lead with hushed BGVs. Include [Pre‑Chorus], double [Chorus], very soft [Outro]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--deep-quiet-wonder.mp3" data-track-title="Deep Quiet Wonder" data-album-title="Warm Signal — Songs for the Living Line" data-album-slug="warm-signal" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul ballad at 76 BPM; fingerpicked clean guitar, Wurlitzer, Hammond pad, brushed kit, warm bass; tender baritone lead with hushed BGVs. Include [Pre‑Chorus], double [Chorus], very soft [Outro]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
 [Guitar harmonics; room tone]
 
 [Verse 1]
@@ -737,7 +748,7 @@ Hold me under.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--deep-quiet-wonder.mp3" data-track-title="Deep Quiet Wonder" data-album-title="Warm Signal — Songs for the Living Line" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul ballad at 76 BPM; fingerpicked clean guitar, Wurlitzer, Hammond pad, brushed kit, warm bass; tender baritone lead with hushed BGVs. Include [Pre‑Chorus], double [Chorus], very soft [Outro]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--deep-quiet-wonder.mp3" data-track-title="Deep Quiet Wonder" data-album-title="Warm Signal — Songs for the Living Line" data-album-slug="warm-signal" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul ballad at 76 BPM; fingerpicked clean guitar, Wurlitzer, Hammond pad, brushed kit, warm bass; tender baritone lead with hushed BGVs. Include [Pre‑Chorus], double [Chorus], very soft [Outro]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
 [Guitar harmonics; room tone]
 
 [Verse 1]
@@ -790,7 +801,7 @@ Hold me under.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--the-living-line.mp3" data-track-title="The Living Line" data-album-title="Warm Signal — Songs for the Living Line" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul at 88 BPM; clean tremolo guitar, Wurlitzer, Hammond pad, warm bass, laid‑back drums with tambourine; communal baritone lead + light gospel BGVs. Include [Pre‑Chorus], double [Chorus], and a modest key‑lift [Bridge]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--the-living-line.mp3" data-track-title="The Living Line" data-album-title="Warm Signal — Songs for the Living Line" data-album-slug="warm-signal" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul at 88 BPM; clean tremolo guitar, Wurlitzer, Hammond pad, warm bass, laid‑back drums with tambourine; communal baritone lead + light gospel BGVs. Include [Pre‑Chorus], double [Chorus], and a modest key‑lift [Bridge]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
 [Count‑in; guitar sets the stitch]
 
 [Verse 1]
@@ -832,7 +843,7 @@ Hands in rhythm, hearts in time.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--the-living-line.mp3" data-track-title="The Living Line" data-album-title="Warm Signal — Songs for the Living Line" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul at 88 BPM; clean tremolo guitar, Wurlitzer, Hammond pad, warm bass, laid‑back drums with tambourine; communal baritone lead + light gospel BGVs. Include [Pre‑Chorus], double [Chorus], and a modest key‑lift [Bridge]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/warm-signal--the-living-line.mp3" data-track-title="The Living Line" data-album-title="Warm Signal — Songs for the Living Line" data-album-slug="warm-signal" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png" data-style-prompt="1970s country‑soul at 88 BPM; clean tremolo guitar, Wurlitzer, Hammond pad, warm bass, laid‑back drums with tambourine; communal baritone lead + light gospel BGVs. Include [Pre‑Chorus], double [Chorus], and a modest key‑lift [Bridge]. No heavy distortion, EDM hats, auto‑tune, or hyper‑compression." data-lyrics="[Intro]
 [Count‑in; guitar sets the stitch]
 
 [Verse 1]
@@ -878,6 +889,7 @@ Hands in rhythm, hearts in time.
             </div>
           </div>
         
+        </div>
       </div>
     
   </main>

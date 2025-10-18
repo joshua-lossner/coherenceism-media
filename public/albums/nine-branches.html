@@ -7,30 +7,41 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=13">
+  <link rel="stylesheet" href="/styles.css?v=15">
   <meta name="description" content="Coherenceism Music - Albums, songs, and lyrics from the CORA network">
 </head>
 <body>
+  <script defer src="https://vercel.com/analytics/script.js"></script>
   <main class="container">
     
-      <a href="/" class="home-button" title="Back to albums">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-        </svg>
-      </a>
+      <div class="album-detail-page">
+        <a href="/" class="home-button" title="Back to albums">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+          </svg>
+        </a>
 
-      <div class="album-detail-header">
-        <div class="album-detail-cover">
-          <img src="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" alt="Nine Branches" />
-        </div>
-        <div class="album-detail-info">
-          <h1>Nine Branches</h1>
-          <p class="album-inspiration">Nine tracks, each channeling a branch of Coherenceism through a 1990s Hip‑Hop lens: dusty jazz/soul chops, boom‑bap swing, and grounded, reflective bars. The arc moves from the largest view (the field we’re already in) to lived practice (how we show up with others, with tools, and in mystery) and lands on daily coherence. Themes echo across songs with recurring motifs: vinyl hiss, re‑pitched vocal bits, a Rhodes stab that returns in variations, and a signature scratch hook style.</p>
-        </div>
-      </div>
+        <div class="album-detail-top">
+          <div class="album-detail-header">
+            <div class="album-detail-cover">
+              <img src="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" alt="Nine Branches" />
+            </div>
+            <div class="album-detail-info">
+              <h1>Nine Branches</h1>
+              <div class="album-concept"><p>Nine songs channel the branches of Coherenceism into a ’90s boom‑bap frame: gritty jazz‑soul chops, punchy drums, and grounded, reflective verses. The arc starts wide with the universal field and narrows toward daily practice, threading recurring motifs — a Rhodes stab in varied voicings, vocal‑cut scratch hooks, and tape‑warm textures. Two G‑funk‑colored cuts lift the mid‑album energy. Sequencing favors a confident opener, early singles, a story centerpiece, and an anthemic closer. The tone stays coherent: present, ethical, and communal without preachiness.</p></div>
+            </div>
+          </div>
 
-      <div class="tracks-grid">
-        
+          <button class="play-album-header-btn play-album-btn" data-album-slug="nine-branches">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            Play Album
+          </button>
+        </div>
+
+        <div class="tracks-grid">
+          
           <div class="track-grid-item" data-track-index="0" data-album-slug="nine-branches">
             <div class="track-grid-info">
               <div class="track-grid-number">01</div>
@@ -38,7 +49,7 @@
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--universal-mindset.mp3" data-track-title="Universal Mindset" data-album-title="Nine Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s NYC boom‑bap at 92 BPM; mood reflective yet assertive with spiritual undertones; palette of chopped jazz/soul loops, punchy kick+snare, filtered bass, Rhodes stabs, light vinyl crackle, and DJ scratches. Structure: Intro → Verse 1 → Chorus → Verse 2 → [Instrumental Break: scratch solo] → Chorus → Verse 3 → Chorus → Outro. Vocals: male gritty with internal multisyllables; hook uses scratch‑cut vocal phrase “mind… set.” Negatives: avoid modern trap hats, 808‑heavy subs, glossy EDM risers, heavy autotune; mix vocal upfront with drum punch, slightly narrow sample bed; dynamic master (no brickwall)." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--universal-mindset.mp3" data-track-title="Universal Mindset" data-album-title="Nine Branches" data-album-slug="nine-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s NYC boom‑bap at 92 BPM; mood reflective yet assertive with spiritual undertones; palette of chopped jazz/soul loops, punchy kick+snare, filtered bass, Rhodes stabs, light vinyl crackle, and DJ scratches. Structure: Intro → Verse 1 → Chorus → Verse 2 → [Instrumental Break: scratch solo] → Chorus → Verse 3 → Chorus → Outro. Vocals: male gritty with internal multisyllables; hook uses scratch‑cut vocal phrase “mind… set.” Negatives: avoid modern trap hats, 808‑heavy subs, glossy EDM risers, heavy autotune; mix vocal upfront with drum punch, slightly narrow sample bed; dynamic master (no brickwall)." data-lyrics="[Intro]
 [Rhodes stab over dusty loop; city ambience]
 
 [Verse 1]
@@ -98,7 +109,7 @@ Mind set — tune the heart, keep it grooving.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--universal-mindset.mp3" data-track-title="Universal Mindset" data-album-title="Nine Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s NYC boom‑bap at 92 BPM; mood reflective yet assertive with spiritual undertones; palette of chopped jazz/soul loops, punchy kick+snare, filtered bass, Rhodes stabs, light vinyl crackle, and DJ scratches. Structure: Intro → Verse 1 → Chorus → Verse 2 → [Instrumental Break: scratch solo] → Chorus → Verse 3 → Chorus → Outro. Vocals: male gritty with internal multisyllables; hook uses scratch‑cut vocal phrase “mind… set.” Negatives: avoid modern trap hats, 808‑heavy subs, glossy EDM risers, heavy autotune; mix vocal upfront with drum punch, slightly narrow sample bed; dynamic master (no brickwall)." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--universal-mindset.mp3" data-track-title="Universal Mindset" data-album-title="Nine Branches" data-album-slug="nine-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s NYC boom‑bap at 92 BPM; mood reflective yet assertive with spiritual undertones; palette of chopped jazz/soul loops, punchy kick+snare, filtered bass, Rhodes stabs, light vinyl crackle, and DJ scratches. Structure: Intro → Verse 1 → Chorus → Verse 2 → [Instrumental Break: scratch solo] → Chorus → Verse 3 → Chorus → Outro. Vocals: male gritty with internal multisyllables; hook uses scratch‑cut vocal phrase “mind… set.” Negatives: avoid modern trap hats, 808‑heavy subs, glossy EDM risers, heavy autotune; mix vocal upfront with drum punch, slightly narrow sample bed; dynamic master (no brickwall)." data-lyrics="[Intro]
 [Rhodes stab over dusty loop; city ambience]
 
 [Verse 1]
@@ -169,7 +180,7 @@ Mind set — tune the heart, keep it grooving.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--nothing-vanishes.mp3" data-track-title="Nothing Vanishes" data-album-title="Nine Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s NYC boom‑bap at 88 BPM; mood reflective and somber with resilient undertone; dusty jazz/soul loop, punchy kick+snare, filtered bass, light vinyl hiss. Story format with minimal refrain: Intro → Verse 1 → [Refrain: 2 bars] → [Instrumental Break: 4 bars turnaround] → Verse 2 → Refrain → Instrumental Break → Verse 3 → Refrain → [Extended Outro: 8–12 bars]. Vocals: close‑mic narrative delivery; vivid, concrete imagery; memorable end‑lines. Aim ~3:00 runtime via turnarounds + extended outro. Negatives: avoid modern trap hats, 808‑dominant subs, glossy EDM risers, heavy autotune; vocal‑forward, dynamic master (no brickwall)." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--nothing-vanishes.mp3" data-track-title="Nothing Vanishes" data-album-title="Nine Branches" data-album-slug="nine-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s NYC boom‑bap at 88 BPM; mood reflective and somber with resilient undertone; dusty jazz/soul loop, punchy kick+snare, filtered bass, light vinyl hiss. Story format with minimal refrain: Intro → Verse 1 → [Refrain: 2 bars] → [Instrumental Break: 4 bars turnaround] → Verse 2 → Refrain → Instrumental Break → Verse 3 → Refrain → [Extended Outro: 8–12 bars]. Vocals: close‑mic narrative delivery; vivid, concrete imagery; memorable end‑lines. Aim ~3:00 runtime via turnarounds + extended outro. Negatives: avoid modern trap hats, 808‑dominant subs, glossy EDM risers, heavy autotune; vocal‑forward, dynamic master (no brickwall)." data-lyrics="[Intro]
 [Soft piano loop; wind over rooftop]
 
 [Verse 1]
@@ -226,7 +237,7 @@ What falls feeds what’s coming on.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--nothing-vanishes.mp3" data-track-title="Nothing Vanishes" data-album-title="Nine Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s NYC boom‑bap at 88 BPM; mood reflective and somber with resilient undertone; dusty jazz/soul loop, punchy kick+snare, filtered bass, light vinyl hiss. Story format with minimal refrain: Intro → Verse 1 → [Refrain: 2 bars] → [Instrumental Break: 4 bars turnaround] → Verse 2 → Refrain → Instrumental Break → Verse 3 → Refrain → [Extended Outro: 8–12 bars]. Vocals: close‑mic narrative delivery; vivid, concrete imagery; memorable end‑lines. Aim ~3:00 runtime via turnarounds + extended outro. Negatives: avoid modern trap hats, 808‑dominant subs, glossy EDM risers, heavy autotune; vocal‑forward, dynamic master (no brickwall)." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--nothing-vanishes.mp3" data-track-title="Nothing Vanishes" data-album-title="Nine Branches" data-album-slug="nine-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s NYC boom‑bap at 88 BPM; mood reflective and somber with resilient undertone; dusty jazz/soul loop, punchy kick+snare, filtered bass, light vinyl hiss. Story format with minimal refrain: Intro → Verse 1 → [Refrain: 2 bars] → [Instrumental Break: 4 bars turnaround] → Verse 2 → Refrain → Instrumental Break → Verse 3 → Refrain → [Extended Outro: 8–12 bars]. Vocals: close‑mic narrative delivery; vivid, concrete imagery; memorable end‑lines. Aim ~3:00 runtime via turnarounds + extended outro. Negatives: avoid modern trap hats, 808‑dominant subs, glossy EDM risers, heavy autotune; vocal‑forward, dynamic master (no brickwall)." data-lyrics="[Intro]
 [Soft piano loop; wind over rooftop]
 
 [Verse 1]
@@ -294,7 +305,7 @@ What falls feeds what’s coming on.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--in-tune.mp3" data-track-title="In Tune" data-album-title="Nine Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s boom‑bap at 94 BPM; mood focused and confident; chopped jazz/soul loop with Rhodes stabs, punchy kick+snare, filtered bass, light horn accents. Structure: Intro → 3 x Verse/Chorus → Outro; mantra‑style hook. Vocals: gritty, internal multisyllables, tight pocket. Negatives: avoid modern trap hats, 808‑dominant subs, glossy EDM risers, heavy autotune; mix vocal‑forward with drum punch, dynamic master." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--in-tune.mp3" data-track-title="In Tune" data-album-title="Nine Branches" data-album-slug="nine-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s boom‑bap at 94 BPM; mood focused and confident; chopped jazz/soul loop with Rhodes stabs, punchy kick+snare, filtered bass, light horn accents. Structure: Intro → 3 x Verse/Chorus → Outro; mantra‑style hook. Vocals: gritty, internal multisyllables, tight pocket. Negatives: avoid modern trap hats, 808‑dominant subs, glossy EDM risers, heavy autotune; mix vocal‑forward with drum punch, dynamic master." data-lyrics="[Intro]
 [Staccato Rhodes stab; rimshot count‑in]
 
 [Verse 1]
@@ -351,7 +362,7 @@ In tune — every bar a clearer view.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--in-tune.mp3" data-track-title="In Tune" data-album-title="Nine Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s boom‑bap at 94 BPM; mood focused and confident; chopped jazz/soul loop with Rhodes stabs, punchy kick+snare, filtered bass, light horn accents. Structure: Intro → 3 x Verse/Chorus → Outro; mantra‑style hook. Vocals: gritty, internal multisyllables, tight pocket. Negatives: avoid modern trap hats, 808‑dominant subs, glossy EDM risers, heavy autotune; mix vocal‑forward with drum punch, dynamic master." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--in-tune.mp3" data-track-title="In Tune" data-album-title="Nine Branches" data-album-slug="nine-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s boom‑bap at 94 BPM; mood focused and confident; chopped jazz/soul loop with Rhodes stabs, punchy kick+snare, filtered bass, light horn accents. Structure: Intro → 3 x Verse/Chorus → Outro; mantra‑style hook. Vocals: gritty, internal multisyllables, tight pocket. Negatives: avoid modern trap hats, 808‑dominant subs, glossy EDM risers, heavy autotune; mix vocal‑forward with drum punch, dynamic master." data-lyrics="[Intro]
 [Staccato Rhodes stab; rimshot count‑in]
 
 [Verse 1]
@@ -419,7 +430,7 @@ In tune — every bar a clearer view.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--here-and-now.mp3" data-track-title="Here & Now" data-album-title="Nine Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s boom‑bap at 90 BPM; mood calm but alert; soft Rhodes pad and sparse jazz loop; punchy kick+snare; filtered bass; roomy, minimal arrangement. Structure: Intro → 3 x Verse/Chorus → Outro; optional soft female hook. Vocals: reflective, close‑mic cadence; space between lines. Negatives: avoid modern trap hats, 808‑dominant subs, glossy risers, heavy autotune; keep a dynamic, airy mix." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--here-and-now.mp3" data-track-title="Here & Now" data-album-title="Nine Branches" data-album-slug="nine-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s boom‑bap at 90 BPM; mood calm but alert; soft Rhodes pad and sparse jazz loop; punchy kick+snare; filtered bass; roomy, minimal arrangement. Structure: Intro → 3 x Verse/Chorus → Outro; optional soft female hook. Vocals: reflective, close‑mic cadence; space between lines. Negatives: avoid modern trap hats, 808‑dominant subs, glossy risers, heavy autotune; keep a dynamic, airy mix." data-lyrics="[Intro]
 [Low‑pass loop; deep breath in]
 
 [Verse 1]
@@ -476,7 +487,7 @@ Here and now — breathe steady, keep it low.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--here-and-now.mp3" data-track-title="Here & Now" data-album-title="Nine Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s boom‑bap at 90 BPM; mood calm but alert; soft Rhodes pad and sparse jazz loop; punchy kick+snare; filtered bass; roomy, minimal arrangement. Structure: Intro → 3 x Verse/Chorus → Outro; optional soft female hook. Vocals: reflective, close‑mic cadence; space between lines. Negatives: avoid modern trap hats, 808‑dominant subs, glossy risers, heavy autotune; keep a dynamic, airy mix." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--here-and-now.mp3" data-track-title="Here & Now" data-album-title="Nine Branches" data-album-slug="nine-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s boom‑bap at 90 BPM; mood calm but alert; soft Rhodes pad and sparse jazz loop; punchy kick+snare; filtered bass; roomy, minimal arrangement. Structure: Intro → 3 x Verse/Chorus → Outro; optional soft female hook. Vocals: reflective, close‑mic cadence; space between lines. Negatives: avoid modern trap hats, 808‑dominant subs, glossy risers, heavy autotune; keep a dynamic, airy mix." data-lyrics="[Intro]
 [Low‑pass loop; deep breath in]
 
 [Verse 1]
@@ -544,7 +555,7 @@ Here and now — breathe steady, keep it low.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--right-weight.mp3" data-track-title="Right Weight" data-album-title="Nine Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s boom‑bap at 92 BPM; mood assertive/reflective; jazz‑soul chops with horn stabs; punchy kick+snare; filtered bass. Structure: Intro → 3 x Verse/Chorus → Outro; concise, maxim‑style hook. Vocals: crisp consonants, internal rhymes, grounded specifics. Negatives: avoid modern trap hats, 808‑dominant subs, glossy risers, heavy autotune; vocal upfront; dynamic master." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--right-weight.mp3" data-track-title="Right Weight" data-album-title="Nine Branches" data-album-slug="nine-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s boom‑bap at 92 BPM; mood assertive/reflective; jazz‑soul chops with horn stabs; punchy kick+snare; filtered bass. Structure: Intro → 3 x Verse/Chorus → Outro; concise, maxim‑style hook. Vocals: crisp consonants, internal rhymes, grounded specifics. Negatives: avoid modern trap hats, 808‑dominant subs, glossy risers, heavy autotune; vocal upfront; dynamic master." data-lyrics="[Intro]
 [Horn stab; snare crack]
 
 [Verse 1]
@@ -601,7 +612,7 @@ Just enough for one step, done in the right way.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--right-weight.mp3" data-track-title="Right Weight" data-album-title="Nine Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s boom‑bap at 92 BPM; mood assertive/reflective; jazz‑soul chops with horn stabs; punchy kick+snare; filtered bass. Structure: Intro → 3 x Verse/Chorus → Outro; concise, maxim‑style hook. Vocals: crisp consonants, internal rhymes, grounded specifics. Negatives: avoid modern trap hats, 808‑dominant subs, glossy risers, heavy autotune; vocal upfront; dynamic master." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--right-weight.mp3" data-track-title="Right Weight" data-album-title="Nine Branches" data-album-slug="nine-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s boom‑bap at 92 BPM; mood assertive/reflective; jazz‑soul chops with horn stabs; punchy kick+snare; filtered bass. Structure: Intro → 3 x Verse/Chorus → Outro; concise, maxim‑style hook. Vocals: crisp consonants, internal rhymes, grounded specifics. Negatives: avoid modern trap hats, 808‑dominant subs, glossy risers, heavy autotune; vocal upfront; dynamic master." data-lyrics="[Intro]
 [Horn stab; snare crack]
 
 [Verse 1]
@@ -669,7 +680,7 @@ Just enough for one step, done in the right way.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--the-circle-lives.mp3" data-track-title="The Circle Lives" data-album-title="Nine Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s boom‑bap at 96 BPM; communal, uplifting mood; jazz/soul loop with horn hits; punchy kick+snare; subtle G‑funk bass color; chant‑ready hook. Structure: Intro → 3 x Verse/Chorus → Outro. Vocals: assertive lead with room for group chant on hook. Negatives: avoid modern trap hats, 808‑dominant subs, glossy risers, heavy autotune; keep vocal upfront; dynamic master." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--the-circle-lives.mp3" data-track-title="The Circle Lives" data-album-title="Nine Branches" data-album-slug="nine-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s boom‑bap at 96 BPM; communal, uplifting mood; jazz/soul loop with horn hits; punchy kick+snare; subtle G‑funk bass color; chant‑ready hook. Structure: Intro → 3 x Verse/Chorus → Outro. Vocals: assertive lead with room for group chant on hook. Negatives: avoid modern trap hats, 808‑dominant subs, glossy risers, heavy autotune; keep vocal upfront; dynamic master." data-lyrics="[Intro]
 [Crowd ambience; handclaps on 2 and 4]
 
 [Verse 1]
@@ -726,7 +737,7 @@ Your voice, my voice — listen how the rhythm lifts.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--the-circle-lives.mp3" data-track-title="The Circle Lives" data-album-title="Nine Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s boom‑bap at 96 BPM; communal, uplifting mood; jazz/soul loop with horn hits; punchy kick+snare; subtle G‑funk bass color; chant‑ready hook. Structure: Intro → 3 x Verse/Chorus → Outro. Vocals: assertive lead with room for group chant on hook. Negatives: avoid modern trap hats, 808‑dominant subs, glossy risers, heavy autotune; keep vocal upfront; dynamic master." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--the-circle-lives.mp3" data-track-title="The Circle Lives" data-album-title="Nine Branches" data-album-slug="nine-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="1990s boom‑bap at 96 BPM; communal, uplifting mood; jazz/soul loop with horn hits; punchy kick+snare; subtle G‑funk bass color; chant‑ready hook. Structure: Intro → 3 x Verse/Chorus → Outro. Vocals: assertive lead with room for group chant on hook. Negatives: avoid modern trap hats, 808‑dominant subs, glossy risers, heavy autotune; keep vocal upfront; dynamic master." data-lyrics="[Intro]
 [Crowd ambience; handclaps on 2 and 4]
 
 [Verse 1]
@@ -794,7 +805,7 @@ Your voice, my voice — listen how the rhythm lifts.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--digital-presence.mp3" data-track-title="Digital Presence" data-album-title="Nine Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="’90s boom‑bap at 98 BPM with subtle West Coast G‑funk color; focused, grounded mood; punchy kick+snare, filtered bass, Rhodes stabs, occasional synth bass glide; chant‑ready extended chorus. Structure: Intro → Verse/Chorus → Verse/Chorus → Bridge → Double Chorus → Outro. Vocals: precise internal multisyllables; assertive but calm. Negatives: avoid modern trap hats, overpowering 808s, glossy EDM risers, heavy autotune; vocal‑forward, dynamic master." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--digital-presence.mp3" data-track-title="Digital Presence" data-album-title="Nine Branches" data-album-slug="nine-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="’90s boom‑bap at 98 BPM with subtle West Coast G‑funk color; focused, grounded mood; punchy kick+snare, filtered bass, Rhodes stabs, occasional synth bass glide; chant‑ready extended chorus. Structure: Intro → Verse/Chorus → Verse/Chorus → Bridge → Double Chorus → Outro. Vocals: precise internal multisyllables; assertive but calm. Negatives: avoid modern trap hats, overpowering 808s, glossy EDM risers, heavy autotune; vocal‑forward, dynamic master." data-lyrics="[Intro]
 [Modem‑like sweep; needle crackle returns]
 
 [Verse 1]
@@ -853,7 +864,7 @@ Put the signal over static; make your scrolling into time.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--digital-presence.mp3" data-track-title="Digital Presence" data-album-title="Nine Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="’90s boom‑bap at 98 BPM with subtle West Coast G‑funk color; focused, grounded mood; punchy kick+snare, filtered bass, Rhodes stabs, occasional synth bass glide; chant‑ready extended chorus. Structure: Intro → Verse/Chorus → Verse/Chorus → Bridge → Double Chorus → Outro. Vocals: precise internal multisyllables; assertive but calm. Negatives: avoid modern trap hats, overpowering 808s, glossy EDM risers, heavy autotune; vocal‑forward, dynamic master." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--digital-presence.mp3" data-track-title="Digital Presence" data-album-title="Nine Branches" data-album-slug="nine-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="’90s boom‑bap at 98 BPM with subtle West Coast G‑funk color; focused, grounded mood; punchy kick+snare, filtered bass, Rhodes stabs, occasional synth bass glide; chant‑ready extended chorus. Structure: Intro → Verse/Chorus → Verse/Chorus → Bridge → Double Chorus → Outro. Vocals: precise internal multisyllables; assertive but calm. Negatives: avoid modern trap hats, overpowering 808s, glossy EDM risers, heavy autotune; vocal‑forward, dynamic master." data-lyrics="[Intro]
 [Modem‑like sweep; needle crackle returns]
 
 [Verse 1]
@@ -923,7 +934,7 @@ Put the signal over static; make your scrolling into time.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--luminous-mystery.mp3" data-track-title="Luminous Mystery" data-album-title="Nine Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="’90s boom‑bap with soft swing at 90 BPM; airy Rhodes/pad, minimal chops, gentle kick+snare; wide sense of space; chant‑like hook. Structure: Intro → 3 x Verse/Chorus → Outro. Vocals: quiet intensity, slower phrasing with room for breath. Negatives: avoid modern trap hats, sub‑dominant 808s, glossy risers, heavy autotune; vocal‑forward, dynamic and airy mix." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--luminous-mystery.mp3" data-track-title="Luminous Mystery" data-album-title="Nine Branches" data-album-slug="nine-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="’90s boom‑bap with soft swing at 90 BPM; airy Rhodes/pad, minimal chops, gentle kick+snare; wide sense of space; chant‑like hook. Structure: Intro → 3 x Verse/Chorus → Outro. Vocals: quiet intensity, slower phrasing with room for breath. Negatives: avoid modern trap hats, sub‑dominant 808s, glossy risers, heavy autotune; vocal‑forward, dynamic and airy mix." data-lyrics="[Intro]
 [Airy pad; faint vinyl hush]
 
 [Verse 1]
@@ -980,7 +991,7 @@ Leave room — for the luminous beneath.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--luminous-mystery.mp3" data-track-title="Luminous Mystery" data-album-title="Nine Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="’90s boom‑bap with soft swing at 90 BPM; airy Rhodes/pad, minimal chops, gentle kick+snare; wide sense of space; chant‑like hook. Structure: Intro → 3 x Verse/Chorus → Outro. Vocals: quiet intensity, slower phrasing with room for breath. Negatives: avoid modern trap hats, sub‑dominant 808s, glossy risers, heavy autotune; vocal‑forward, dynamic and airy mix." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--luminous-mystery.mp3" data-track-title="Luminous Mystery" data-album-title="Nine Branches" data-album-slug="nine-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="’90s boom‑bap with soft swing at 90 BPM; airy Rhodes/pad, minimal chops, gentle kick+snare; wide sense of space; chant‑like hook. Structure: Intro → 3 x Verse/Chorus → Outro. Vocals: quiet intensity, slower phrasing with room for breath. Negatives: avoid modern trap hats, sub‑dominant 808s, glossy risers, heavy autotune; vocal‑forward, dynamic and airy mix." data-lyrics="[Intro]
 [Airy pad; faint vinyl hush]
 
 [Verse 1]
@@ -1048,7 +1059,7 @@ Leave room — for the luminous beneath.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--small-moves.mp3" data-track-title="Small Moves" data-album-title="Nine Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="’90s boom‑bap at 92 BPM; confident, grounded mood; Rhodes/piano stabs on chopped loop; punchy kick+snare; repeatable maxim hook with double chorus finale. Structure: Intro → 3 x Verse/Chorus → Double Chorus → Outro. Vocals: gritty, motivational but concrete; no platitudes. Negatives: avoid modern trap hats, 808‑dominant subs, glossy risers, heavy autotune; vocal‑forward, dynamic master." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--small-moves.mp3" data-track-title="Small Moves" data-album-title="Nine Branches" data-album-slug="nine-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="’90s boom‑bap at 92 BPM; confident, grounded mood; Rhodes/piano stabs on chopped loop; punchy kick+snare; repeatable maxim hook with double chorus finale. Structure: Intro → 3 x Verse/Chorus → Double Chorus → Outro. Vocals: gritty, motivational but concrete; no platitudes. Negatives: avoid modern trap hats, 808‑dominant subs, glossy risers, heavy autotune; vocal‑forward, dynamic master." data-lyrics="[Intro]
 [Rhodes stab; handclap pickup]
 
 [Verse 1]
@@ -1111,7 +1122,7 @@ Small moves — watch the ground turn new.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--small-moves.mp3" data-track-title="Small Moves" data-album-title="Nine Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="’90s boom‑bap at 92 BPM; confident, grounded mood; Rhodes/piano stabs on chopped loop; punchy kick+snare; repeatable maxim hook with double chorus finale. Structure: Intro → 3 x Verse/Chorus → Double Chorus → Outro. Vocals: gritty, motivational but concrete; no platitudes. Negatives: avoid modern trap hats, 808‑dominant subs, glossy risers, heavy autotune; vocal‑forward, dynamic master." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/nine-branches--small-moves.mp3" data-track-title="Small Moves" data-album-title="Nine Branches" data-album-slug="nine-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png" data-style-prompt="’90s boom‑bap at 92 BPM; confident, grounded mood; Rhodes/piano stabs on chopped loop; punchy kick+snare; repeatable maxim hook with double chorus finale. Structure: Intro → 3 x Verse/Chorus → Double Chorus → Outro. Vocals: gritty, motivational but concrete; no platitudes. Negatives: avoid modern trap hats, 808‑dominant subs, glossy risers, heavy autotune; vocal‑forward, dynamic master." data-lyrics="[Intro]
 [Rhodes stab; handclap pickup]
 
 [Verse 1]
@@ -1178,6 +1189,7 @@ Small moves — watch the ground turn new.
             </div>
           </div>
         
+        </div>
       </div>
     
   </main>

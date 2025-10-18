@@ -18,6 +18,8 @@ const TRACKS_DIR = path.join(ASSETS_DIR, 'tracks');
 const COVERS_DIR = path.join(ASSETS_DIR, 'covers');
 const CORA_ALBUMS_DIR = path.join(__dirname, '../cora/harvest/albums/out');
 
+const FORCE_UPLOAD = process.argv.includes('--force');
+
 // You'll need to set this environment variable:
 // BLOB_READ_WRITE_TOKEN from your Vercel dashboard
 const BLOB_TOKEN = process.env.BLOB_READ_WRITE_TOKEN;
@@ -35,15 +37,39 @@ if (!BLOB_TOKEN) {
 
 async function uploadFile(filePath, blobPath) {
   const fileBuffer = await fs.readFile(filePath);
-  const contentType = filePath.endsWith('.mp3') ? 'audio/mpeg' : 'image/jpeg';
+  const ext = path.extname(filePath).toLowerCase();
+
+  let contentType = 'application/octet-stream';
+  if (ext === '.mp3') contentType = 'audio/mpeg';
+  else if (ext === '.wav') contentType = 'audio/wav';
+  else if (ext === '.flac') contentType = 'audio/flac';
+  else if (ext === '.m4a') contentType = 'audio/mp4';
+  else if (ext === '.ogg') contentType = 'audio/ogg';
+  else if (ext === '.jpg' || ext === '.jpeg') contentType = 'image/jpeg';
+  else if (ext === '.png') contentType = 'image/png';
+  else if (ext === '.webp') contentType = 'image/webp';
 
   const blob = await put(blobPath, fileBuffer, {
     access: 'public',
     token: BLOB_TOKEN,
     contentType,
+    addRandomSuffix: false,
+    allowOverwrite: true,
   });
 
   return blob.url;
+}
+
+async function resolveFilePath(candidates) {
+  for (const candidate of candidates) {
+    try {
+      await fs.access(candidate);
+      return candidate;
+    } catch {
+      // keep searching
+    }
+  }
+  return null;
 }
 
 async function processAlbum(albumDir) {
@@ -57,47 +83,76 @@ async function processAlbum(albumDir) {
   let modified = false;
 
   // Upload cover image
-  if (frontmatter.cover_image && frontmatter.cover_image.includes('suno.ai')) {
-    const coverFilename = `${albumSlug}.jpg`;
-    const coverPath = path.join(COVERS_DIR, coverFilename);
+  if (frontmatter.cover_image && (FORCE_UPLOAD || frontmatter.cover_image.includes('suno.ai'))) {
+    const coverCandidates = [
+      `${albumSlug}.jpg`,
+      `${albumSlug}.jpeg`,
+      `${albumSlug}.png`,
+      'cover.jpg',
+      'cover.jpeg',
+      'cover.png',
+    ];
 
-    try {
-      await fs.access(coverPath);
-      console.log(`  ⬆️  Uploading cover: ${coverFilename}`);
-      const blobUrl = await uploadFile(coverPath, `covers/${coverFilename}`);
+    const candidateCovers = [
+      ...coverCandidates.map(name => path.join(COVERS_DIR, name)),
+      ...coverCandidates.map(name => path.join(ASSETS_DIR, albumSlug, name)),
+    ];
+
+    const coverPath = await resolveFilePath(candidateCovers);
+
+    if (coverPath) {
+      const ext = path.extname(coverPath).toLowerCase() || '.jpg';
+      const blobKey = `covers/${albumSlug}${ext}`;
+      console.log(`  ⬆️  ${FORCE_UPLOAD ? 'Re-uploading' : 'Uploading'} cover: ${path.basename(coverPath)}`);
+      const blobUrl = await uploadFile(coverPath, blobKey);
       frontmatter.cover_image = blobUrl;
       modified = true;
       console.log(`  ✓ Cover URL: ${blobUrl}`);
-    } catch (error) {
-      console.log(`  ⊘ Cover file not found locally: ${coverFilename}`);
+    } else {
+      console.log(`  ⊘ Cover file not found locally (searched ${coverCandidates.join(', ')})`);
     }
   }
 
   // Upload tracks
   if (frontmatter.tracks) {
     for (const track of frontmatter.tracks) {
-      if (!track.suno_url) {
+      if (!track.suno_url && !FORCE_UPLOAD) {
         console.log(`  ⊘ Skipping ${track.title} (no suno_url)`);
         continue;
       }
 
-      if (!track.suno_url.includes('suno.ai')) {
+      const needsUpload = FORCE_UPLOAD || (track.suno_url && track.suno_url.includes('suno.ai'));
+      if (!needsUpload) {
         console.log(`  ✓ ${track.title} already migrated`);
         continue;
       }
 
-      const trackFilename = `${albumSlug}--${track.slug}.mp3`;
-      const trackPath = path.join(TRACKS_DIR, trackFilename);
+      if (FORCE_UPLOAD && track.suno_url && !track.suno_url.includes('suno.ai')) {
+        console.log(`  ↻ Forcing re-upload of ${track.title}`);
+      }
 
-      try {
-        await fs.access(trackPath);
-        console.log(`  ⬆️  Uploading: ${track.title}`);
+      const trackFilename = `${albumSlug}--${track.slug}.mp3`;
+      const albumTrackDir = path.join(ASSETS_DIR, albumSlug);
+      const candidateTracks = [
+        path.join(TRACKS_DIR, trackFilename),
+        path.join(albumTrackDir, trackFilename),
+        path.join(albumTrackDir, 'tracks', trackFilename),
+        path.join(albumTrackDir, `${track.slug}.mp3`),
+        path.join(albumTrackDir, `${track.title}.mp3`),
+        path.join(albumTrackDir, 'tracks', `${track.slug}.mp3`),
+        path.join(albumTrackDir, 'tracks', `${track.title}.mp3`),
+      ];
+
+      const trackPath = await resolveFilePath(candidateTracks);
+
+      if (trackPath) {
+        console.log(`  ⬆️  ${FORCE_UPLOAD ? 'Re-uploading' : 'Uploading'}: ${track.title}`);
         const blobUrl = await uploadFile(trackPath, `tracks/${trackFilename}`);
         track.suno_url = blobUrl;
         modified = true;
         console.log(`  ✓ Track URL: ${blobUrl}`);
-      } catch (error) {
-        console.log(`  ⊘ Track file not found locally: ${trackFilename}`);
+      } else {
+        console.log(`  ⊘ Track file not found locally (searched for variants of ${trackFilename})`);
       }
     }
   }
@@ -112,6 +167,10 @@ async function processAlbum(albumDir) {
 
 async function main() {
   console.log('🎵 Uploading music assets to Vercel Blob\n');
+
+  if (FORCE_UPLOAD) {
+    console.log('⚠️  Force mode enabled — existing blob URLs will be overwritten if matching assets are found.\n');
+  }
 
   // Check for assets directory
   try {

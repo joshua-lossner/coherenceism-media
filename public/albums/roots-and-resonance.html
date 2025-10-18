@@ -7,30 +7,41 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=13">
+  <link rel="stylesheet" href="/styles.css?v=15">
   <meta name="description" content="Coherenceism Music - Albums, songs, and lyrics from the CORA network">
 </head>
 <body>
+  <script defer src="https://vercel.com/analytics/script.js"></script>
   <main class="container">
     
-      <a href="/" class="home-button" title="Back to albums">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-        </svg>
-      </a>
+      <div class="album-detail-page">
+        <a href="/" class="home-button" title="Back to albums">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+          </svg>
+        </a>
 
-      <div class="album-detail-header">
-        <div class="album-detail-cover">
-          <img src="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" alt="Roots and Resonance — Coherenceism in Roots Reggae & Dub" />
-        </div>
-        <div class="album-detail-info">
-          <h1>Roots and Resonance — Coherenceism in Roots Reggae & Dub</h1>
-          <p class="album-inspiration">A roots‑forward reggae album that carries Coherenceism’s tone: low, warm bass and an easy one‑drop that leaves space for breath. Upstroke guitar and organ bubble keep the pocket steady while horn lines and a melodica hook thread a simple two‑ or three‑note “resonance motif” across songs. Dub is a technique, not the destination: tasteful spring reverb and tape echo open pockets without drowning the message.</p>
-        </div>
-      </div>
+        <div class="album-detail-top">
+          <div class="album-detail-header">
+            <div class="album-detail-cover">
+              <img src="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" alt="Roots and Resonance — Coherenceism in Roots Reggae & Dub" />
+            </div>
+            <div class="album-detail-info">
+              <h1>Roots and Resonance — Coherenceism in Roots Reggae & Dub</h1>
+              <div class="album-concept"><p>A roots‑forward reggae record that carries Coherenceism’s center: one‑drop drums, deep round bass, and the steady lift of upstroke guitar and organ bubble. Horns and melodica thread a simple resonance motif across the set; dub is a technique, not a flood—spring reverb and tape echo open space without washing out the voice. The arc moves from wide‑field awareness toward the intimate and practical. Tempos stay easy (72–90 BPM); the feel is grounded, hopeful, and unhurried.</p></div>
+            </div>
+          </div>
 
-      <div class="tracks-grid">
-        
+          <button class="play-album-header-btn play-album-btn" data-album-slug="roots-and-resonance">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            Play Album
+          </button>
+        </div>
+
+        <div class="tracks-grid">
+          
           <div class="track-grid-item" data-track-index="0" data-album-slug="roots-and-resonance">
             <div class="track-grid-info">
               <div class="track-grid-number">01</div>
@@ -38,7 +49,7 @@
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--one-field-one-heartbeat.mp3" data-track-title="One Field" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 76 BPM; one‑drop groove with deep round bass, off‑beat guitar upstrokes, organ bubble, light shakers, and tasteful spring reverb/tape echo. Warm soulful lead vocal with gentle lilt; stacked harmonies on choruses. Include a short [Instrumental Break] with dub‑style echoes before the final chorus; keep delays musical, not washed." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--one-field-one-heartbeat.mp3" data-track-title="One Field" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-album-slug="roots-and-resonance" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 76 BPM; one‑drop groove with deep round bass, off‑beat guitar upstrokes, organ bubble, light shakers, and tasteful spring reverb/tape echo. Warm soulful lead vocal with gentle lilt; stacked harmonies on choruses. Include a short [Instrumental Break] with dub‑style echoes before the final chorus; keep delays musical, not washed." data-lyrics="[Intro]
 [Horns state a three‑note motif; organ bubble enters]
 
 [Verse 1]
@@ -81,7 +92,7 @@ Section tags and variations
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--one-field-one-heartbeat.mp3" data-track-title="One Field" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 76 BPM; one‑drop groove with deep round bass, off‑beat guitar upstrokes, organ bubble, light shakers, and tasteful spring reverb/tape echo. Warm soulful lead vocal with gentle lilt; stacked harmonies on choruses. Include a short [Instrumental Break] with dub‑style echoes before the final chorus; keep delays musical, not washed." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--one-field-one-heartbeat.mp3" data-track-title="One Field" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-album-slug="roots-and-resonance" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 76 BPM; one‑drop groove with deep round bass, off‑beat guitar upstrokes, organ bubble, light shakers, and tasteful spring reverb/tape echo. Warm soulful lead vocal with gentle lilt; stacked harmonies on choruses. Include a short [Instrumental Break] with dub‑style echoes before the final chorus; keep delays musical, not washed." data-lyrics="[Intro]
 [Horns state a three‑note motif; organ bubble enters]
 
 [Verse 1]
@@ -135,7 +146,7 @@ Section tags and variations
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--compost-the-endings.mp3" data-track-title="Compost the Endings" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 74 BPM with one‑drop drums (cross‑stick), deep round bass, off‑beat guitar upstrokes, organ bubble, and light congas. Melodica doubles the hook; spring reverb and short tape slap on select words. Keep verses narrative and the chorus mantra‑simple; add a tastefully sparse [Instrumental Break] with dub‑style echoes before the final chorus." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--compost-the-endings.mp3" data-track-title="Compost the Endings" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-album-slug="roots-and-resonance" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 74 BPM with one‑drop drums (cross‑stick), deep round bass, off‑beat guitar upstrokes, organ bubble, and light congas. Melodica doubles the hook; spring reverb and short tape slap on select words. Keep verses narrative and the chorus mantra‑simple; add a tastefully sparse [Instrumental Break] with dub‑style echoes before the final chorus." data-lyrics="[Intro]
 [Melodica hints at the chorus line]
 
 [Verse 1]
@@ -173,7 +184,7 @@ Turn them into light.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--compost-the-endings.mp3" data-track-title="Compost the Endings" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 74 BPM with one‑drop drums (cross‑stick), deep round bass, off‑beat guitar upstrokes, organ bubble, and light congas. Melodica doubles the hook; spring reverb and short tape slap on select words. Keep verses narrative and the chorus mantra‑simple; add a tastefully sparse [Instrumental Break] with dub‑style echoes before the final chorus." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--compost-the-endings.mp3" data-track-title="Compost the Endings" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-album-slug="roots-and-resonance" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 74 BPM with one‑drop drums (cross‑stick), deep round bass, off‑beat guitar upstrokes, organ bubble, and light congas. Melodica doubles the hook; spring reverb and short tape slap on select words. Keep verses narrative and the chorus mantra‑simple; add a tastefully sparse [Instrumental Break] with dub‑style echoes before the final chorus." data-lyrics="[Intro]
 [Melodica hints at the chorus line]
 
 [Verse 1]
@@ -222,7 +233,7 @@ Turn them into light.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--ride-dont-force.mp3" data-track-title="Ride" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 78 BPM, laid‑back one‑drop with round bass, off‑beat guitar upstrokes, organ bubble; horns answer the hook with a two‑note call. Warm soulful lead, stacked harmonies on the chorus; tasteful spring reverb/tape echo. Include a short [Instrumental Break] with dub‑style echoes and keep timing slightly behind the click." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--ride-dont-force.mp3" data-track-title="Ride" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-album-slug="roots-and-resonance" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 78 BPM, laid‑back one‑drop with round bass, off‑beat guitar upstrokes, organ bubble; horns answer the hook with a two‑note call. Warm soulful lead, stacked harmonies on the chorus; tasteful spring reverb/tape echo. Include a short [Instrumental Break] with dub‑style echoes and keep timing slightly behind the click." data-lyrics="[Intro]
 [Sea noise low; horns answer guitar]
 
 [Verse 1]
@@ -260,7 +271,7 @@ Lean and hold the course.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--ride-dont-force.mp3" data-track-title="Ride" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 78 BPM, laid‑back one‑drop with round bass, off‑beat guitar upstrokes, organ bubble; horns answer the hook with a two‑note call. Warm soulful lead, stacked harmonies on the chorus; tasteful spring reverb/tape echo. Include a short [Instrumental Break] with dub‑style echoes and keep timing slightly behind the click." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--ride-dont-force.mp3" data-track-title="Ride" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-album-slug="roots-and-resonance" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 78 BPM, laid‑back one‑drop with round bass, off‑beat guitar upstrokes, organ bubble; horns answer the hook with a two‑note call. Warm soulful lead, stacked harmonies on the chorus; tasteful spring reverb/tape echo. Include a short [Instrumental Break] with dub‑style echoes and keep timing slightly behind the click." data-lyrics="[Intro]
 [Sea noise low; horns answer guitar]
 
 [Verse 1]
@@ -309,7 +320,7 @@ Lean and hold the course.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--one-breath-one-drop.mp3" data-track-title="One Breath" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Gentle roots reggae at 72 BPM; one‑drop drums, warm bass, off‑beat guitar upstrokes, organ bubble; include a lyrical [Instrumental Break] (melodica‑led) in the middle. Soulful lead vocal with stacked harmonies on chorus. Use spring reverb and light tape echo on chorus tags." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--one-breath-one-drop.mp3" data-track-title="One Breath" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-album-slug="roots-and-resonance" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Gentle roots reggae at 72 BPM; one‑drop drums, warm bass, off‑beat guitar upstrokes, organ bubble; include a lyrical [Instrumental Break] (melodica‑led) in the middle. Soulful lead vocal with stacked harmonies on chorus. Use spring reverb and light tape echo on chorus tags." data-lyrics="[Intro]
 [Soft melodica motif; shakers enter]
 
 [Verse 1]
@@ -343,7 +354,7 @@ Find the ground and let it rock.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--one-breath-one-drop.mp3" data-track-title="One Breath" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Gentle roots reggae at 72 BPM; one‑drop drums, warm bass, off‑beat guitar upstrokes, organ bubble; include a lyrical [Instrumental Break] (melodica‑led) in the middle. Soulful lead vocal with stacked harmonies on chorus. Use spring reverb and light tape echo on chorus tags." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--one-breath-one-drop.mp3" data-track-title="One Breath" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-album-slug="roots-and-resonance" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Gentle roots reggae at 72 BPM; one‑drop drums, warm bass, off‑beat guitar upstrokes, organ bubble; include a lyrical [Instrumental Break] (melodica‑led) in the middle. Soulful lead vocal with stacked harmonies on chorus. Use spring reverb and light tape echo on chorus tags." data-lyrics="[Intro]
 [Soft melodica motif; shakers enter]
 
 [Verse 1]
@@ -388,7 +399,7 @@ Find the ground and let it rock.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--next-true-thing.mp3" data-track-title="Next True Thing" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 80 BPM; steady one‑drop, organ bubble, deep round bass; add congas in Verse 2. Soulful lead with crowd‑ready call/response on the hook. Spring reverb and tape echo used sparingly; include a compact [Instrumental Break] with dub‑style echoes before the last chorus." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--next-true-thing.mp3" data-track-title="Next True Thing" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-album-slug="roots-and-resonance" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 80 BPM; steady one‑drop, organ bubble, deep round bass; add congas in Verse 2. Soulful lead with crowd‑ready call/response on the hook. Spring reverb and tape echo used sparingly; include a compact [Instrumental Break] with dub‑style echoes before the last chorus." data-lyrics="[Intro]
 [Handclaps and shakers tuck in]
 
 [Verse 1]
@@ -426,7 +437,7 @@ Let the living line ring.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--next-true-thing.mp3" data-track-title="Next True Thing" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 80 BPM; steady one‑drop, organ bubble, deep round bass; add congas in Verse 2. Soulful lead with crowd‑ready call/response on the hook. Spring reverb and tape echo used sparingly; include a compact [Instrumental Break] with dub‑style echoes before the last chorus." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--next-true-thing.mp3" data-track-title="Next True Thing" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-album-slug="roots-and-resonance" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 80 BPM; steady one‑drop, organ bubble, deep round bass; add congas in Verse 2. Soulful lead with crowd‑ready call/response on the hook. Spring reverb and tape echo used sparingly; include a compact [Instrumental Break] with dub‑style echoes before the last chorus." data-lyrics="[Intro]
 [Handclaps and shakers tuck in]
 
 [Verse 1]
@@ -475,7 +486,7 @@ Let the living line ring.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--many-hands-one-sound.mp3" data-track-title="Many Hands" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Rocksteady‑leaning roots at 84 BPM; one‑drop pocket with lively off‑beat guitar, organ bubble, and a bright horn section. Call‑and‑response chorus; insert a short [Instrumental Break] (horn‑led) between Verse 2 and Chorus. Spring reverb/tape echo for taste; keep the groove buoyant." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--many-hands-one-sound.mp3" data-track-title="Many Hands" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-album-slug="roots-and-resonance" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Rocksteady‑leaning roots at 84 BPM; one‑drop pocket with lively off‑beat guitar, organ bubble, and a bright horn section. Call‑and‑response chorus; insert a short [Instrumental Break] (horn‑led) between Verse 2 and Chorus. Spring reverb/tape echo for taste; keep the groove buoyant." data-lyrics="[Intro]
 [Band count‑in; horn pickup]
 
 [Verse 1]
@@ -516,7 +527,7 @@ This is how we move the town.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--many-hands-one-sound.mp3" data-track-title="Many Hands" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Rocksteady‑leaning roots at 84 BPM; one‑drop pocket with lively off‑beat guitar, organ bubble, and a bright horn section. Call‑and‑response chorus; insert a short [Instrumental Break] (horn‑led) between Verse 2 and Chorus. Spring reverb/tape echo for taste; keep the groove buoyant." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--many-hands-one-sound.mp3" data-track-title="Many Hands" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-album-slug="roots-and-resonance" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Rocksteady‑leaning roots at 84 BPM; one‑drop pocket with lively off‑beat guitar, organ bubble, and a bright horn section. Call‑and‑response chorus; insert a short [Instrumental Break] (horn‑led) between Verse 2 and Chorus. Spring reverb/tape echo for taste; keep the groove buoyant." data-lyrics="[Intro]
 [Band count‑in; horn pickup]
 
 [Verse 1]
@@ -568,7 +579,7 @@ This is how we move the town.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--teach-the-wire-to-sing.mp3" data-track-title="Teach the Wire to Sing" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 82 BPM; one‑drop drums, round bass, off‑beat guitar upstrokes, organ bubble; tasteful dub‑style echoes to illustrate “the wire.” Warm lead vocal, call‑and‑response on hook. Include an [Instrumental Break] with melodic echo fragments before the final chorus." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--teach-the-wire-to-sing.mp3" data-track-title="Teach the Wire to Sing" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-album-slug="roots-and-resonance" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 82 BPM; one‑drop drums, round bass, off‑beat guitar upstrokes, organ bubble; tasteful dub‑style echoes to illustrate “the wire.” Warm lead vocal, call‑and‑response on hook. Include an [Instrumental Break] with melodic echo fragments before the final chorus." data-lyrics="[Intro]
 [Test tone → organ swells; tape hiss]
 
 [Verse 1]
@@ -606,7 +617,7 @@ Love on every channel.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--teach-the-wire-to-sing.mp3" data-track-title="Teach the Wire to Sing" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 82 BPM; one‑drop drums, round bass, off‑beat guitar upstrokes, organ bubble; tasteful dub‑style echoes to illustrate “the wire.” Warm lead vocal, call‑and‑response on hook. Include an [Instrumental Break] with melodic echo fragments before the final chorus." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--teach-the-wire-to-sing.mp3" data-track-title="Teach the Wire to Sing" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-album-slug="roots-and-resonance" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 82 BPM; one‑drop drums, round bass, off‑beat guitar upstrokes, organ bubble; tasteful dub‑style echoes to illustrate “the wire.” Warm lead vocal, call‑and‑response on hook. Include an [Instrumental Break] with melodic echo fragments before the final chorus." data-lyrics="[Intro]
 [Test tone → organ swells; tape hiss]
 
 [Verse 1]
@@ -655,7 +666,7 @@ Love on every channel.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--sweet-unknown.mp3" data-track-title="Sweet Unknown" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 74 BPM; airy one‑drop, organ bubble, mellow horns; add a soft [Bridge] with hand drums after Verse 2 and a brief [Instrumental Break] with dub‑style echoes before the final chorus. Warm, meditative lead; stacked harmonies on the hook. Keep echoes subtle." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--sweet-unknown.mp3" data-track-title="Sweet Unknown" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-album-slug="roots-and-resonance" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 74 BPM; airy one‑drop, organ bubble, mellow horns; add a soft [Bridge] with hand drums after Verse 2 and a brief [Instrumental Break] with dub‑style echoes before the final chorus. Warm, meditative lead; stacked harmonies on the hook. Keep echoes subtle." data-lyrics="[Intro]
 [Shakers, organ pad; melodica breath]
 
 [Verse 1]
@@ -696,7 +707,7 @@ Meet me where the stars are bright.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--sweet-unknown.mp3" data-track-title="Sweet Unknown" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 74 BPM; airy one‑drop, organ bubble, mellow horns; add a soft [Bridge] with hand drums after Verse 2 and a brief [Instrumental Break] with dub‑style echoes before the final chorus. Warm, meditative lead; stacked harmonies on the hook. Keep echoes subtle." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--sweet-unknown.mp3" data-track-title="Sweet Unknown" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-album-slug="roots-and-resonance" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="Roots reggae at 74 BPM; airy one‑drop, organ bubble, mellow horns; add a soft [Bridge] with hand drums after Verse 2 and a brief [Instrumental Break] with dub‑style echoes before the final chorus. Warm, meditative lead; stacked harmonies on the hook. Keep echoes subtle." data-lyrics="[Intro]
 [Shakers, organ pad; melodica breath]
 
 [Verse 1]
@@ -748,7 +759,7 @@ Meet me where the stars are bright.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--thread-by-thread.mp3" data-track-title="Thread by Thread" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="1950s rock & roll, ~150 BPM straight‑eighths with handclaps, boogie‑woogie piano quoting a three‑note motif, clean twang guitar, upright bass, and ride kit. Open, friendly lead with supportive BGVs in English; include an [Instrumental Break] trading lines between piano and guitar. Exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--thread-by-thread.mp3" data-track-title="Thread by Thread" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-album-slug="roots-and-resonance" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="1950s rock & roll, ~150 BPM straight‑eighths with handclaps, boogie‑woogie piano quoting a three‑note motif, clean twang guitar, upright bass, and ride kit. Open, friendly lead with supportive BGVs in English; include an [Instrumental Break] trading lines between piano and guitar. Exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
 [Claps on two and four; piano lick quotes motif]
 
 [Verse 1]
@@ -782,7 +793,7 @@ Thread by thread with me and you.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--thread-by-thread.mp3" data-track-title="Thread by Thread" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="1950s rock & roll, ~150 BPM straight‑eighths with handclaps, boogie‑woogie piano quoting a three‑note motif, clean twang guitar, upright bass, and ride kit. Open, friendly lead with supportive BGVs in English; include an [Instrumental Break] trading lines between piano and guitar. Exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/roots-and-resonance--thread-by-thread.mp3" data-track-title="Thread by Thread" data-album-title="Roots and Resonance — Coherenceism in Roots Reggae & Dub" data-album-slug="roots-and-resonance" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png" data-style-prompt="1950s rock & roll, ~150 BPM straight‑eighths with handclaps, boogie‑woogie piano quoting a three‑note motif, clean twang guitar, upright bass, and ride kit. Open, friendly lead with supportive BGVs in English; include an [Instrumental Break] trading lines between piano and guitar. Exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
 [Claps on two and four; piano lick quotes motif]
 
 [Verse 1]
@@ -820,6 +831,7 @@ Thread by thread with me and you.
             </div>
           </div>
         
+        </div>
       </div>
     
   </main>

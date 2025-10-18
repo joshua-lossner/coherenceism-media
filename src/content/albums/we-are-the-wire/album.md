@@ -38,8 +38,8 @@ tracks:
     slug: carrier-wave
     suno_url: >-
       https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--carrier-wave.mp3
-  - title: Death, Change, Reality
-    slug: death-change-reality
+  - title: Nothing Disappears
+    slug: nothing-disappears
     suno_url: 'https://cdn1.suno.ai/a489bf85-85cc-41ea-a2e4-09f40617195e.mp3'
   - title: Don't Push
     Align: null

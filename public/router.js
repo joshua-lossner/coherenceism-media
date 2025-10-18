@@ -50,6 +50,11 @@ class CoherenceRouter {
   }
 
   handleClick(e) {
+    // Ignore clicks within the global player or slide-up panel
+    if (e.target.closest('#global-player') || e.target.closest('#slide-up-panel')) {
+      return;
+    }
+
     const link = e.target.closest('a[href]');
 
     if (!link) return;

@@ -7,30 +7,41 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=13">
+  <link rel="stylesheet" href="/styles.css?v=15">
   <meta name="description" content="Coherenceism Music - Albums, songs, and lyrics from the CORA network">
 </head>
 <body>
+  <script defer src="https://vercel.com/analytics/script.js"></script>
   <main class="container">
     
-      <a href="/" class="home-button" title="Back to albums">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-        </svg>
-      </a>
+      <div class="album-detail-page">
+        <a href="/" class="home-button" title="Back to albums">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+          </svg>
+        </a>
 
-      <div class="album-detail-header">
-        <div class="album-detail-cover">
-          <img src="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" alt="Quiet Signals" />
-        </div>
-        <div class="album-detail-info">
-          <h1>Quiet Signals</h1>
-          <p class="album-inspiration">An album for late trains and quiet rooms. It treats breath, touch, and pauses as instruments. Songs move like small decisions: a held beat, a rotated coaster, a single LED blink. Field recordings (train hum, HVAC cycles) and tape‑warm keys sit under hushed vocals. The arc moves from learning to listen (1–3), through pressure and misdirection (4–6), to alignment and a small, decisive move (7–8).</p>
-        </div>
-      </div>
+        <div class="album-detail-top">
+          <div class="album-detail-header">
+            <div class="album-detail-cover">
+              <img src="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" alt="Quiet Signals" />
+            </div>
+            <div class="album-detail-info">
+              <h1>Quiet Signals</h1>
+              <div class="album-concept"><p>An album for late trains and quiet rooms. It treats breath, touch, and pauses as instruments. Songs move like small decisions: a held beat, a rotated coaster, a single LED blink. Field recordings (train hum, HVAC cycles) and tape‑warm keys sit under hushed vocals. The arc moves from learning to listen (1–3), through pressure and misdirection (4–6), to alignment and a small, decisive move (7–8).</p></div>
+            </div>
+          </div>
 
-      <div class="tracks-grid">
-        
+          <button class="play-album-header-btn play-album-btn" data-album-slug="quiet-signals">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            Play Album
+          </button>
+        </div>
+
+        <div class="tracks-grid">
+          
           <div class="track-grid-item" data-track-index="0" data-album-slug="quiet-signals">
             <div class="track-grid-info">
               <div class="track-grid-number">01</div>
@@ -38,7 +49,7 @@
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/quiet-signals--noise-map.mp3" data-track-title="Noise Map" data-album-title="Quiet Signals" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" data-style-prompt="Cinematic downtempo around 84 BPM with analog synth pads, tape‑warm piano, soft brushed drums, and subtle sub‑bass. Late‑night city ambience with a gentle train‑hum motif; hushed female lead with whispered harmonies; end on a small open loop. [Intro: field recording — train hum] [Break: pencil scratches on paper] Negatives: no supersaws, no heavy reverb wash, no overcompression, no harsh distortion." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/quiet-signals--noise-map.mp3" data-track-title="Noise Map" data-album-title="Quiet Signals" data-album-slug="quiet-signals" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" data-style-prompt="Cinematic downtempo around 84 BPM with analog synth pads, tape‑warm piano, soft brushed drums, and subtle sub‑bass. Late‑night city ambience with a gentle train‑hum motif; hushed female lead with whispered harmonies; end on a small open loop. [Intro: field recording — train hum] [Break: pencil scratches on paper] Negatives: no supersaws, no heavy reverb wash, no overcompression, no harsh distortion." data-lyrics="[Intro]
 [Train hum, soft pad swell]
 
 [Verse 1]
@@ -75,7 +86,7 @@ Quiet hands and tiny shifts
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/quiet-signals--noise-map.mp3" data-track-title="Noise Map" data-album-title="Quiet Signals" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" data-style-prompt="Cinematic downtempo around 84 BPM with analog synth pads, tape‑warm piano, soft brushed drums, and subtle sub‑bass. Late‑night city ambience with a gentle train‑hum motif; hushed female lead with whispered harmonies; end on a small open loop. [Intro: field recording — train hum] [Break: pencil scratches on paper] Negatives: no supersaws, no heavy reverb wash, no overcompression, no harsh distortion." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/quiet-signals--noise-map.mp3" data-track-title="Noise Map" data-album-title="Quiet Signals" data-album-slug="quiet-signals" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" data-style-prompt="Cinematic downtempo around 84 BPM with analog synth pads, tape‑warm piano, soft brushed drums, and subtle sub‑bass. Late‑night city ambience with a gentle train‑hum motif; hushed female lead with whispered harmonies; end on a small open loop. [Intro: field recording — train hum] [Break: pencil scratches on paper] Negatives: no supersaws, no heavy reverb wash, no overcompression, no harsh distortion." data-lyrics="[Intro]
 [Train hum, soft pad swell]
 
 [Verse 1]
@@ -123,7 +134,7 @@ Quiet hands and tiny shifts
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/quiet-signals--the-quiet-signal.mp3" data-track-title="The Quiet Signal" data-album-title="Quiet Signals" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" data-style-prompt="Cinematic downtempo at ~84 BPM; soft drums, analog pads, tape‑warm piano, close‑miked hush vocals with whispered harmonies. Sparse micro‑gesture motifs in percussion; restrained builds; a calm, confident chorus. [Intro: cafe room tone] [Break: fingertip taps, coaster turn] Negatives: no heavy reverb wash, no loud risers, no harsh distortion." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/quiet-signals--the-quiet-signal.mp3" data-track-title="The Quiet Signal" data-album-title="Quiet Signals" data-album-slug="quiet-signals" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" data-style-prompt="Cinematic downtempo at ~84 BPM; soft drums, analog pads, tape‑warm piano, close‑miked hush vocals with whispered harmonies. Sparse micro‑gesture motifs in percussion; restrained builds; a calm, confident chorus. [Intro: cafe room tone] [Break: fingertip taps, coaster turn] Negatives: no heavy reverb wash, no loud risers, no harsh distortion." data-lyrics="[Intro]
 [Cafe murmur, cup ring]
 
 [Verse 1]
@@ -160,7 +171,7 @@ Leave the rest inside the murk
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/quiet-signals--the-quiet-signal.mp3" data-track-title="The Quiet Signal" data-album-title="Quiet Signals" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" data-style-prompt="Cinematic downtempo at ~84 BPM; soft drums, analog pads, tape‑warm piano, close‑miked hush vocals with whispered harmonies. Sparse micro‑gesture motifs in percussion; restrained builds; a calm, confident chorus. [Intro: cafe room tone] [Break: fingertip taps, coaster turn] Negatives: no heavy reverb wash, no loud risers, no harsh distortion." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/quiet-signals--the-quiet-signal.mp3" data-track-title="The Quiet Signal" data-album-title="Quiet Signals" data-album-slug="quiet-signals" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" data-style-prompt="Cinematic downtempo at ~84 BPM; soft drums, analog pads, tape‑warm piano, close‑miked hush vocals with whispered harmonies. Sparse micro‑gesture motifs in percussion; restrained builds; a calm, confident chorus. [Intro: cafe room tone] [Break: fingertip taps, coaster turn] Negatives: no heavy reverb wash, no loud risers, no harsh distortion." data-lyrics="[Intro]
 [Cafe murmur, cup ring]
 
 [Verse 1]
@@ -208,7 +219,7 @@ Leave the rest inside the murk
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/quiet-signals--archive-of-breath.mp3" data-track-title="Archive of Breath" data-album-title="Quiet Signals" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" data-style-prompt="Downtempo/ambient at ~82–86 BPM with tape‑warm piano, analog pads, soft brush kit, and low room noise; intimate female lead, breathy harmonies. Motifs: HVAC hush, reel‑to‑reel click, wood creaks; pauses used as musical space. [Intro: room tone + tape start] [Bridge: held rest as address] Negatives: no epic drums, no washed‑out reverb, no metallic distortion." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/quiet-signals--archive-of-breath.mp3" data-track-title="Archive of Breath" data-album-title="Quiet Signals" data-album-slug="quiet-signals" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" data-style-prompt="Downtempo/ambient at ~82–86 BPM with tape‑warm piano, analog pads, soft brush kit, and low room noise; intimate female lead, breathy harmonies. Motifs: HVAC hush, reel‑to‑reel click, wood creaks; pauses used as musical space. [Intro: room tone + tape start] [Bridge: held rest as address] Negatives: no epic drums, no washed‑out reverb, no metallic distortion." data-lyrics="[Intro]
 [Tape clicks on; room breathes]
 
 [Verse 1]
@@ -245,7 +256,7 @@ Quiet returns what noise can’t detect
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/quiet-signals--archive-of-breath.mp3" data-track-title="Archive of Breath" data-album-title="Quiet Signals" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" data-style-prompt="Downtempo/ambient at ~82–86 BPM with tape‑warm piano, analog pads, soft brush kit, and low room noise; intimate female lead, breathy harmonies. Motifs: HVAC hush, reel‑to‑reel click, wood creaks; pauses used as musical space. [Intro: room tone + tape start] [Bridge: held rest as address] Negatives: no epic drums, no washed‑out reverb, no metallic distortion." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/quiet-signals--archive-of-breath.mp3" data-track-title="Archive of Breath" data-album-title="Quiet Signals" data-album-slug="quiet-signals" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" data-style-prompt="Downtempo/ambient at ~82–86 BPM with tape‑warm piano, analog pads, soft brush kit, and low room noise; intimate female lead, breathy harmonies. Motifs: HVAC hush, reel‑to‑reel click, wood creaks; pauses used as musical space. [Intro: room tone + tape start] [Bridge: held rest as address] Negatives: no epic drums, no washed‑out reverb, no metallic distortion." data-lyrics="[Intro]
 [Tape clicks on; room breathes]
 
 [Verse 1]
@@ -293,7 +304,7 @@ Quiet returns what noise can’t detect
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/quiet-signals--the-listening-room.mp3" data-track-title="The Listening Room" data-album-title="Quiet Signals" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" data-style-prompt="Cinematic downtempo ~86 BPM; subtractive mix with analog pads, soft drums, muted bass, minimal piano figures; hushed female lead, whisper harmonies. Theme: tuning self to open a window; small shifts; a single‑vibe room. [Intro: door close + hush] [Break: metronome‑like clicks, then cleaner window] Negatives: no big risers, no bombastic cymbals, no heavy sidechain pump." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/quiet-signals--the-listening-room.mp3" data-track-title="The Listening Room" data-album-title="Quiet Signals" data-album-slug="quiet-signals" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" data-style-prompt="Cinematic downtempo ~86 BPM; subtractive mix with analog pads, soft drums, muted bass, minimal piano figures; hushed female lead, whisper harmonies. Theme: tuning self to open a window; small shifts; a single‑vibe room. [Intro: door close + hush] [Break: metronome‑like clicks, then cleaner window] Negatives: no big risers, no bombastic cymbals, no heavy sidechain pump." data-lyrics="[Intro]
 [Door closes; rug absorbs]
 
 [Verse 1]
@@ -330,7 +341,7 @@ Carry it out of listening rooms
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/quiet-signals--the-listening-room.mp3" data-track-title="The Listening Room" data-album-title="Quiet Signals" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" data-style-prompt="Cinematic downtempo ~86 BPM; subtractive mix with analog pads, soft drums, muted bass, minimal piano figures; hushed female lead, whisper harmonies. Theme: tuning self to open a window; small shifts; a single‑vibe room. [Intro: door close + hush] [Break: metronome‑like clicks, then cleaner window] Negatives: no big risers, no bombastic cymbals, no heavy sidechain pump." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/quiet-signals--the-listening-room.mp3" data-track-title="The Listening Room" data-album-title="Quiet Signals" data-album-slug="quiet-signals" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" data-style-prompt="Cinematic downtempo ~86 BPM; subtractive mix with analog pads, soft drums, muted bass, minimal piano figures; hushed female lead, whisper harmonies. Theme: tuning self to open a window; small shifts; a single‑vibe room. [Intro: door close + hush] [Break: metronome‑like clicks, then cleaner window] Negatives: no big risers, no bombastic cymbals, no heavy sidechain pump." data-lyrics="[Intro]
 [Door closes; rug absorbs]
 
 [Verse 1]
@@ -378,7 +389,7 @@ Carry it out of listening rooms
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/quiet-signals--false-flags.mp3" data-track-title="False Flags" data-album-title="Quiet Signals" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" data-style-prompt="Downtempo 84–88 BPM; analog pads, muted bass, soft percussive textures (no splashy cymbals), close‑miked vocals with whisper harmonies. Tension theme: decoys and double‑confirmation; chorus resolves into calm certainty. [Intro: feed scroll SFX subtle] [Break: breath‑paced double tap] Negatives: no overt drops, no harsh distortion, no supersaw stacks." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/quiet-signals--false-flags.mp3" data-track-title="False Flags" data-album-title="Quiet Signals" data-album-slug="quiet-signals" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" data-style-prompt="Downtempo 84–88 BPM; analog pads, muted bass, soft percussive textures (no splashy cymbals), close‑miked vocals with whisper harmonies. Tension theme: decoys and double‑confirmation; chorus resolves into calm certainty. [Intro: feed scroll SFX subtle] [Break: breath‑paced double tap] Negatives: no overt drops, no harsh distortion, no supersaw stacks." data-lyrics="[Intro]
 [A feed scrolls, then dims]
 
 [Verse 1]
@@ -415,7 +426,7 @@ Hold your line, let panic pass
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/quiet-signals--false-flags.mp3" data-track-title="False Flags" data-album-title="Quiet Signals" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" data-style-prompt="Downtempo 84–88 BPM; analog pads, muted bass, soft percussive textures (no splashy cymbals), close‑miked vocals with whisper harmonies. Tension theme: decoys and double‑confirmation; chorus resolves into calm certainty. [Intro: feed scroll SFX subtle] [Break: breath‑paced double tap] Negatives: no overt drops, no harsh distortion, no supersaw stacks." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/quiet-signals--false-flags.mp3" data-track-title="False Flags" data-album-title="Quiet Signals" data-album-slug="quiet-signals" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/quiet-signals.png" data-style-prompt="Downtempo 84–88 BPM; analog pads, muted bass, soft percussive textures (no splashy cymbals), close‑miked vocals with whisper harmonies. Tension theme: decoys and double‑confirmation; chorus resolves into calm certainty. [Intro: feed scroll SFX subtle] [Break: breath‑paced double tap] Negatives: no overt drops, no harsh distortion, no supersaw stacks." data-lyrics="[Intro]
 [A feed scrolls, then dims]
 
 [Verse 1]
@@ -492,6 +503,7 @@ Hold your line, let panic pass
             </div>
           </div>
         
+        </div>
       </div>
     
   </main>

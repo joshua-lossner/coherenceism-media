@@ -688,6 +688,18 @@ footer {
   font-style: italic;
 }
 
+.album-concept {
+  margin-top: var(--spacing-md);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.album-concept p {
+  margin-bottom: var(--spacing-md);
+  color: var(--text-secondary);
+}
+
 /* Play Album Button */
 .play-album-header-btn {
   background: none;
@@ -1109,9 +1121,15 @@ footer {
   #prev-btn,
   #shuffle-btn,
   #repeat-btn,
-  #queue-btn,
-  #lyrics-btn {
+  #queue-btn {
     display: none;
+  }
+
+  #lyrics-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-sm);
   }
 
   .global-player-btn {
@@ -1297,6 +1315,7 @@ footer {
 /* Hide mini player when full-screen player is active */
 body.panel-open .global-player.active {
   transform: translateY(100%) !important;
+  pointer-events: none;
 }
 
 .slide-up-panel-header {
@@ -1645,6 +1664,15 @@ body.panel-open .global-player.active {
   color: var(--text-primary);
 }
 
+.slide-up-panel-prompt {
+  font-family: var(--font-family);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  white-space: pre-line;
+  padding: var(--spacing-md) 0;
+}
+
 /* Panel Queue Styles */
 .slide-up-panel-queue {
   display: flex;
@@ -1859,7 +1887,6 @@ body.panel-open .global-player.active {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    margin-bottom: 200px;
   }
 
   .slide-up-panel-tabs {
@@ -1871,7 +1898,6 @@ body.panel-open .global-player.active {
     display: flex;
     flex-direction: column;
     min-height: 0;
-    overflow: hidden;
   }
 
   .slide-up-tab-panel {
@@ -1880,18 +1906,11 @@ body.panel-open .global-player.active {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    padding-bottom: calc(160px + env(safe-area-inset-bottom, 0px));
   }
 
   .slide-up-tab-panel::-webkit-scrollbar {
     display: none;
-  }
-
-  .slide-up-panel-lyrics {
-    padding-bottom: var(--spacing-lg);
-  }
-
-  .slide-up-panel-queue {
-    padding-bottom: var(--spacing-lg);
   }
 
   /* Mobile controls: Fixed at bottom */

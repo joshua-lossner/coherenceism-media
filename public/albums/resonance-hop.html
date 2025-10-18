@@ -7,30 +7,41 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=13">
+  <link rel="stylesheet" href="/styles.css?v=15">
   <meta name="description" content="Coherenceism Music - Albums, songs, and lyrics from the CORA network">
 </head>
 <body>
+  <script defer src="https://vercel.com/analytics/script.js"></script>
   <main class="container">
     
-      <a href="/" class="home-button" title="Back to albums">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-        </svg>
-      </a>
+      <div class="album-detail-page">
+        <a href="/" class="home-button" title="Back to albums">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+          </svg>
+        </a>
 
-      <div class="album-detail-header">
-        <div class="album-detail-cover">
-          <img src="https://cdn2.suno.ai/87525f1a.jpeg?width=360" alt="Resonance Hop" />
-        </div>
-        <div class="album-detail-info">
-          <h1>Resonance Hop</h1>
-          <p class="album-inspiration">The sound of Coherenceism through a 1950s jukebox: twangy guitars with tape slap, upright bass that pops, a boogie‑woogie piano grinning in the corner, and a tenor sax that steps out front when the room leans in. Each song translates a branch into a dance—alignment becomes pocket, presence becomes a hush‑and‑harmony doo‑wop, and technology shows up as a new instrument that multiplies what you bring to it. The set stays simple and singable: I‑IV‑V and 12‑bar turns, catchy choruses, and a shared three‑note “resonance” motif that sneaks into intros and breaks. It’s youthful, honest, and built for moving together—because coherence feels like the room falling into time.</p>
-        </div>
-      </div>
+        <div class="album-detail-top">
+          <div class="album-detail-header">
+            <div class="album-detail-cover">
+              <img src="https://cdn2.suno.ai/87525f1a.jpeg?width=360" alt="Resonance Hop" />
+            </div>
+            <div class="album-detail-info">
+              <h1>Resonance Hop</h1>
+              <div class="album-concept"><p>The sound of Coherenceism through a 1950s jukebox: twangy guitars with tape slap, upright bass that pops, a boogie‑woogie piano grinning in the corner, and a tenor sax that steps out front when the room leans in. Each song translates a branch into a dance—alignment becomes pocket, presence becomes a hush‑and‑harmony doo‑wop, and technology shows up as a new instrument that multiplies what you bring to it. The set stays simple and singable: I‑IV‑V and 12‑bar turns, catchy choruses, and a shared three‑note “resonance” motif that sneaks into intros and breaks. It’s youthful, honest, and built for moving together—because coherence feels like the room falling into time.</p></div>
+            </div>
+          </div>
 
-      <div class="tracks-grid">
-        
+          <button class="play-album-header-btn play-album-btn" data-album-slug="resonance-hop">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            Play Album
+          </button>
+        </div>
+
+        <div class="tracks-grid">
+          
           <div class="track-grid-item" data-track-index="0" data-album-slug="resonance-hop">
             <div class="track-grid-info">
               <div class="track-grid-number">01</div>
@@ -38,7 +49,7 @@
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--the-universal-hop.mp3" data-track-title="The Universal Hop" data-album-title="Resonance Hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="Fast 1950s rock & roll shuffle (~156 BPM) with clean twang guitar and tape‑slapback, upright bass slap, boogie‑woogie piano, handclaps, and doo‑wop backing vocals. Energetic lead vocal in English; include a [Guitar Solo] and a [Handclap Break], then a double [Chorus] ending. Center‑heavy mono image; no modern trap/EDM, autotune, or contemporary synths." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--the-universal-hop.mp3" data-track-title="The Universal Hop" data-album-title="Resonance Hop" data-album-slug="resonance-hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="Fast 1950s rock & roll shuffle (~156 BPM) with clean twang guitar and tape‑slapback, upright bass slap, boogie‑woogie piano, handclaps, and doo‑wop backing vocals. Energetic lead vocal in English; include a [Guitar Solo] and a [Handclap Break], then a double [Chorus] ending. Center‑heavy mono image; no modern trap/EDM, autotune, or contemporary synths." data-lyrics="[Intro]
 [Band hits; three‑note “resonance” lick]
 
 [Verse 1]
@@ -79,7 +90,7 @@ One field, one pocket, one hop — hey!
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--the-universal-hop.mp3" data-track-title="The Universal Hop" data-album-title="Resonance Hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="Fast 1950s rock & roll shuffle (~156 BPM) with clean twang guitar and tape‑slapback, upright bass slap, boogie‑woogie piano, handclaps, and doo‑wop backing vocals. Energetic lead vocal in English; include a [Guitar Solo] and a [Handclap Break], then a double [Chorus] ending. Center‑heavy mono image; no modern trap/EDM, autotune, or contemporary synths." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--the-universal-hop.mp3" data-track-title="The Universal Hop" data-album-title="Resonance Hop" data-album-slug="resonance-hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="Fast 1950s rock & roll shuffle (~156 BPM) with clean twang guitar and tape‑slapback, upright bass slap, boogie‑woogie piano, handclaps, and doo‑wop backing vocals. Energetic lead vocal in English; include a [Guitar Solo] and a [Handclap Break], then a double [Chorus] ending. Center‑heavy mono image; no modern trap/EDM, autotune, or contemporary synths." data-lyrics="[Intro]
 [Band hits; three‑note “resonance” lick]
 
 [Verse 1]
@@ -131,7 +142,7 @@ One field, one pocket, one hop — hey!
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--shake-rattle-and-align.mp3" data-track-title="Shake" data-album-title="Resonance Hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="1950s rock & roll at ~158 BPM straight‑eighths with clean twang guitar (slapback), upright bass slap, boogie‑woogie piano, rimshot snare and ride cymbal, and tight doo‑wop backgrounds. Add a brief [Pre‑Chorus] lift before the hook and a compact [Guitar Solo] that quotes a three‑note motif. Mono‑style room image; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--shake-rattle-and-align.mp3" data-track-title="Shake" data-album-title="Resonance Hop" data-album-slug="resonance-hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="1950s rock & roll at ~158 BPM straight‑eighths with clean twang guitar (slapback), upright bass slap, boogie‑woogie piano, rimshot snare and ride cymbal, and tight doo‑wop backgrounds. Add a brief [Pre‑Chorus] lift before the hook and a compact [Guitar Solo] that quotes a three‑note motif. Mono‑style room image; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
 [Count‑in; rimshot pickup]
 
 [Verse 1]
@@ -169,7 +180,7 @@ Find the beat and ride the line — hey!
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--shake-rattle-and-align.mp3" data-track-title="Shake" data-album-title="Resonance Hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="1950s rock & roll at ~158 BPM straight‑eighths with clean twang guitar (slapback), upright bass slap, boogie‑woogie piano, rimshot snare and ride cymbal, and tight doo‑wop backgrounds. Add a brief [Pre‑Chorus] lift before the hook and a compact [Guitar Solo] that quotes a three‑note motif. Mono‑style room image; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--shake-rattle-and-align.mp3" data-track-title="Shake" data-album-title="Resonance Hop" data-album-slug="resonance-hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="1950s rock & roll at ~158 BPM straight‑eighths with clean twang guitar (slapback), upright bass slap, boogie‑woogie piano, rimshot snare and ride cymbal, and tight doo‑wop backgrounds. Add a brief [Pre‑Chorus] lift before the hook and a compact [Guitar Solo] that quotes a three‑note motif. Mono‑style room image; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
 [Count‑in; rimshot pickup]
 
 [Verse 1]
@@ -218,7 +229,7 @@ Find the beat and ride the line — hey!
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--quiet-attention.mp3" data-track-title="Quiet Attention" data-album-title="Resonance Hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="1950s doo‑wop ballad around 92 BPM with brushed drums, gentle upright bass, clean guitar with light slapback, soft piano, and airy background “oohs.” Warm lead vocal in English; include a subtle [Bridge] lift before the final chorus. Keep a mono‑ish room image; no modern trap/EDM, autotune, or contemporary synths." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--quiet-attention.mp3" data-track-title="Quiet Attention" data-album-title="Resonance Hop" data-album-slug="resonance-hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="1950s doo‑wop ballad around 92 BPM with brushed drums, gentle upright bass, clean guitar with light slapback, soft piano, and airy background “oohs.” Warm lead vocal in English; include a subtle [Bridge] lift before the final chorus. Keep a mono‑ish room image; no modern trap/EDM, autotune, or contemporary synths." data-lyrics="[Intro]
 [Soft guitar and “oohs”]
 
 [Verse 1]
@@ -254,7 +265,7 @@ I hear the world when I lean to you.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--quiet-attention.mp3" data-track-title="Quiet Attention" data-album-title="Resonance Hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="1950s doo‑wop ballad around 92 BPM with brushed drums, gentle upright bass, clean guitar with light slapback, soft piano, and airy background “oohs.” Warm lead vocal in English; include a subtle [Bridge] lift before the final chorus. Keep a mono‑ish room image; no modern trap/EDM, autotune, or contemporary synths." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--quiet-attention.mp3" data-track-title="Quiet Attention" data-album-title="Resonance Hop" data-album-slug="resonance-hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="1950s doo‑wop ballad around 92 BPM with brushed drums, gentle upright bass, clean guitar with light slapback, soft piano, and airy background “oohs.” Warm lead vocal in English; include a subtle [Bridge] lift before the final chorus. Keep a mono‑ish room image; no modern trap/EDM, autotune, or contemporary synths." data-lyrics="[Intro]
 [Soft guitar and “oohs”]
 
 [Verse 1]
@@ -301,7 +312,7 @@ I hear the world when I lean to you.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--right-by-the-rhythm.mp3" data-track-title="Right by the Rhythm" data-album-title="Resonance Hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="1950s rock & roll shuffle at ~152 BPM with clean twang guitar (slapback), upright bass slap, boogie‑woogie piano, ride/shuffle drums, and bright gang responses. Confident lead vocal in English; compact [Guitar Solo] before the final hook. Keep mono‑style space; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--right-by-the-rhythm.mp3" data-track-title="Right by the Rhythm" data-album-title="Resonance Hop" data-album-slug="resonance-hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="1950s rock & roll shuffle at ~152 BPM with clean twang guitar (slapback), upright bass slap, boogie‑woogie piano, ride/shuffle drums, and bright gang responses. Confident lead vocal in English; compact [Guitar Solo] before the final hook. Keep mono‑style space; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
 [Count‑in; piano walk‑up]
 
 [Verse 1]
@@ -335,7 +346,7 @@ Right by the rhythm — me and you.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--right-by-the-rhythm.mp3" data-track-title="Right by the Rhythm" data-album-title="Resonance Hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="1950s rock & roll shuffle at ~152 BPM with clean twang guitar (slapback), upright bass slap, boogie‑woogie piano, ride/shuffle drums, and bright gang responses. Confident lead vocal in English; compact [Guitar Solo] before the final hook. Keep mono‑style space; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--right-by-the-rhythm.mp3" data-track-title="Right by the Rhythm" data-album-title="Resonance Hop" data-album-slug="resonance-hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="1950s rock & roll shuffle at ~152 BPM with clean twang guitar (slapback), upright bass slap, boogie‑woogie piano, ride/shuffle drums, and bright gang responses. Confident lead vocal in English; compact [Guitar Solo] before the final hook. Keep mono‑style space; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
 [Count‑in; piano walk‑up]
 
 [Verse 1]
@@ -380,7 +391,7 @@ Right by the rhythm — me and you.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--thread-by-thread.mp3" data-track-title="Thread by Thread" data-album-title="Resonance Hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="1950s rock & roll, ~150 BPM straight‑eighths with handclaps, boogie‑woogie piano quoting a three‑note motif, clean twang guitar, upright bass, and ride kit. Open, friendly lead with supportive BGVs in English; include an [Instrumental Break] trading lines between piano and guitar. Exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--thread-by-thread.mp3" data-track-title="Thread by Thread" data-album-title="Resonance Hop" data-album-slug="resonance-hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="1950s rock & roll, ~150 BPM straight‑eighths with handclaps, boogie‑woogie piano quoting a three‑note motif, clean twang guitar, upright bass, and ride kit. Open, friendly lead with supportive BGVs in English; include an [Instrumental Break] trading lines between piano and guitar. Exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
 [Claps on two and four; piano lick quotes motif]
 
 [Verse 1]
@@ -414,7 +425,7 @@ Thread by thread with me and you.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--thread-by-thread.mp3" data-track-title="Thread by Thread" data-album-title="Resonance Hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="1950s rock & roll, ~150 BPM straight‑eighths with handclaps, boogie‑woogie piano quoting a three‑note motif, clean twang guitar, upright bass, and ride kit. Open, friendly lead with supportive BGVs in English; include an [Instrumental Break] trading lines between piano and guitar. Exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--thread-by-thread.mp3" data-track-title="Thread by Thread" data-album-title="Resonance Hop" data-album-slug="resonance-hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="1950s rock & roll, ~150 BPM straight‑eighths with handclaps, boogie‑woogie piano quoting a three‑note motif, clean twang guitar, upright bass, and ride kit. Open, friendly lead with supportive BGVs in English; include an [Instrumental Break] trading lines between piano and guitar. Exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
 [Claps on two and four; piano lick quotes motif]
 
 [Verse 1]
@@ -459,7 +470,7 @@ Thread by thread with me and you.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--nothing-really-ends.mp3" data-track-title="Nothing Really Ends" data-album-title="Resonance Hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="12‑bar blues‑tinged 1950s rock & roll at ~150 BPM with shuffle drums, upright bass slap, clean guitar, piano comping, and a prominent tenor sax. Yearning lead vocal in English with gentle call‑and‑response; include a featured [Sax Solo] before the last chorus. Keep mono‑style space; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--nothing-really-ends.mp3" data-track-title="Nothing Really Ends" data-album-title="Resonance Hop" data-album-slug="resonance-hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="12‑bar blues‑tinged 1950s rock & roll at ~150 BPM with shuffle drums, upright bass slap, clean guitar, piano comping, and a prominent tenor sax. Yearning lead vocal in English with gentle call‑and‑response; include a featured [Sax Solo] before the last chorus. Keep mono‑style space; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
 [Low piano rumble; guitar pickup]
 
 [Verse 1]
@@ -493,7 +504,7 @@ Turn it like a record till it finds the heart.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--nothing-really-ends.mp3" data-track-title="Nothing Really Ends" data-album-title="Resonance Hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="12‑bar blues‑tinged 1950s rock & roll at ~150 BPM with shuffle drums, upright bass slap, clean guitar, piano comping, and a prominent tenor sax. Yearning lead vocal in English with gentle call‑and‑response; include a featured [Sax Solo] before the last chorus. Keep mono‑style space; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--nothing-really-ends.mp3" data-track-title="Nothing Really Ends" data-album-title="Resonance Hop" data-album-slug="resonance-hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="12‑bar blues‑tinged 1950s rock & roll at ~150 BPM with shuffle drums, upright bass slap, clean guitar, piano comping, and a prominent tenor sax. Yearning lead vocal in English with gentle call‑and‑response; include a featured [Sax Solo] before the last chorus. Keep mono‑style space; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
 [Low piano rumble; guitar pickup]
 
 [Verse 1]
@@ -538,7 +549,7 @@ Turn it like a record till it finds the heart.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--new-instrument.mp3" data-track-title="New Instrument" data-album-title="Resonance Hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="Lively 1950s rock & roll (~154 BPM) with clean slapback guitar, upright bass, piano, crisp drums, and tenor sax. Lively lead vocal in English with friendly gang responses; include an [Instrumental Break] trading 4‑bar phrases between guitar and sax. Mono‑ish room; no modern trap/EDM, autotune, or contemporary synths." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--new-instrument.mp3" data-track-title="New Instrument" data-album-title="Resonance Hop" data-album-slug="resonance-hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="Lively 1950s rock & roll (~154 BPM) with clean slapback guitar, upright bass, piano, crisp drums, and tenor sax. Lively lead vocal in English with friendly gang responses; include an [Instrumental Break] trading 4‑bar phrases between guitar and sax. Mono‑ish room; no modern trap/EDM, autotune, or contemporary synths." data-lyrics="[Intro]
 [Short guitar riff; band hits]
 
 [Verse 1]
@@ -572,7 +583,7 @@ Play it true and let it roll.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--new-instrument.mp3" data-track-title="New Instrument" data-album-title="Resonance Hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="Lively 1950s rock & roll (~154 BPM) with clean slapback guitar, upright bass, piano, crisp drums, and tenor sax. Lively lead vocal in English with friendly gang responses; include an [Instrumental Break] trading 4‑bar phrases between guitar and sax. Mono‑ish room; no modern trap/EDM, autotune, or contemporary synths." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--new-instrument.mp3" data-track-title="New Instrument" data-album-title="Resonance Hop" data-album-slug="resonance-hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="Lively 1950s rock & roll (~154 BPM) with clean slapback guitar, upright bass, piano, crisp drums, and tenor sax. Lively lead vocal in English with friendly gang responses; include an [Instrumental Break] trading 4‑bar phrases between guitar and sax. Mono‑ish room; no modern trap/EDM, autotune, or contemporary synths." data-lyrics="[Intro]
 [Short guitar riff; band hits]
 
 [Verse 1]
@@ -617,7 +628,7 @@ Play it true and let it roll.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--held-in-wonder.mp3" data-track-title="Held in Wonder" data-album-title="Resonance Hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="Mid‑tempo 1950s swing (~138 BPM) with clean slapback guitar, soft tenor sax, upright bass, and gentle ride cymbal. Gentle lead vocal in English with airy harmonies; include a reflective [Bridge] where the three‑note motif appears before a final chorus. Keep mono‑ish space; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--held-in-wonder.mp3" data-track-title="Held in Wonder" data-album-title="Resonance Hop" data-album-slug="resonance-hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="Mid‑tempo 1950s swing (~138 BPM) with clean slapback guitar, soft tenor sax, upright bass, and gentle ride cymbal. Gentle lead vocal in English with airy harmonies; include a reflective [Bridge] where the three‑note motif appears before a final chorus. Keep mono‑ish space; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
 [Soft guitar arpeggio]
 
 [Verse 1]
@@ -653,7 +664,7 @@ I don’t need answers to enjoy the ride.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--held-in-wonder.mp3" data-track-title="Held in Wonder" data-album-title="Resonance Hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="Mid‑tempo 1950s swing (~138 BPM) with clean slapback guitar, soft tenor sax, upright bass, and gentle ride cymbal. Gentle lead vocal in English with airy harmonies; include a reflective [Bridge] where the three‑note motif appears before a final chorus. Keep mono‑ish space; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--held-in-wonder.mp3" data-track-title="Held in Wonder" data-album-title="Resonance Hop" data-album-slug="resonance-hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="Mid‑tempo 1950s swing (~138 BPM) with clean slapback guitar, soft tenor sax, upright bass, and gentle ride cymbal. Gentle lead vocal in English with airy harmonies; include a reflective [Bridge] where the three‑note motif appears before a final chorus. Keep mono‑ish space; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
 [Soft guitar arpeggio]
 
 [Verse 1]
@@ -700,7 +711,7 @@ I don’t need answers to enjoy the ride.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--corner-jamboree.mp3" data-track-title="Corner Jamboree" data-album-title="Resonance Hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="Uptempo 1950s rock & roll (~158 BPM) with handclaps, boogie‑woogie piano, clean twang guitar, upright bass slap, and exuberant tenor sax. Rowdy lead with stacked gang vocals in English; add a celebratory [Sax Solo] and finish with a double [Chorus] and gentle fade. Mono‑ish mix; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--corner-jamboree.mp3" data-track-title="Corner Jamboree" data-album-title="Resonance Hop" data-album-slug="resonance-hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="Uptempo 1950s rock & roll (~158 BPM) with handclaps, boogie‑woogie piano, clean twang guitar, upright bass slap, and exuberant tenor sax. Rowdy lead with stacked gang vocals in English; add a celebratory [Sax Solo] and finish with a double [Chorus] and gentle fade. Mono‑ish mix; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
 [Crowd “hey!” and claps; band hits]
 
 [Verse 1]
@@ -738,7 +749,7 @@ Corner jamboree — gather the crowd!
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--corner-jamboree.mp3" data-track-title="Corner Jamboree" data-album-title="Resonance Hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="Uptempo 1950s rock & roll (~158 BPM) with handclaps, boogie‑woogie piano, clean twang guitar, upright bass slap, and exuberant tenor sax. Rowdy lead with stacked gang vocals in English; add a celebratory [Sax Solo] and finish with a double [Chorus] and gentle fade. Mono‑ish mix; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/resonance-hop--corner-jamboree.mp3" data-track-title="Corner Jamboree" data-album-title="Resonance Hop" data-album-slug="resonance-hop" data-cover-url="https://cdn2.suno.ai/87525f1a.jpeg?width=360" data-style-prompt="Uptempo 1950s rock & roll (~158 BPM) with handclaps, boogie‑woogie piano, clean twang guitar, upright bass slap, and exuberant tenor sax. Rowdy lead with stacked gang vocals in English; add a celebratory [Sax Solo] and finish with a double [Chorus] and gentle fade. Mono‑ish mix; exclude modern trap/EDM, autotune, and contemporary synths." data-lyrics="[Intro]
 [Crowd “hey!” and claps; band hits]
 
 [Verse 1]
@@ -780,6 +791,7 @@ Corner jamboree — gather the crowd!
             </div>
           </div>
         
+        </div>
       </div>
     
   </main>

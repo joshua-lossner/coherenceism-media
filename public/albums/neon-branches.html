@@ -7,30 +7,41 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=13">
+  <link rel="stylesheet" href="/styles.css?v=15">
   <meta name="description" content="Coherenceism Music - Albums, songs, and lyrics from the CORA network">
 </head>
 <body>
+  <script defer src="https://vercel.com/analytics/script.js"></script>
   <main class="container">
     
-      <a href="/" class="home-button" title="Back to albums">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-        </svg>
-      </a>
+      <div class="album-detail-page">
+        <a href="/" class="home-button" title="Back to albums">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+          </svg>
+        </a>
 
-      <div class="album-detail-header">
-        <div class="album-detail-cover">
-          <img src="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" alt="Neon Branches" />
-        </div>
-        <div class="album-detail-info">
-          <h1>Neon Branches</h1>
-          <p class="album-inspiration">Nine songs mirror the Coherenceism branch order, reframed through an 80s‑alternative lens: urban nights, rain on pavement, neon fog on wet glass. Voice is reflective but unsentimental; intimacy over spectacle. A recurring three‑note resonance motif (scale degrees 1–♭3–4, transposed per key) threads the record—introduced as a guitar arpeggio, resurfacing as a bass hook or synth figure, and resolving in a brighter tint on the closer. Mid‑tempo pulse (90–122 BPM); melancholy that moves.</p>
-        </div>
-      </div>
+        <div class="album-detail-top">
+          <div class="album-detail-header">
+            <div class="album-detail-cover">
+              <img src="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" alt="Neon Branches" />
+            </div>
+            <div class="album-detail-info">
+              <h1>Neon Branches</h1>
+              <div class="album-concept"><p>Nine songs mirror the Coherenceism branch order, reframed through an 80s‑alternative lens: urban nights, rain on pavement, neon fog on wet glass. Voice is reflective but unsentimental; intimacy over spectacle. A recurring three‑note resonance motif (scale degrees 1–♭3–4, transposed per key) threads the record—introduced as a guitar arpeggio, resurfacing as a bass hook or synth figure, and resolving in a brighter tint on the closer. Mid‑tempo pulse (90–122 BPM); melancholy that moves.</p></div>
+            </div>
+          </div>
 
-      <div class="tracks-grid">
-        
+          <button class="play-album-header-btn play-album-btn" data-album-slug="neon-branches">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            Play Album
+          </button>
+        </div>
+
+        <div class="tracks-grid">
+          
           <div class="track-grid-item" data-track-index="0" data-album-slug="neon-branches">
             <div class="track-grid-info">
               <div class="track-grid-number">01</div>
@@ -38,7 +49,7 @@
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--carrier-in-the-sky.mp3" data-track-title="Carrier in the Sky" data-album-title="Neon Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative (post‑punk + jangle + dream‑pop) at 116 BPM. Chorused clean‑guitar arpeggio leads with a 1–♭3–4 motif, Juno‑style pads, TR‑707 hats layered with a tight live kit, and melodic chorus‑bass; baritone/androgynous close‑mic’d vocals with doubled choruses. Plate/room reverb; no modern trap hats, no EDM risers/supersaws, no glossy pop shine." data-lyrics="[Instrumental Intro: 10s]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--carrier-in-the-sky.mp3" data-track-title="Carrier in the Sky" data-album-title="Neon Branches" data-album-slug="neon-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative (post‑punk + jangle + dream‑pop) at 116 BPM. Chorused clean‑guitar arpeggio leads with a 1–♭3–4 motif, Juno‑style pads, TR‑707 hats layered with a tight live kit, and melodic chorus‑bass; baritone/androgynous close‑mic’d vocals with doubled choruses. Plate/room reverb; no modern trap hats, no EDM risers/supersaws, no glossy pop shine." data-lyrics="[Instrumental Intro: 10s]
 [Clean arpeggio with 1–♭3–4 motif]
 
 [Verse 1]
@@ -89,7 +100,7 @@ Running straight through.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--carrier-in-the-sky.mp3" data-track-title="Carrier in the Sky" data-album-title="Neon Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative (post‑punk + jangle + dream‑pop) at 116 BPM. Chorused clean‑guitar arpeggio leads with a 1–♭3–4 motif, Juno‑style pads, TR‑707 hats layered with a tight live kit, and melodic chorus‑bass; baritone/androgynous close‑mic’d vocals with doubled choruses. Plate/room reverb; no modern trap hats, no EDM risers/supersaws, no glossy pop shine." data-lyrics="[Instrumental Intro: 10s]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--carrier-in-the-sky.mp3" data-track-title="Carrier in the Sky" data-album-title="Neon Branches" data-album-slug="neon-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative (post‑punk + jangle + dream‑pop) at 116 BPM. Chorused clean‑guitar arpeggio leads with a 1–♭3–4 motif, Juno‑style pads, TR‑707 hats layered with a tight live kit, and melodic chorus‑bass; baritone/androgynous close‑mic’d vocals with doubled choruses. Plate/room reverb; no modern trap hats, no EDM risers/supersaws, no glossy pop shine." data-lyrics="[Instrumental Intro: 10s]
 [Clean arpeggio with 1–♭3–4 motif]
 
 [Verse 1]
@@ -151,7 +162,7 @@ Running straight through.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--the-long-fade.mp3" data-track-title="The Long Fade" data-album-title="Neon Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 98 BPM, tom‑led Linn/707 groove with gated snare; clean guitar with subtle flange, Juno/Prophet pad, melodic bass, baritone close‑mic’d vocal; plate reverb, tape‑ish saturation. Mood: melancholy but resolute. No modern trap hats or EDM risers/supersaws; no glossy pop shine." data-lyrics="[Instrumental Intro: 8s]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--the-long-fade.mp3" data-track-title="The Long Fade" data-album-title="Neon Branches" data-album-slug="neon-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 98 BPM, tom‑led Linn/707 groove with gated snare; clean guitar with subtle flange, Juno/Prophet pad, melodic bass, baritone close‑mic’d vocal; plate reverb, tape‑ish saturation. Mood: melancholy but resolute. No modern trap hats or EDM risers/supersaws; no glossy pop shine." data-lyrics="[Instrumental Intro: 8s]
 [Tom pattern with gated snare]
 
 [Verse 1]
@@ -208,7 +219,7 @@ Nothing disappears.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--the-long-fade.mp3" data-track-title="The Long Fade" data-album-title="Neon Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 98 BPM, tom‑led Linn/707 groove with gated snare; clean guitar with subtle flange, Juno/Prophet pad, melodic bass, baritone close‑mic’d vocal; plate reverb, tape‑ish saturation. Mood: melancholy but resolute. No modern trap hats or EDM risers/supersaws; no glossy pop shine." data-lyrics="[Instrumental Intro: 8s]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--the-long-fade.mp3" data-track-title="The Long Fade" data-album-title="Neon Branches" data-album-slug="neon-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 98 BPM, tom‑led Linn/707 groove with gated snare; clean guitar with subtle flange, Juno/Prophet pad, melodic bass, baritone close‑mic’d vocal; plate reverb, tape‑ish saturation. Mood: melancholy but resolute. No modern trap hats or EDM risers/supersaws; no glossy pop shine." data-lyrics="[Instrumental Intro: 8s]
 [Tom pattern with gated snare]
 
 [Verse 1]
@@ -276,7 +287,7 @@ Nothing disappears.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--angle-into-the-wind.mp3" data-track-title="Angle into the Wind" data-album-title="Neon Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 122 BPM, motorik 707 hi‑hats with tight live snare, jangle rhythm guitars, Juno pad, melodic bass; baritone close‑mic’d vocal. Include [Pre‑Chorus] lift before a wide but not louder [Chorus]. Plate/room verbs; no modern trap hats or EDM risers/supersaws." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--angle-into-the-wind.mp3" data-track-title="Angle into the Wind" data-album-title="Neon Branches" data-album-slug="neon-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 122 BPM, motorik 707 hi‑hats with tight live snare, jangle rhythm guitars, Juno pad, melodic bass; baritone close‑mic’d vocal. Include [Pre‑Chorus] lift before a wide but not louder [Chorus]. Plate/room verbs; no modern trap hats or EDM risers/supersaws." data-lyrics="[Intro]
 [Jangle guitar; bass outlines Dm]
 
 [Verse 1]
@@ -327,7 +338,7 @@ It carries you in.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--angle-into-the-wind.mp3" data-track-title="Angle into the Wind" data-album-title="Neon Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 122 BPM, motorik 707 hi‑hats with tight live snare, jangle rhythm guitars, Juno pad, melodic bass; baritone close‑mic’d vocal. Include [Pre‑Chorus] lift before a wide but not louder [Chorus]. Plate/room verbs; no modern trap hats or EDM risers/supersaws." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--angle-into-the-wind.mp3" data-track-title="Angle into the Wind" data-album-title="Neon Branches" data-album-slug="neon-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 122 BPM, motorik 707 hi‑hats with tight live snare, jangle rhythm guitars, Juno pad, melodic bass; baritone close‑mic’d vocal. Include [Pre‑Chorus] lift before a wide but not louder [Chorus]. Plate/room verbs; no modern trap hats or EDM risers/supersaws." data-lyrics="[Intro]
 [Jangle guitar; bass outlines Dm]
 
 [Verse 1]
@@ -389,7 +400,7 @@ It carries you in.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--library-without-rules.mp3" data-track-title="Library Without Rules" data-album-title="Neon Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 90 BPM; clean chorused guitar, subtle pad, tight roomy kit, melodic forward bass; baritone/androgynous close‑mic’d vocal. Keep dynamics restrained; chorus widens without volume jump. Plate/room verbs; no modern trap hats/EDM risers/supersaws." data-lyrics="[Instrumental Intro: 8s]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--library-without-rules.mp3" data-track-title="Library Without Rules" data-album-title="Neon Branches" data-album-slug="neon-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 90 BPM; clean chorused guitar, subtle pad, tight roomy kit, melodic forward bass; baritone/androgynous close‑mic’d vocal. Keep dynamics restrained; chorus widens without volume jump. Plate/room verbs; no modern trap hats/EDM risers/supersaws." data-lyrics="[Instrumental Intro: 8s]
 [Soft count‑in; room tone]
 
 [Verse 1]
@@ -435,7 +446,7 @@ Turns the world to music.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--library-without-rules.mp3" data-track-title="Library Without Rules" data-album-title="Neon Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 90 BPM; clean chorused guitar, subtle pad, tight roomy kit, melodic forward bass; baritone/androgynous close‑mic’d vocal. Keep dynamics restrained; chorus widens without volume jump. Plate/room verbs; no modern trap hats/EDM risers/supersaws." data-lyrics="[Instrumental Intro: 8s]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--library-without-rules.mp3" data-track-title="Library Without Rules" data-album-title="Neon Branches" data-album-slug="neon-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 90 BPM; clean chorused guitar, subtle pad, tight roomy kit, melodic forward bass; baritone/androgynous close‑mic’d vocal. Keep dynamics restrained; chorus widens without volume jump. Plate/room verbs; no modern trap hats/EDM risers/supersaws." data-lyrics="[Instrumental Intro: 8s]
 [Soft count‑in; room tone]
 
 [Verse 1]
@@ -492,7 +503,7 @@ Turns the world to music.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--clean-lines.mp3" data-track-title="Clean Lines" data-album-title="Neon Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 118 BPM; palm‑muted clean guitar, pad for chorus lift, tight kit with tasteful gate, melodic bass; baritone close‑mic’d vocal. Chorus has subtle major tint. Plate/room verbs; exclude modern trap hats and EDM risers/supersaws." data-lyrics="[Instrumental Intro: 6s]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--clean-lines.mp3" data-track-title="Clean Lines" data-album-title="Neon Branches" data-album-slug="neon-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 118 BPM; palm‑muted clean guitar, pad for chorus lift, tight kit with tasteful gate, melodic bass; baritone close‑mic’d vocal. Chorus has subtle major tint. Plate/room verbs; exclude modern trap hats and EDM risers/supersaws." data-lyrics="[Instrumental Intro: 6s]
 [Palm‑mute pulse]
 
 [Verse 1]
@@ -546,7 +557,7 @@ I’ll hold them with you.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--clean-lines.mp3" data-track-title="Clean Lines" data-album-title="Neon Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 118 BPM; palm‑muted clean guitar, pad for chorus lift, tight kit with tasteful gate, melodic bass; baritone close‑mic’d vocal. Chorus has subtle major tint. Plate/room verbs; exclude modern trap hats and EDM risers/supersaws." data-lyrics="[Instrumental Intro: 6s]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--clean-lines.mp3" data-track-title="Clean Lines" data-album-title="Neon Branches" data-album-slug="neon-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 118 BPM; palm‑muted clean guitar, pad for chorus lift, tight kit with tasteful gate, melodic bass; baritone close‑mic’d vocal. Chorus has subtle major tint. Plate/room verbs; exclude modern trap hats and EDM risers/supersaws." data-lyrics="[Instrumental Intro: 6s]
 [Palm‑mute pulse]
 
 [Verse 1]
@@ -611,7 +622,7 @@ I’ll hold them with you.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--small-rituals.mp3" data-track-title="Small Rituals" data-album-title="Neon Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 110 BPM; clean rhythm guitar, warm pad, 606 claps layered with live kit, melodic bass; baritone close‑mic’d vocal with gang‑response backing on choruses. Double [Chorus] ending. Plate/room verbs; no modern trap hats/EDM risers/supersaws." data-lyrics="[Instrumental Intro: 6s]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--small-rituals.mp3" data-track-title="Small Rituals" data-album-title="Neon Branches" data-album-slug="neon-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 110 BPM; clean rhythm guitar, warm pad, 606 claps layered with live kit, melodic bass; baritone close‑mic’d vocal with gang‑response backing on choruses. Double [Chorus] ending. Plate/room verbs; no modern trap hats/EDM risers/supersaws." data-lyrics="[Instrumental Intro: 6s]
 [Handclaps with muted guitar]
 
 [Verse 1]
@@ -656,7 +667,7 @@ Hearts fall in line.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--small-rituals.mp3" data-track-title="Small Rituals" data-album-title="Neon Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 110 BPM; clean rhythm guitar, warm pad, 606 claps layered with live kit, melodic bass; baritone close‑mic’d vocal with gang‑response backing on choruses. Double [Chorus] ending. Plate/room verbs; no modern trap hats/EDM risers/supersaws." data-lyrics="[Instrumental Intro: 6s]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--small-rituals.mp3" data-track-title="Small Rituals" data-album-title="Neon Branches" data-album-slug="neon-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 110 BPM; clean rhythm guitar, warm pad, 606 claps layered with live kit, melodic bass; baritone close‑mic’d vocal with gang‑response backing on choruses. Double [Chorus] ending. Plate/room verbs; no modern trap hats/EDM risers/supersaws." data-lyrics="[Instrumental Intro: 6s]
 [Handclaps with muted guitar]
 
 [Verse 1]
@@ -712,7 +723,7 @@ Hearts fall in line.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--warm-machines.mp3" data-track-title="Warm Machines" data-album-title="Neon Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 114 BPM; DX‑style bell arp with hidden 1–♭3–4 motif, guitar swell textures, tight kit, melodic bass; baritone close‑mic’d vocal. Include [Instrumental Break] with guitar swells. Plate/room verbs; no modern trap hats/EDM risers/supersaws." data-lyrics="[Instrumental Intro: 8s]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--warm-machines.mp3" data-track-title="Warm Machines" data-album-title="Neon Branches" data-album-slug="neon-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 114 BPM; DX‑style bell arp with hidden 1–♭3–4 motif, guitar swell textures, tight kit, melodic bass; baritone close‑mic’d vocal. Include [Instrumental Break] with guitar swells. Plate/room verbs; no modern trap hats/EDM risers/supersaws." data-lyrics="[Instrumental Intro: 8s]
 [Bell arp hints motif]
 
 [Verse 1]
@@ -757,7 +768,7 @@ Learning how to glide.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--warm-machines.mp3" data-track-title="Warm Machines" data-album-title="Neon Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 114 BPM; DX‑style bell arp with hidden 1–♭3–4 motif, guitar swell textures, tight kit, melodic bass; baritone close‑mic’d vocal. Include [Instrumental Break] with guitar swells. Plate/room verbs; no modern trap hats/EDM risers/supersaws." data-lyrics="[Instrumental Intro: 8s]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--warm-machines.mp3" data-track-title="Warm Machines" data-album-title="Neon Branches" data-album-slug="neon-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 114 BPM; DX‑style bell arp with hidden 1–♭3–4 motif, guitar swell textures, tight kit, melodic bass; baritone close‑mic’d vocal. Include [Instrumental Break] with guitar swells. Plate/room verbs; no modern trap hats/EDM risers/supersaws." data-lyrics="[Instrumental Intro: 8s]
 [Bell arp hints motif]
 
 [Verse 1]
@@ -813,7 +824,7 @@ Learning how to glide.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--rooms-of-air.mp3" data-track-title="Rooms of Air" data-album-title="Neon Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 96 BPM; suspended‑chord clean guitars, soft pad, restrained kit, melodic bass; baritone close‑mic’d vocal. Mood: mature uncertainty and wonder. Plate verbs for choruses only; exclude modern trap hats/EDM risers/supersaws." data-lyrics="[Instrumental Intro: 8s]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--rooms-of-air.mp3" data-track-title="Rooms of Air" data-album-title="Neon Branches" data-album-slug="neon-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 96 BPM; suspended‑chord clean guitars, soft pad, restrained kit, melodic bass; baritone close‑mic’d vocal. Mood: mature uncertainty and wonder. Plate verbs for choruses only; exclude modern trap hats/EDM risers/supersaws." data-lyrics="[Instrumental Intro: 8s]
 [Suspended chords; hush]
 
 [Verse 1]
@@ -860,7 +871,7 @@ We’ll step inside.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--rooms-of-air.mp3" data-track-title="Rooms of Air" data-album-title="Neon Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 96 BPM; suspended‑chord clean guitars, soft pad, restrained kit, melodic bass; baritone close‑mic’d vocal. Mood: mature uncertainty and wonder. Plate verbs for choruses only; exclude modern trap hats/EDM risers/supersaws." data-lyrics="[Instrumental Intro: 8s]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--rooms-of-air.mp3" data-track-title="Rooms of Air" data-album-title="Neon Branches" data-album-slug="neon-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 96 BPM; suspended‑chord clean guitars, soft pad, restrained kit, melodic bass; baritone close‑mic’d vocal. Mood: mature uncertainty and wonder. Plate verbs for choruses only; exclude modern trap hats/EDM risers/supersaws." data-lyrics="[Instrumental Intro: 8s]
 [Suspended chords; hush]
 
 [Verse 1]
@@ -918,7 +929,7 @@ We’ll step inside.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--stitch-the-noise.mp3" data-track-title="Stitch the Noise" data-album-title="Neon Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 120 BPM; bright jangle guitar and major‑tint pad, tight kit, melodic bass forward; baritone close‑mic’d vocals. Include [Pre‑Chorus] lift; chorus resolves the 1–♭3–4 motif in a brighter tint. Plate/room verbs; no modern trap hats/EDM risers/supersaws." data-lyrics="[Instrumental Intro: 8s]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--stitch-the-noise.mp3" data-track-title="Stitch the Noise" data-album-title="Neon Branches" data-album-slug="neon-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 120 BPM; bright jangle guitar and major‑tint pad, tight kit, melodic bass forward; baritone close‑mic’d vocals. Include [Pre‑Chorus] lift; chorus resolves the 1–♭3–4 motif in a brighter tint. Plate/room verbs; no modern trap hats/EDM risers/supersaws." data-lyrics="[Instrumental Intro: 8s]
 [Jangle guitar; bass climbs]
 
 [Verse 1]
@@ -973,7 +984,7 @@ Let it shine.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--stitch-the-noise.mp3" data-track-title="Stitch the Noise" data-album-title="Neon Branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 120 BPM; bright jangle guitar and major‑tint pad, tight kit, melodic bass forward; baritone close‑mic’d vocals. Include [Pre‑Chorus] lift; chorus resolves the 1–♭3–4 motif in a brighter tint. Plate/room verbs; no modern trap hats/EDM risers/supersaws." data-lyrics="[Instrumental Intro: 8s]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/neon-branches--stitch-the-noise.mp3" data-track-title="Stitch the Noise" data-album-title="Neon Branches" data-album-slug="neon-branches" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/neon-branches.png" data-style-prompt="80s alternative at 120 BPM; bright jangle guitar and major‑tint pad, tight kit, melodic bass forward; baritone close‑mic’d vocals. Include [Pre‑Chorus] lift; chorus resolves the 1–♭3–4 motif in a brighter tint. Plate/room verbs; no modern trap hats/EDM risers/supersaws." data-lyrics="[Instrumental Intro: 8s]
 [Jangle guitar; bass climbs]
 
 [Verse 1]
@@ -1032,6 +1043,7 @@ Let it shine.
             </div>
           </div>
         
+        </div>
       </div>
     
   </main>

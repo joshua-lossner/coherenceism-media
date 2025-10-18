@@ -7,30 +7,41 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=13">
+  <link rel="stylesheet" href="/styles.css?v=15">
   <meta name="description" content="Coherenceism Music - Albums, songs, and lyrics from the CORA network">
 </head>
 <body>
+  <script defer src="https://vercel.com/analytics/script.js"></script>
   <main class="container">
     
-      <a href="/" class="home-button" title="Back to albums">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-        </svg>
-      </a>
+      <div class="album-detail-page">
+        <a href="/" class="home-button" title="Back to albums">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+          </svg>
+        </a>
 
-      <div class="album-detail-header">
-        <div class="album-detail-cover">
-          <img src="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" alt="Signal of Us — Coherenceism in Modern Boy Band Pop" />
-        </div>
-        <div class="album-detail-info">
-          <h1>Signal of Us — Coherenceism in Modern Boy Band Pop</h1>
-          <p class="album-inspiration">Nine pop anthems translate Coherenceism’s branches into modern boy‑band language: unity, presence, and daily rituals sung like vows. Bright, nostalgic synths meet present‑tense production; stacked harmonies carry a recurring three‑note “resonance motif” (1–♭3–4) as synth hook, bass figure, or post‑chorus tag. The arc moves from wide‑field awe to practical love—alignment over force, mystery without panic, and the little habits that hold us.</p>
-        </div>
-      </div>
+        <div class="album-detail-top">
+          <div class="album-detail-header">
+            <div class="album-detail-cover">
+              <img src="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" alt="Signal of Us — Coherenceism in Modern Boy Band Pop" />
+            </div>
+            <div class="album-detail-info">
+              <h1>Signal of Us — Coherenceism in Modern Boy Band Pop</h1>
+              <div class="album-concept"><p>Nine pop anthems translate Coherenceism’s branches into modern boy‑band language: unity, presence, and daily rituals sung like vows. Bright, nostalgic synths meet present‑tense production; stacked harmonies carry a recurring three‑note “resonance motif” (1–♭3–4) as synth hook, bass figure, or post‑chorus tag. The arc moves from wide‑field awe to practical love—alignment over force, mystery without panic, and the little habits that hold us.</p></div>
+            </div>
+          </div>
 
-      <div class="tracks-grid">
-        
+          <button class="play-album-header-btn play-album-btn" data-album-slug="signal-of-us">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            Play Album
+          </button>
+        </div>
+
+        <div class="tracks-grid">
+          
           <div class="track-grid-item" data-track-index="0" data-album-slug="signal-of-us">
             <div class="track-grid-info">
               <div class="track-grid-number">01</div>
@@ -38,7 +49,7 @@
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--all-around-us.mp3" data-track-title="All Around Us" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band pop with ’80s roots at 112 BPM. Slick claps/snaps + 808 thump with tasteful hats, lush polysynth pads, shimmer guitars, side‑chained sub‑bass, stacked harmonies. Synth hook states a 1–♭3–4 motif; wide chorus; airy post‑chorus tag. No heavy EDM drops or harsh distortion." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--all-around-us.mp3" data-track-title="All Around Us" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-album-slug="signal-of-us" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band pop with ’80s roots at 112 BPM. Slick claps/snaps + 808 thump with tasteful hats, lush polysynth pads, shimmer guitars, side‑chained sub‑bass, stacked harmonies. Synth hook states a 1–♭3–4 motif; wide chorus; airy post‑chorus tag. No heavy EDM drops or harsh distortion." data-lyrics="[Intro]
 [Synth hook states 1–♭3–4; claps enter]
 
 [Verse 1]
@@ -84,7 +95,7 @@ Da‑da, da‑da, we’re all around.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--all-around-us.mp3" data-track-title="All Around Us" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band pop with ’80s roots at 112 BPM. Slick claps/snaps + 808 thump with tasteful hats, lush polysynth pads, shimmer guitars, side‑chained sub‑bass, stacked harmonies. Synth hook states a 1–♭3–4 motif; wide chorus; airy post‑chorus tag. No heavy EDM drops or harsh distortion." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--all-around-us.mp3" data-track-title="All Around Us" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-album-slug="signal-of-us" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band pop with ’80s roots at 112 BPM. Slick claps/snaps + 808 thump with tasteful hats, lush polysynth pads, shimmer guitars, side‑chained sub‑bass, stacked harmonies. Synth hook states a 1–♭3–4 motif; wide chorus; airy post‑chorus tag. No heavy EDM drops or harsh distortion." data-lyrics="[Intro]
 [Synth hook states 1–♭3–4; claps enter]
 
 [Verse 1]
@@ -141,7 +152,7 @@ Da‑da, da‑da, we’re all around.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--never-disappears.mp3" data-track-title="Never Disappears" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band pop at 100 BPM. Clap/snare pop groove, glossy pads, clean guitar sparkle, side‑chained sub‑bass, stacked harmonies with falsetto lifts. Chorus vows “never disappears”; soft post‑chorus reassurance. No heavy EDM drops or harsh distortion." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--never-disappears.mp3" data-track-title="Never Disappears" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-album-slug="signal-of-us" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band pop at 100 BPM. Clap/snare pop groove, glossy pads, clean guitar sparkle, side‑chained sub‑bass, stacked harmonies with falsetto lifts. Chorus vows “never disappears”; soft post‑chorus reassurance. No heavy EDM drops or harsh distortion." data-lyrics="[Intro]
 [Clap/snare groove; soft pad]
 
 [Verse 1]
@@ -186,7 +197,7 @@ Still here, still here—never disappears.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--never-disappears.mp3" data-track-title="Never Disappears" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band pop at 100 BPM. Clap/snare pop groove, glossy pads, clean guitar sparkle, side‑chained sub‑bass, stacked harmonies with falsetto lifts. Chorus vows “never disappears”; soft post‑chorus reassurance. No heavy EDM drops or harsh distortion." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--never-disappears.mp3" data-track-title="Never Disappears" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-album-slug="signal-of-us" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band pop at 100 BPM. Clap/snare pop groove, glossy pads, clean guitar sparkle, side‑chained sub‑bass, stacked harmonies with falsetto lifts. Chorus vows “never disappears”; soft post‑chorus reassurance. No heavy EDM drops or harsh distortion." data-lyrics="[Intro]
 [Clap/snare groove; soft pad]
 
 [Verse 1]
@@ -242,7 +253,7 @@ Still here, still here—never disappears.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--lean-with-me.mp3" data-track-title="Lean With Me" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band dance‑pop at 122 BPM. Crisp pop drums, polysynth stabs, clean electric guitar, side‑chained sub‑bass, stacked harmonies. Pre‑Chorus squeeze → wide Chorus. Add [Dance Break: 16 bars] after Verse 2. No heavy EDM drops." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--lean-with-me.mp3" data-track-title="Lean With Me" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-album-slug="signal-of-us" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band dance‑pop at 122 BPM. Crisp pop drums, polysynth stabs, clean electric guitar, side‑chained sub‑bass, stacked harmonies. Pre‑Chorus squeeze → wide Chorus. Add [Dance Break: 16 bars] after Verse 2. No heavy EDM drops." data-lyrics="[Intro]
 [Stabs and claps; bass breathes]
 
 [Verse 1]
@@ -291,7 +302,7 @@ We lean and we shine.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--lean-with-me.mp3" data-track-title="Lean With Me" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band dance‑pop at 122 BPM. Crisp pop drums, polysynth stabs, clean electric guitar, side‑chained sub‑bass, stacked harmonies. Pre‑Chorus squeeze → wide Chorus. Add [Dance Break: 16 bars] after Verse 2. No heavy EDM drops." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--lean-with-me.mp3" data-track-title="Lean With Me" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-album-slug="signal-of-us" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band dance‑pop at 122 BPM. Crisp pop drums, polysynth stabs, clean electric guitar, side‑chained sub‑bass, stacked harmonies. Pre‑Chorus squeeze → wide Chorus. Add [Dance Break: 16 bars] after Verse 2. No heavy EDM drops." data-lyrics="[Intro]
 [Stabs and claps; bass breathes]
 
 [Verse 1]
@@ -351,7 +362,7 @@ We lean and we shine.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--be-here-with-you.mp3" data-track-title="Be Here With You" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band mid‑tempo at 96 BPM. Soft pop kit with claps, lush pads, shimmer acoustic, side‑chained sub‑bass, stacked but airy harmonies. Intimate verses; spacious post‑chorus “one‑breath” tag. No harsh distortion or heavy EDM drops." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--be-here-with-you.mp3" data-track-title="Be Here With You" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-album-slug="signal-of-us" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band mid‑tempo at 96 BPM. Soft pop kit with claps, lush pads, shimmer acoustic, side‑chained sub‑bass, stacked but airy harmonies. Intimate verses; spacious post‑chorus “one‑breath” tag. No harsh distortion or heavy EDM drops." data-lyrics="[Intro]
 [Acoustic shimmer; soft pad]
 
 [Verse 1]
@@ -396,7 +407,7 @@ Haaa—one breath in, one breath through.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--be-here-with-you.mp3" data-track-title="Be Here With You" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band mid‑tempo at 96 BPM. Soft pop kit with claps, lush pads, shimmer acoustic, side‑chained sub‑bass, stacked but airy harmonies. Intimate verses; spacious post‑chorus “one‑breath” tag. No harsh distortion or heavy EDM drops." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--be-here-with-you.mp3" data-track-title="Be Here With You" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-album-slug="signal-of-us" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band mid‑tempo at 96 BPM. Soft pop kit with claps, lush pads, shimmer acoustic, side‑chained sub‑bass, stacked but airy harmonies. Intimate verses; spacious post‑chorus “one‑breath” tag. No harsh distortion or heavy EDM drops." data-lyrics="[Intro]
 [Acoustic shimmer; soft pad]
 
 [Verse 1]
@@ -452,7 +463,7 @@ Haaa—one breath in, one breath through.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--make-us-stronger.mp3" data-track-title="Make Us Stronger" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band arena‑pop at 118 BPM. Palm‑mute guitars + pop drums, pad lift in choruses, side‑chained sub‑bass, strong harmony stack. Pre‑Chorus punch into big vow Chorus: “make us stronger.” No harsh distortion; no heavy EDM drops." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--make-us-stronger.mp3" data-track-title="Make Us Stronger" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-album-slug="signal-of-us" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band arena‑pop at 118 BPM. Palm‑mute guitars + pop drums, pad lift in choruses, side‑chained sub‑bass, strong harmony stack. Pre‑Chorus punch into big vow Chorus: “make us stronger.” No harsh distortion; no heavy EDM drops." data-lyrics="[Intro]
 [Palm‑mute guitar; claps]
 
 [Verse 1]
@@ -497,7 +508,7 @@ Oh‑oh, we get stronger—me and you.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--make-us-stronger.mp3" data-track-title="Make Us Stronger" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band arena‑pop at 118 BPM. Palm‑mute guitars + pop drums, pad lift in choruses, side‑chained sub‑bass, strong harmony stack. Pre‑Chorus punch into big vow Chorus: “make us stronger.” No harsh distortion; no heavy EDM drops." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--make-us-stronger.mp3" data-track-title="Make Us Stronger" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-album-slug="signal-of-us" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band arena‑pop at 118 BPM. Palm‑mute guitars + pop drums, pad lift in choruses, side‑chained sub‑bass, strong harmony stack. Pre‑Chorus punch into big vow Chorus: “make us stronger.” No harsh distortion; no heavy EDM drops." data-lyrics="[Intro]
 [Palm‑mute guitar; claps]
 
 [Verse 1]
@@ -553,7 +564,7 @@ Oh‑oh, we get stronger—me and you.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--little-things-we-do.mp3" data-track-title="Little Things We Do" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band pop at 110 BPM. Clean rhythm guitar, warm pads, claps + pop kit, side‑chained sub‑bass, stacked harmonies with gang‑response ad‑libs. Double Chorus ending; soft post‑chorus hum. No heavy EDM drops." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--little-things-we-do.mp3" data-track-title="Little Things We Do" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-album-slug="signal-of-us" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band pop at 110 BPM. Clean rhythm guitar, warm pads, claps + pop kit, side‑chained sub‑bass, stacked harmonies with gang‑response ad‑libs. Double Chorus ending; soft post‑chorus hum. No heavy EDM drops." data-lyrics="[Intro]
 [Claps and guitar]
 
 [Verse 1]
@@ -602,7 +613,7 @@ Mmm‑hmm (oh‑oh), the little things we do.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--little-things-we-do.mp3" data-track-title="Little Things We Do" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band pop at 110 BPM. Clean rhythm guitar, warm pads, claps + pop kit, side‑chained sub‑bass, stacked harmonies with gang‑response ad‑libs. Double Chorus ending; soft post‑chorus hum. No heavy EDM drops." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--little-things-we-do.mp3" data-track-title="Little Things We Do" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-album-slug="signal-of-us" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band pop at 110 BPM. Clean rhythm guitar, warm pads, claps + pop kit, side‑chained sub‑bass, stacked harmonies with gang‑response ad‑libs. Double Chorus ending; soft post‑chorus hum. No heavy EDM drops." data-lyrics="[Intro]
 [Claps and guitar]
 
 [Verse 1]
@@ -662,7 +673,7 @@ Mmm‑hmm (oh‑oh), the little things we do.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--warm-circuits.mp3" data-track-title="Warm Circuits" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band dance‑pop at 114 BPM. Bell‑synth motif (1–♭3–4), polysynth pads, pop kit, side‑chained sub‑bass, stacked harmony. Add [Dance Break: 16 bars] into a harmony‑stack Bridge; post‑chorus repeats motif. No heavy EDM drops." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--warm-circuits.mp3" data-track-title="Warm Circuits" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-album-slug="signal-of-us" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band dance‑pop at 114 BPM. Bell‑synth motif (1–♭3–4), polysynth pads, pop kit, side‑chained sub‑bass, stacked harmony. Add [Dance Break: 16 bars] into a harmony‑stack Bridge; post‑chorus repeats motif. No heavy EDM drops." data-lyrics="[Intro]
 [Bell‑synth states motif; kit builds]
 
 [Verse 1]
@@ -710,7 +721,7 @@ Da‑da, da‑da (1–♭3–4), we’re alive.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--warm-circuits.mp3" data-track-title="Warm Circuits" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band dance‑pop at 114 BPM. Bell‑synth motif (1–♭3–4), polysynth pads, pop kit, side‑chained sub‑bass, stacked harmony. Add [Dance Break: 16 bars] into a harmony‑stack Bridge; post‑chorus repeats motif. No heavy EDM drops." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--warm-circuits.mp3" data-track-title="Warm Circuits" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-album-slug="signal-of-us" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band dance‑pop at 114 BPM. Bell‑synth motif (1–♭3–4), polysynth pads, pop kit, side‑chained sub‑bass, stacked harmony. Add [Dance Break: 16 bars] into a harmony‑stack Bridge; post‑chorus repeats motif. No heavy EDM drops." data-lyrics="[Intro]
 [Bell‑synth states motif; kit builds]
 
 [Verse 1]
@@ -769,7 +780,7 @@ Da‑da, da‑da (1–♭3–4), we’re alive.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--leave-it-open.mp3" data-track-title="Leave It Open" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band reflective pop at 98 BPM. Suspended synth chords, soft pop kit, clean guitar, side‑chained sub‑bass, airy stacked harmonies. Chorus invites uncertainty; post‑chorus repeats an open line. No heavy EDM drops or harsh distortion." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--leave-it-open.mp3" data-track-title="Leave It Open" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-album-slug="signal-of-us" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band reflective pop at 98 BPM. Suspended synth chords, soft pop kit, clean guitar, side‑chained sub‑bass, airy stacked harmonies. Chorus invites uncertainty; post‑chorus repeats an open line. No heavy EDM drops or harsh distortion." data-lyrics="[Intro]
 [Suspended chords; gentle kit]
 
 [Verse 1]
@@ -814,7 +825,7 @@ Leave it open (ooh), leave it open.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--leave-it-open.mp3" data-track-title="Leave It Open" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band reflective pop at 98 BPM. Suspended synth chords, soft pop kit, clean guitar, side‑chained sub‑bass, airy stacked harmonies. Chorus invites uncertainty; post‑chorus repeats an open line. No heavy EDM drops or harsh distortion." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--leave-it-open.mp3" data-track-title="Leave It Open" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-album-slug="signal-of-us" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band reflective pop at 98 BPM. Suspended synth chords, soft pop kit, clean guitar, side‑chained sub‑bass, airy stacked harmonies. Chorus invites uncertainty; post‑chorus repeats an open line. No heavy EDM drops or harsh distortion." data-lyrics="[Intro]
 [Suspended chords; gentle kit]
 
 [Verse 1]
@@ -870,7 +881,7 @@ Leave it open (ooh), leave it open.
             </div>
             <div class="track-hover-controls">
               
-                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--thread-us-in.mp3" data-track-title="Thread Us In" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band finale at 120 BPM. Bright polysynth, clean guitar sparkle, pop kit, side‑chained sub‑bass, big harmony stacks. [Vocal Breakdown] before final choruses; key‑lift feel; long outro with ad‑libs. No heavy EDM drops." data-lyrics="[Intro]
+                <button class="track-play-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--thread-us-in.mp3" data-track-title="Thread Us In" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-album-slug="signal-of-us" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band finale at 120 BPM. Bright polysynth, clean guitar sparkle, pop kit, side‑chained sub‑bass, big harmony stacks. [Vocal Breakdown] before final choruses; key‑lift feel; long outro with ad‑libs. No heavy EDM drops." data-lyrics="[Intro]
 [Bright poly + guitar sparkle]
 
 [Verse 1]
@@ -923,7 +934,7 @@ Da‑da (1–♭3–4), thread us in.
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
-                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--thread-us-in.mp3" data-track-title="Thread Us In" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band finale at 120 BPM. Bright polysynth, clean guitar sparkle, pop kit, side‑chained sub‑bass, big harmony stacks. [Vocal Breakdown] before final choruses; key‑lift feel; long outro with ad‑libs. No heavy EDM drops." data-lyrics="[Intro]
+                <button class="track-queue-btn" data-track-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/signal-of-us--thread-us-in.mp3" data-track-title="Thread Us In" data-album-title="Signal of Us — Coherenceism in Modern Boy Band Pop" data-album-slug="signal-of-us" data-cover-url="https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png" data-style-prompt="Modern boy‑band finale at 120 BPM. Bright polysynth, clean guitar sparkle, pop kit, side‑chained sub‑bass, big harmony stacks. [Vocal Breakdown] before final choruses; key‑lift feel; long outro with ad‑libs. No heavy EDM drops." data-lyrics="[Intro]
 [Bright poly + guitar sparkle]
 
 [Verse 1]
@@ -980,6 +991,7 @@ Da‑da (1–♭3–4), thread us in.
             </div>
           </div>
         
+        </div>
       </div>
     
   </main>
