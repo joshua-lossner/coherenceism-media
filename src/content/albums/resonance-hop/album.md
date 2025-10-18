@@ -3,6 +3,7 @@ kind: album
 title: Resonance Hop
 slug: resonance-hop
 created: 2025-10-12T00:00:00.000Z
+status: published
 cover_image: 'https://cdn2.suno.ai/87525f1a.jpeg?width=360'
 language: English
 genre: 1950s rock & roll

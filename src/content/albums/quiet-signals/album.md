@@ -3,6 +3,7 @@ kind: album
 title: Quiet Signals
 slug: quiet-signals
 created: 2025-10-13T00:00:00.000Z
+status: in_progress
 language: English
 genre: cinematic downtempo / ambient electronica
 mood:

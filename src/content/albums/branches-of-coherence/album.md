@@ -3,6 +3,7 @@ kind: album
 title: Branches of Coherence — A Smooth Jazz Suite
 slug: branches-of-coherence
 created: 2025-10-05T00:00:00.000Z
+status: published
 cover_image: >-
   https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/branches-of-coherence.png
 language: Instrumental
@@ -97,4 +98,3 @@ A late‑night, unhurried suite where each piece reflects a branch of Coherencei
 - Bass slightly forward for warmth; drums tucked with brushes.  
 - Reuse the three‑note resonance motif in heads and as a tag.  
 - Feature order varies for texture; overall feel remains calm and cohesive.
-

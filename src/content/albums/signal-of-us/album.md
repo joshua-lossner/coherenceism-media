@@ -3,6 +3,7 @@ kind: album
 title: Signal of Us — Coherenceism in Modern Boy Band Pop
 slug: signal-of-us
 created: 2025-10-06T00:00:00.000Z
+status: published
 cover_image: >-
   https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/signal-of-us.png
 language: English

@@ -3,6 +3,7 @@ kind: album
 title: Nine Branches
 slug: nine-branches
 created: 2025-10-11T00:00:00.000Z
+status: published
 cover_image: >-
   https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/nine-branches.png
 language: English

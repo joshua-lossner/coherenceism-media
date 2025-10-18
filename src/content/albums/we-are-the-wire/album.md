@@ -3,6 +3,7 @@ kind: album
 title: We Are the Wire
 slug: we-are-the-wire
 created: 2025-10-04T00:00:00.000Z
+status: published
 cover_image: >-
   https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/we-are-the-wire.png
 language: English
@@ -38,9 +39,10 @@ tracks:
     slug: carrier-wave
     suno_url: >-
       https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--carrier-wave.mp3
-  - title: Nothing Disappears
-    slug: nothing-disappears
-    suno_url: 'https://cdn1.suno.ai/a489bf85-85cc-41ea-a2e4-09f40617195e.mp3'
+  - title: 'Death, Change, Reality'
+    slug: death-change-reality
+    suno_url: >-
+      https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/tracks/we-are-the-wire--death-change-reality.mp3
   - title: Don't Push
     Align: null
     slug: dont-push-align

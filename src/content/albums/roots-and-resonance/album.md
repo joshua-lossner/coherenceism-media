@@ -3,6 +3,7 @@ kind: album
 title: Roots and Resonance — Coherenceism in Roots Reggae & Dub
 slug: roots-and-resonance
 created: 2025-10-10T00:00:00.000Z
+status: published
 cover_image: >-
   https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/roots-and-resonance.png
 language: English

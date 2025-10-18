@@ -3,6 +3,7 @@ kind: album
 title: Warm Signal — Songs for the Living Line
 slug: warm-signal
 created: 2025-10-09T00:00:00.000Z
+status: published
 cover_image: 'https://vwg1ncft29dfjhnp.public.blob.vercel-storage.com/covers/warm-signal.png'
 language: English
 mood:
@@ -96,4 +97,3 @@ Nine songs trace Coherenceism from wide‑field seeing to daily practice: awaren
 - Keep vocals present and conversational; phrasing slightly behind the beat.
 - Acoustic spaces over synthetic tails; let the room do the lifting.
 - Repeat a quiet three‑note “resonance” tag at the end of a few tracks.
-
