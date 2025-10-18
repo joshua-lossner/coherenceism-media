@@ -2,8 +2,5 @@
   "buildCommand": "npm run build",
   "outputDirectory": "public",
   "cleanUrls": true,
-  "trailingSlash": false,
-  "env": {
-    "CORA_REQUIRED": "true"
-  }
+  "trailingSlash": false
 }
