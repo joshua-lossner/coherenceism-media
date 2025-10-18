@@ -151,26 +151,6 @@ class GlobalMusicPlayer {
               <h2 id="panel-title">Song Title</h2>
               <h3 id="panel-album">Album Name</h3>
             </div>
-            <!-- Mobile-only transport controls inside panel -->
-            <div class="panel-transport mobile-only" id="panel-transport">
-              <button class="panel-btn" id="panel-prev-btn" aria-label="Previous">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
-              </button>
-              <button class="panel-btn primary" id="panel-play-pause-btn" aria-label="Play/Pause">
-                <svg class="panel-play-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                <svg class="panel-pause-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
-              </button>
-              <button class="panel-btn" id="panel-next-btn" aria-label="Next">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
-              </button>
-            </div>
-            <div class="panel-progress mobile-only">
-              <span class="panel-time" id="panel-current-time">0:00</span>
-              <div class="panel-progress-bar" id="panel-progress-bar">
-                <div class="panel-progress-fill" id="panel-progress-fill"></div>
-              </div>
-              <span class="panel-time" id="panel-duration-time">0:00</span>
-            </div>
           <div class="slide-up-panel-style">
             <h4>Style Prompt</h4>
             <p id="panel-style-text">No style prompt available</p>
@@ -239,14 +219,6 @@ class GlobalMusicPlayer {
     this.lyricsBtn = document.getElementById('lyrics-btn');
     this.slideUpPanel = document.getElementById('slide-up-panel');
     this.panelMinimizeBtn = document.getElementById('panel-minimize-btn');
-    // Panel transport elements (mobile)
-    this.panelPrevBtn = document.getElementById('panel-prev-btn');
-    this.panelPlayPauseBtn = document.getElementById('panel-play-pause-btn');
-    this.panelNextBtn = document.getElementById('panel-next-btn');
-    this.panelProgressBar = document.getElementById('panel-progress-bar');
-    this.panelProgressFill = document.getElementById('panel-progress-fill');
-    this.panelCurrentTimeEl = document.getElementById('panel-current-time');
-    this.panelDurationTimeEl = document.getElementById('panel-duration-time');
     this.titleEl = this.playerElement.querySelector('.global-player-title');
     this.artistEl = this.playerElement.querySelector('.global-player-artist');
     this.albumArtEl = document.getElementById('player-album-art');
@@ -255,31 +227,31 @@ class GlobalMusicPlayer {
   setupEventListeners() {
     // Remove existing listeners to avoid duplicates
     if (this.playPauseBtn && !this.playPauseBtn.dataset.listenerAdded) {
-      this.playPauseBtn.addEventListener('click', (e) => { e.stopPropagation(); this.togglePlay(); });
+      this.playPauseBtn.addEventListener('click', () => this.togglePlay());
       this.playPauseBtn.dataset.listenerAdded = 'true';
     }
     if (this.prevBtn && !this.prevBtn.dataset.listenerAdded) {
-      this.prevBtn.addEventListener('click', (e) => { e.stopPropagation(); this.previousTrack(); });
+      this.prevBtn.addEventListener('click', () => this.previousTrack());
       this.prevBtn.dataset.listenerAdded = 'true';
     }
     if (this.nextBtn && !this.nextBtn.dataset.listenerAdded) {
-      this.nextBtn.addEventListener('click', (e) => { e.stopPropagation(); this.nextTrack(); });
+      this.nextBtn.addEventListener('click', () => this.nextTrack());
       this.nextBtn.dataset.listenerAdded = 'true';
     }
     if (this.progressBar && !this.progressBar.dataset.listenerAdded) {
-      this.progressBar.addEventListener('click', (e) => { e.stopPropagation(); this.seek(e); });
+      this.progressBar.addEventListener('click', (e) => this.seek(e));
       this.progressBar.dataset.listenerAdded = 'true';
     }
     if (this.shuffleBtn && !this.shuffleBtn.dataset.listenerAdded) {
-      this.shuffleBtn.addEventListener('click', (e) => { e.stopPropagation(); this.toggleShuffle(); });
+      this.shuffleBtn.addEventListener('click', () => this.toggleShuffle());
       this.shuffleBtn.dataset.listenerAdded = 'true';
     }
     if (this.repeatBtn && !this.repeatBtn.dataset.listenerAdded) {
-      this.repeatBtn.addEventListener('click', (e) => { e.stopPropagation(); this.toggleRepeat(); });
+      this.repeatBtn.addEventListener('click', () => this.toggleRepeat());
       this.repeatBtn.dataset.listenerAdded = 'true';
     }
     if (this.queueBtn && !this.queueBtn.dataset.listenerAdded) {
-      this.queueBtn.addEventListener('click', (e) => { e.stopPropagation(); this.toggleQueue(); });
+      this.queueBtn.addEventListener('click', () => this.toggleQueue());
       this.queueBtn.dataset.listenerAdded = 'true';
     }
     if (this.queueCloseBtn && !this.queueCloseBtn.dataset.listenerAdded) {
@@ -287,43 +259,20 @@ class GlobalMusicPlayer {
       this.queueCloseBtn.dataset.listenerAdded = 'true';
     }
     if (this.lyricsBtn && !this.lyricsBtn.dataset.listenerAdded) {
-      this.lyricsBtn.addEventListener('click', (e) => { e.stopPropagation(); this.togglePanel(); });
+      this.lyricsBtn.addEventListener('click', () => this.togglePanel());
       this.lyricsBtn.dataset.listenerAdded = 'true';
     }
     if (this.panelMinimizeBtn && !this.panelMinimizeBtn.dataset.listenerAdded) {
       this.panelMinimizeBtn.addEventListener('click', () => this.hidePanel());
       this.panelMinimizeBtn.dataset.listenerAdded = 'true';
     }
-    // Panel transport listeners
-    if (this.panelPlayPauseBtn && !this.panelPlayPauseBtn.dataset.listenerAdded) {
-      this.panelPlayPauseBtn.addEventListener('click', (e) => { e.stopPropagation(); this.togglePlay(); });
-      this.panelPlayPauseBtn.dataset.listenerAdded = 'true';
-    }
-    if (this.panelPrevBtn && !this.panelPrevBtn.dataset.listenerAdded) {
-      this.panelPrevBtn.addEventListener('click', (e) => { e.stopPropagation(); this.previousTrack(); });
-      this.panelPrevBtn.dataset.listenerAdded = 'true';
-    }
-    if (this.panelNextBtn && !this.panelNextBtn.dataset.listenerAdded) {
-      this.panelNextBtn.addEventListener('click', (e) => { e.stopPropagation(); this.nextTrack(); });
-      this.panelNextBtn.dataset.listenerAdded = 'true';
-    }
-    if (this.panelProgressBar && !this.panelProgressBar.dataset.listenerAdded) {
-      this.panelProgressBar.addEventListener('click', (e) => { e.stopPropagation(); const rect = this.panelProgressBar.getBoundingClientRect(); const percent = (e.clientX - rect.left) / rect.width; const time = percent * this.audio.duration; this.audio.currentTime = time; });
-      this.panelProgressBar.dataset.listenerAdded = 'true';
-    }
     if (this.playerElement && !this.playerElement.dataset.panelListenerAdded) {
       const handleMiniPlayerTap = (event) => {
         console.log('[GlobalPlayer] mini player tapped', event.type, event.target);
         // Ignore clicks on playback controls or progress bar
-        const ignoreSelectors = [
-          '.global-player-controls', '#play-pause-btn', '#prev-btn', '#next-btn',
-          '#shuffle-btn', '#repeat-btn', '#queue-btn', '#lyrics-btn', '#progress-bar'
-        ];
-        const target = event.target;
-        if (ignoreSelectors.some(sel => target.closest(sel))) {
-          return; // let control handle it
+        if (event.type === 'touchend') {
+          event.preventDefault();
         }
-        if (event.type === 'touchend') { event.preventDefault(); }
 
         // Only open the panel when a track is loaded
         if (window.matchMedia('(max-width: 900px)').matches && this.currentTrack) {
@@ -624,17 +573,13 @@ class GlobalMusicPlayer {
   updatePlayButton() {
     const playIcon = this.playPauseBtn.querySelector('.play-icon');
     const pauseIcon = this.playPauseBtn.querySelector('.pause-icon');
-    const panelPlayIcon = document.querySelector('.panel-play-icon');
-    const panelPauseIcon = document.querySelector('.panel-pause-icon');
 
     if (this.isPlaying) {
       playIcon.style.display = 'none';
       pauseIcon.style.display = 'block';
-      if (panelPlayIcon && panelPauseIcon) { panelPlayIcon.style.display = 'none'; panelPauseIcon.style.display = 'block'; }
     } else {
       playIcon.style.display = 'block';
       pauseIcon.style.display = 'none';
-      if (panelPlayIcon && panelPauseIcon) { panelPlayIcon.style.display = 'block'; panelPauseIcon.style.display = 'none'; }
     }
   }
 
@@ -668,14 +613,11 @@ class GlobalMusicPlayer {
       const percent = (this.audio.currentTime / this.audio.duration) * 100;
       this.progressFill.style.width = `${percent}%`;
       this.currentTimeEl.textContent = this.formatTime(this.audio.currentTime);
-      if (this.panelProgressFill) this.panelProgressFill.style.width = `${percent}%`;
-      if (this.panelCurrentTimeEl) this.panelCurrentTimeEl.textContent = this.formatTime(this.audio.currentTime);
     }
   }
 
   updateDuration() {
     this.durationTimeEl.textContent = this.formatTime(this.audio.duration);
-    if (this.panelDurationTimeEl) this.panelDurationTimeEl.textContent = this.formatTime(this.audio.duration);
   }
 
   showPlayer() {
