@@ -37,6 +37,7 @@ function syncDirectory(sourcePath, destPath) {
 
   if (!fs.existsSync(fullSourcePath)) {
     console.log(`⚠️  Source path not found: ${fullSourcePath}`);
+    console.log('   Using committed src/content as-is (no sync).');
     return;
   }
 
