@@ -9,6 +9,7 @@ const projectRoot = path.join(__dirname, '..');
 
 // Paths
 const coraPath = path.join(projectRoot, 'cora');
+const requireCora = process.env.CORA_REQUIRED === 'true';
 const contentPath = path.join(projectRoot, 'src', 'content');
 
 console.log('🎵 Syncing music content from CORA...\n');
@@ -36,9 +37,16 @@ function syncDirectory(sourcePath, destPath) {
   const fullDestPath = path.join(contentPath, destPath);
 
   if (!fs.existsSync(fullSourcePath)) {
-    console.log(`⚠️  Source path not found: ${fullSourcePath}`);
-    console.log('   Using committed src/content as-is (no sync).');
-    return;
+    const msg = `⚠️  Source path not found: ${fullSourcePath}`;
+    if (requireCora) {
+      console.error(msg);
+      console.error('❌ CORA_REQUIRED is true — failing build to avoid stale deploys.');
+      process.exit(1);
+    } else {
+      console.log(msg);
+      console.log('   Using committed src/content as-is (no sync).');
+      return;
+    }
   }
 
   // Remove existing content
