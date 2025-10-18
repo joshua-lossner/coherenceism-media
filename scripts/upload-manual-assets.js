@@ -117,7 +117,7 @@ async function processAlbum(albumDir, assetMap) {
   if (frontmatter.tracks && assets.tracks.length > 0) {
     for (const track of frontmatter.tracks) {
       // Normalize strings for matching: remove hyphens, spaces, and lowercase
-      const normalizeForMatch = (str) => str.toLowerCase().replace(/[-\s]/g, '');
+      const normalizeForMatch = (str) => (str || "").toString().toLowerCase().replace(/[^a-z0-9]/g, "");
       const normalizedSlug = normalizeForMatch(track.slug);
       const normalizedTitle = normalizeForMatch(track.title);
 

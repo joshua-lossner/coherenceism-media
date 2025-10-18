@@ -234,13 +234,16 @@ function build() {
     });
   }
 
-  console.log(`Found ${albums.length} albums and ${songs.length} songs`);
+  // Filter to published albums only (default to published if unset)
+  const publishedAlbums = albums.filter(a => (a.frontmatter.status || 'published').toLowerCase() === 'published');
+
+  console.log(`Found ${albums.length} albums (${publishedAlbums.length} published) and ${songs.length} songs`);
 
   // Build homepage - pure album cover grid with embedded track data
   const heroContent = `
     <div class="album-grid-container">
       <div class="albums-grid">
-        ${albums.map(album => {
+        ${publishedAlbums.map(album => {
           const tracks = album.frontmatter.tracks || [];
           const coverUrl = album.frontmatter.cover_image || '';
           const tracksData = tracks.filter(t => t.suno_url).map(t => {
@@ -285,7 +288,7 @@ function build() {
     fs.mkdirSync(albumsDir, { recursive: true });
   }
 
-  albums.forEach(album => {
+  publishedAlbums.forEach(album => {
     const tracks = album.frontmatter.tracks || [];
 
     // Extract inspiration from the album content
@@ -293,7 +296,7 @@ function build() {
     const conceptMatch = album.html.match(/<h1>Concept<\/h1>([\s\S]*?)(?:<h1>|$)/);
     const conceptHtml = conceptMatch ? conceptMatch[1].trim() : null;
     const inspiration = inspirationMatch ? inspirationMatch[1] : null;
-    const conceptDisplay = conceptHtml || (inspiration ? `<p>${inspiration}</p>` : null);
+    const conceptDisplay = conceptHtml || (inspiration ? `<div class="album-concept">${inspiration}</div>` : null);
     const albumContent = `
       <div class="album-detail-page">
         <a href="/" class="home-button" title="Back to albums">
