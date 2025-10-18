@@ -385,6 +385,11 @@ class GlobalMusicPlayer {
     this.audio.src = track.url;
     console.log('Set audio src to:', track.url);
     this.updateTrackInfo();
+    // If the slide-up panel is open, refresh its content to match the new track
+    if (this.slideUpPanel && this.slideUpPanel.classList.contains('active')) {
+      this.updatePanelContent();
+    }
+    
     this.showPlayer();
     this.play();
   }
@@ -765,6 +770,21 @@ class GlobalMusicPlayer {
     }
 
     // Update panel content
+    this.updatePanelContent();
+
+    // Show panel
+    this.slideUpPanel.classList.add('active');
+    document.body.classList.add('panel-open');
+    this.switchTab(this.activeTab || 'queue');
+
+
+    // Update lyrics button icon to down arrow
+    this.updateLyricsButtonIcon(true);
+  }
+
+  updatePanelContent() {
+    if (!this.currentTrack) return;
+
     const panelTitle = document.getElementById('panel-title');
     const panelAlbum = document.getElementById('panel-album');
     const panelCover = document.getElementById('panel-cover');
@@ -775,52 +795,28 @@ class GlobalMusicPlayer {
     if (panelTitle) panelTitle.textContent = this.currentTrack.title;
     if (panelAlbum) panelAlbum.textContent = this.currentTrack.album || 'Coherenceism Music';
 
-    // Update cover
     if (panelCover) {
       if (this.currentTrack.coverUrl) {
-        panelCover.innerHTML = `<img src="${this.currentTrack.coverUrl}" alt="${this.currentTrack.album}" />`;
+        panelCover.innerHTML = `<img src="${this.currentTrack.coverUrl}" alt="${this.currentTrack.album or ''}" />`;
       } else {
         panelCover.innerHTML = '<div class="global-player-album-art-placeholder">♪</div>';
       }
     }
 
-    // Update style prompt
-    if (panelStyleText) {
-      if (this.currentTrack.stylePrompt) {
-        panelStyleText.textContent = this.currentTrack.stylePrompt;
-      } else {
-        panelStyleText.textContent = 'No style prompt available';
-      }
-    }
+    const styleText = (this.currentTrack.stylePrompt && this.currentTrack.stylePrompt.trim().length)
+      ? this.currentTrack.stylePrompt
+      : 'No style prompt available';
+    if (panelStyleText) panelStyleText.textContent = styleText;
+    if (panelPromptText) panelPromptText.textContent = styleText;
 
-    // Update lyrics
     if (panelLyricsText) {
-      if (this.currentTrack.lyrics) {
-        panelLyricsText.innerHTML = '<pre>' + this.currentTrack.lyrics + '</pre>';
-      } else {
-        panelLyricsText.innerHTML = '<pre>No lyrics available</pre>';
-      }
+      const lyrics = (this.currentTrack.lyrics && this.currentTrack.lyrics.trim().length)
+        ? this.currentTrack.lyrics
+        : 'No lyrics available';
+      panelLyricsText.innerHTML = '<pre>' + lyrics + '</pre>';
     }
 
-    if (panelPromptText) {
-      if (this.currentTrack.stylePrompt) {
-        panelPromptText.textContent = this.currentTrack.stylePrompt;
-      } else {
-        panelPromptText.textContent = 'No style prompt available';
-      }
-    }
-
-    // Update panel queue
     this.updatePanelQueue();
-
-    // Show panel
-    this.slideUpPanel.classList.add('active');
-    document.body.classList.add('panel-open');
-    this.switchTab(this.activeTab || 'queue');
-
-
-    // Update lyrics button icon to down arrow
-    this.updateLyricsButtonIcon(true);
   }
 
   hidePanel() {
@@ -985,6 +981,11 @@ class GlobalMusicPlayer {
             // Show player and update UI immediately
             this.showPlayer();
             this.updateTrackInfo();
+    // If the slide-up panel is open, refresh its content to match the new track
+    if (this.slideUpPanel && this.slideUpPanel.classList.contains('active')) {
+      this.updatePanelContent();
+    }
+    
             this.updateQueueDisplay();
 
             // Update shuffle/repeat button states
