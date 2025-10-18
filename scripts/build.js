@@ -58,16 +58,22 @@ function generateNav() {
 }
 
 // Build page
-function buildPage(content, title, template = 'default') {
+function buildPage(content, title, template = 'default', options = {}) {
   const pageTemplate = loadTemplate(template) || loadTemplate('default');
   if (!pageTemplate) {
     console.error('No template found!');
     return '';
   }
 
+  const { bodyClass = '', containerClass = '' } = options;
+  const bodyAttr = bodyClass ? ` class="${bodyClass}"` : '';
+  const containerAttr = ` class="container${containerClass ? ' ' + containerClass : ''}"`;
+
   return pageTemplate
     .replace('{{title}}', title)
     .replace('{{nav}}', generateNav())
+    .replace('{{body_attr}}', bodyAttr)
+    .replace('{{container_attr}}', containerAttr)
     .replace('{{content}}', content)
     .replace('{{year}}', new Date().getFullYear());
 }
@@ -288,24 +294,34 @@ function build() {
     const inspiration = inspirationMatch ? inspirationMatch[1] : null;
 
     const albumContent = `
-      <a href="/" class="home-button" title="Back to albums">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-        </svg>
-      </a>
+      <div class="album-detail-page">
+        <a href="/" class="home-button" title="Back to albums">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+          </svg>
+        </a>
 
-      <div class="album-detail-header">
-        <div class="album-detail-cover">
-          ${getAlbumCover(album)}
-        </div>
-        <div class="album-detail-info">
-          <h1>${album.frontmatter.title}</h1>
-          ${inspiration ? `<p class="album-inspiration">${inspiration}</p>` : ''}
-        </div>
-      </div>
+        <div class="album-detail-top">
+          <div class="album-detail-header">
+            <div class="album-detail-cover">
+              ${getAlbumCover(album)}
+            </div>
+            <div class="album-detail-info">
+              <h1>${album.frontmatter.title}</h1>
+              ${inspiration ? `<p class="album-inspiration">${inspiration}</p>` : ''}
+            </div>
+          </div>
 
-      <div class="tracks-grid">
-        ${tracks.map((track, index) => {
+          <button class="play-album-header-btn play-album-btn" data-album-slug="${album.slug}">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            Play Album
+          </button>
+        </div>
+
+        <div class="tracks-grid">
+          ${tracks.map((track, index) => {
           const trackSlug = track.slug || track.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
           const song = songsBySlug.get(trackSlug);
           const stylePrompt = song?.stylePrompt || '';
@@ -336,10 +352,15 @@ function build() {
           </div>
         `;
         }).join('')}
+        </div>
       </div>
     `;
 
-    const albumPage = buildPage(albumContent, `${album.frontmatter.title} - Coherenceism Music`);
+    const albumPage = buildPage(
+      albumContent,
+      `${album.frontmatter.title} - Coherenceism Music`,
+      'default'
+    );
     fs.writeFileSync(path.join(albumsDir, `${album.slug}.html`), albumPage);
     console.log(`Built album: ${album.slug}`);
   });
