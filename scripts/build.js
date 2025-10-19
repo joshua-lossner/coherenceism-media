@@ -266,11 +266,19 @@ function build() {
             };
           });
 
+          // HTML-encode the JSON to prevent attribute breakage
+          const encodedTracks = JSON.stringify(tracksData)
+            .replace(/&/g, '&amp;')
+            .replace(/'/g, '&#39;')
+            .replace(/"/g, '&quot;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+
           return `
           <div class="album-cover-item"
                data-album-slug="${album.slug}"
                data-album-title="${album.frontmatter.title}"
-               data-album-tracks='${JSON.stringify(tracksData)}'>
+               data-album-tracks='${encodedTracks}'>
             <div class="album-cover-image">
               ${getAlbumCover(album)}
             </div>
@@ -290,92 +298,8 @@ function build() {
   const homepage = buildPage(heroContent, 'Coherenceism Music - Resonance through Sound', 'home');
   fs.writeFileSync(path.join(publicPath, 'index.html'), homepage);
 
-  // Build individual album pages
-  const albumsDir = path.join(publicPath, 'albums');
-  if (!fs.existsSync(albumsDir)) {
-    fs.mkdirSync(albumsDir, { recursive: true });
-  }
-
-  publishedAlbums.forEach(album => {
-    const tracks = album.frontmatter.tracks || [];
-
-    // Extract inspiration from the album content
-    const inspirationMatch = album.html.match(/<h1>Inspiration<\/h1>\s*<p>(.*?)<\/p>/s);
-    const conceptMatch = album.html.match(/<h1>Concept<\/h1>([\s\S]*?)(?:<h1>|$)/);
-    const conceptHtml = conceptMatch ? conceptMatch[1].trim() : null;
-    const inspiration = inspirationMatch ? inspirationMatch[1] : null;
-    const conceptDisplay = conceptHtml || (inspiration ? `<div class="album-concept">${inspiration}</div>` : null);
-    const albumContent = `
-      <div class="album-detail-page">
-        <a href="/" class="home-button" title="Back to albums">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-          </svg>
-        </a>
-
-        <div class="album-detail-top">
-          <div class="album-detail-header">
-            <div class="album-detail-cover">
-              ${getAlbumCover(album)}
-            </div>
-            <div class="album-detail-info">
-              <h1>${album.frontmatter.title}</h1>
-              ${conceptDisplay ? `<div class="album-concept">${conceptDisplay}</div>` : ''}
-            </div>
-          </div>
-
-          <button class="play-album-header-btn play-album-btn" data-album-slug="${album.slug}">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M8 5v14l11-7z"/>
-            </svg>
-            Play Album
-          </button>
-        </div>
-
-        <div class="tracks-grid">
-          ${tracks.map((track, index) => {
-          const trackSlug = track.slug || track.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-          const song = songsBySlug.get(trackSlug);
-          const stylePrompt = song?.stylePrompt || '';
-          const lyrics = song?.lyrics || '';
-
-          return `
-          <div class="track-grid-item" data-track-index="${index}" data-album-slug="${album.slug}">
-            <div class="track-grid-info">
-              <div class="track-grid-number">${(index + 1).toString().padStart(2, '0')}</div>
-              <div class="track-grid-title">${track.title}</div>
-            </div>
-            <div class="track-hover-controls">
-              ${track.suno_url ? `
-                <button class="track-play-btn" data-track-url="${track.suno_url}" data-track-title="${track.title}" data-album-title="${album.frontmatter.title}" data-album-slug="${album.slug}" data-cover-url="${album.frontmatter.cover_image || ''}" data-style-prompt="${stylePrompt.replace(/"/g, '&quot;')}" data-lyrics="${lyrics.replace(/"/g, '&quot;')}">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                </button>
-                <button class="track-queue-btn" data-track-url="${track.suno_url}" data-track-title="${track.title}" data-album-title="${album.frontmatter.title}" data-album-slug="${album.slug}" data-cover-url="${album.frontmatter.cover_image || ''}" data-style-prompt="${stylePrompt.replace(/"/g, '&quot;')}" data-lyrics="${lyrics.replace(/"/g, '&quot;')}">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-                  </svg>
-                </button>
-              ` : `
-                <span class="track-unavailable">🎵 On Suno</span>
-              `}
-            </div>
-          </div>
-        `;
-        }).join('')}
-        </div>
-      </div>
-    `;
-
-    const albumPage = buildPage(
-      albumContent,
-      `${album.frontmatter.title} - Coherenceism Music`,
-      'default'
-    );
-    fs.writeFileSync(path.join(albumsDir, `${album.slug}.html`), albumPage);
-    console.log(`Built album: ${album.slug}`);
-  });
+  // Album detail pages removed - all playback happens from homepage
+  // All album data (tracks, lyrics, style prompts) is embedded in homepage
 
   console.log('\n✅ Music site build complete!');
 }
