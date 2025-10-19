@@ -1524,8 +1524,8 @@ body.panel-open .global-player.active {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-lg);
-  margin: var(--spacing-lg) 0;
+  gap: var(--spacing-sm);
+  margin: var(--spacing-sm) 0;
   flex-shrink: 0;
 }
 
@@ -1541,12 +1541,14 @@ body.panel-open .global-player.active {
   border: none;
   color: var(--text-primary);
   cursor: pointer;
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm);
   border-radius: 50%;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
 }
 
 .slide-up-control-btn:hover {
@@ -1557,12 +1559,60 @@ body.panel-open .global-player.active {
 .slide-up-control-btn.primary {
   background: var(--accent-color);
   color: white;
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md);
+  min-width: 52px;
+  min-height: 52px;
 }
 
 .slide-up-control-btn.primary:hover {
   background: #5a9069;
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+
+/* Compact progress bar integrated into panel info */
+.slide-up-panel-progress-compact {
+  margin-top: var(--spacing-sm);
+  width: 100%;
+}
+
+/* Hide slide-up progress on desktop (progress is in mini player) */
+@media (min-width: 769px) {
+  .slide-up-panel-progress-compact {
+    display: none;
+  }
+}
+
+.slide-up-progress-bar {
+  width: 100%;
+  height: 3px;
+  background: var(--surface);
+  border-radius: 2px;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+
+.slide-up-progress-bar:hover {
+  height: 4px;
+}
+
+.slide-up-progress-fill {
+  height: 100%;
+  background: var(--accent-color);
+  width: 0%;
+  transition: width 0.1s ease;
+}
+
+.slide-up-progress-times {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slide-up-progress-time {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-family: 'SF Mono', Monaco, monospace;
 }
 
 .slide-up-view-toggle-icon {

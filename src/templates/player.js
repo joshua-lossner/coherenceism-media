@@ -157,23 +157,32 @@ class GlobalMusicPlayer {
             <div class="slide-up-panel-info">
               <h2 id="panel-title">Song Title</h2>
               <h3 id="panel-album">Album Name</h3>
+              <div class="slide-up-panel-progress-compact">
+                <div class="slide-up-progress-bar" id="panel-progress-bar">
+                  <div class="slide-up-progress-fill" id="panel-progress-fill"></div>
+                </div>
+                <div class="slide-up-progress-times">
+                  <span class="slide-up-progress-time" id="panel-current-time">0:00</span>
+                  <span class="slide-up-progress-time" id="panel-duration-time">0:00</span>
+                </div>
+              </div>
             </div>
             <div class="slide-up-panel-controls">
               <button class="slide-up-control-btn" id="panel-prev-btn" aria-label="Previous track">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
                 </svg>
               </button>
               <button class="slide-up-control-btn primary" id="panel-play-pause-btn" aria-label="Play/Pause">
-                <svg class="play-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                <svg class="play-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M8 5v14l11-7z"/>
                 </svg>
-                <svg class="pause-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                <svg class="pause-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
                   <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
                 </svg>
               </button>
               <button class="slide-up-control-btn" id="panel-next-btn" aria-label="Next track">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
                 </svg>
               </button>
@@ -249,6 +258,10 @@ class GlobalMusicPlayer {
     this.panelPlayPauseBtn = document.getElementById('panel-play-pause-btn');
     this.panelPrevBtn = document.getElementById('panel-prev-btn');
     this.panelNextBtn = document.getElementById('panel-next-btn');
+    this.panelProgressBar = document.getElementById('panel-progress-bar');
+    this.panelProgressFill = document.getElementById('panel-progress-fill');
+    this.panelCurrentTimeEl = document.getElementById('panel-current-time');
+    this.panelDurationTimeEl = document.getElementById('panel-duration-time');
     this.titleEl = this.playerElement.querySelector('.global-player-title');
     this.artistEl = this.playerElement.querySelector('.global-player-artist');
     this.albumArtEl = document.getElementById('player-album-art');
@@ -307,6 +320,10 @@ class GlobalMusicPlayer {
     if (this.panelNextBtn && !this.panelNextBtn.dataset.listenerAdded) {
       this.panelNextBtn.addEventListener('click', () => this.nextTrack());
       this.panelNextBtn.dataset.listenerAdded = 'true';
+    }
+    if (this.panelProgressBar && !this.panelProgressBar.dataset.listenerAdded) {
+      this.panelProgressBar.addEventListener('click', (e) => this.seek(e));
+      this.panelProgressBar.dataset.listenerAdded = 'true';
     }
     if (this.playerElement && !this.playerElement.dataset.panelListenerAdded) {
       const handleMiniPlayerTap = (event) => {
@@ -634,13 +651,30 @@ class GlobalMusicPlayer {
   updateProgress() {
     if (this.audio.duration) {
       const percent = (this.audio.currentTime / this.audio.duration) * 100;
+      const currentTime = this.formatTime(this.audio.currentTime);
+
+      // Update mini player progress
       this.progressFill.style.width = `${percent}%`;
-      this.currentTimeEl.textContent = this.formatTime(this.audio.currentTime);
+      this.currentTimeEl.textContent = currentTime;
+
+      // Update slide-up panel progress
+      if (this.panelProgressFill) {
+        this.panelProgressFill.style.width = `${percent}%`;
+      }
+      if (this.panelCurrentTimeEl) {
+        this.panelCurrentTimeEl.textContent = currentTime;
+      }
     }
   }
 
   updateDuration() {
-    this.durationTimeEl.textContent = this.formatTime(this.audio.duration);
+    const duration = this.formatTime(this.audio.duration);
+    this.durationTimeEl.textContent = duration;
+
+    // Update slide-up panel duration
+    if (this.panelDurationTimeEl) {
+      this.panelDurationTimeEl.textContent = duration;
+    }
   }
 
   showPlayer() {
