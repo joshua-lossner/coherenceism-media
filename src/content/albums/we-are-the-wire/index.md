@@ -9,7 +9,7 @@ updated: 2025-10-04
 
 # Track Links
 1. [Carrier Wave](../../../songs/out/2025-10-04/carrier-wave/Carrier%20Wave.md)
-2. [Death, Change, Reality](Death,%20Change,%20Reality.md)
+2. [Nothing Disappears](../../../songs/out/2025-10-04/nothing-disappears/Nothing%20Disappears.md)
 3. [Don't Push, Align](../../../songs/out/2025-10-04/dont-push-align/Don%27t%20Push,%20Align.md)
 4. [One Breath, One Note](../../../songs/out/2025-10-04/one-breath-one-note/One%20Breath,%20One%20Note.md)
 5. [Stronger Field](../../../songs/out/2025-10-04/stronger-field/Stronger%20Field.md)

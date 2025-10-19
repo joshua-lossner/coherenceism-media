@@ -235,7 +235,15 @@ function build() {
   }
 
   // Filter to published albums only (default to published if unset)
-  const publishedAlbums = albums.filter(a => (a.frontmatter.status || 'published').toLowerCase() === 'published');
+  const publishedAlbums = albums
+    .filter(a => (a.frontmatter.status || 'published').toLowerCase() === 'published')
+    .sort((a, b) => {
+      // Pin "Coherenceism" album to the top
+      if (a.frontmatter.title.startsWith('Coherenceism')) return -1;
+      if (b.frontmatter.title.startsWith('Coherenceism')) return 1;
+      // Sort the rest alphabetically
+      return a.frontmatter.title.localeCompare(b.frontmatter.title);
+    });
 
   console.log(`Found ${albums.length} albums (${publishedAlbums.length} published) and ${songs.length} songs`);
 
@@ -380,7 +388,8 @@ if (isWatchMode) {
 
   const watcher = chokidar.watch([contentPath, templatesPath], {
     ignored: /^\./,
-    persistent: true
+    persistent: true,
+    ignoreInitial: true
   });
 
   watcher
