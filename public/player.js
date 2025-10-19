@@ -400,10 +400,11 @@ class GlobalMusicPlayer {
     const albumTitle = albumElement.dataset.albumTitle;
     const tracksData = albumElement.dataset.albumTracks;
 
-    console.log('Album data:', { albumTitle, tracksData });
+    console.log('Album data:', { albumTitle, tracksData: tracksData?.substring(0, 100) + '...' });
 
     if (tracksData) {
       // We have embedded track data (from homepage)
+      // Note: browser automatically decodes HTML entities from data attributes
       try {
         const tracks = JSON.parse(tracksData);
         console.log('Parsed tracks:', tracks);
@@ -435,59 +436,16 @@ class GlobalMusicPlayer {
           this.playTrack(this.queue[0]);
           this.updateQueueDisplay();
         } else {
-          console.log('No playable tracks, navigating to album page');
-          // No tracks available, navigate to album page
-          const albumPath = `/albums/${albumSlug}.html`;
-          if (window.coherenceRouter) {
-            window.coherenceRouter.navigate(albumPath);
-          } else {
-            window.location.href = albumPath;
-          }
+          console.warn('No playable tracks found for album:', albumSlug);
+          // No fallback navigation - albums should have tracks embedded
         }
       } catch (e) {
-        console.error('Failed to parse album tracks:', e);
-        const albumPath = `/albums/${albumSlug}.html`;
-        if (window.coherenceRouter) {
-          window.coherenceRouter.navigate(albumPath);
-        } else {
-          window.location.href = albumPath;
-        }
+        console.error('Failed to parse album tracks for', albumSlug, ':', e);
+        // No fallback navigation - fix the data instead
       }
     } else {
-      // We're on an album page, get tracks from the page
-      const trackButtons = document.querySelectorAll(`[data-album-slug="${albumSlug}"] .track-play-btn`);
-
-      if (trackButtons.length > 0) {
-        // Clear queue and add all tracks
-        this.queue = [];
-        trackButtons.forEach(btn => {
-          const track = {
-            url: btn.dataset.trackUrl,
-            title: btn.dataset.trackTitle,
-            album: btn.dataset.albumTitle,
-            coverUrl: btn.dataset.coverUrl || '',
-            stylePrompt: btn.dataset.stylePrompt || '',
-            lyrics: btn.dataset.lyrics || ''
-          };
-          if (track.url) {
-            this.queue.push(track);
-          }
-        });
-
-        // Start playing the first track
-        if (this.queue.length > 0) {
-          this.currentIndex = 0;
-          this.playTrack(this.queue[0]);
-        }
-      } else {
-        // Navigate to album page
-        const albumPath = `/albums/${albumSlug}.html`;
-        if (window.coherenceRouter) {
-          window.coherenceRouter.navigate(albumPath);
-        } else {
-          window.location.href = albumPath;
-        }
-      }
+      console.warn('No embedded album tracks found for:', albumSlug);
+      // Album data should always be embedded on homepage
     }
   }
 
