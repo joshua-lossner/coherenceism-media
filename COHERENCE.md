@@ -1,3 +1,20 @@
+---
+init:
+  files:
+    - README.md
+    - package.json
+    - scripts/build.js
+    - src/templates/player.js
+    - src/templates/router.js
+    - src/templates/styles.css
+index:
+  map:
+    - src/
+    - scripts/
+    - public/
+    - assets/
+scope: directory
+---
 # Coherenceism Media
 
 **Music library site for Coherenceism - browse albums, songs, and lyrics from the CORA network**

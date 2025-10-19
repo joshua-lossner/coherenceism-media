@@ -71,7 +71,7 @@ class GlobalMusicPlayer {
             <div class="global-player-artist">Choose a song to play</div>
           </div>
 
-          <div class="global-player-controls">
+          <div class="global-player-controls desktop-controls">
             <button class="global-player-btn" id="prev-btn" aria-label="Previous track">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
@@ -92,6 +92,13 @@ class GlobalMusicPlayer {
                 <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
               </svg>
             </button>
+          </div>
+
+          <div class="global-player-visualizer mobile-visualizer">
+            <div class="visualizer-bar"></div>
+            <div class="visualizer-bar"></div>
+            <div class="visualizer-bar"></div>
+            <div class="visualizer-bar"></div>
           </div>
 
           <div class="global-progress-container">
@@ -138,7 +145,7 @@ class GlobalMusicPlayer {
         <div class="slide-up-panel-header">
           <button class="slide-up-panel-minimize" id="panel-minimize-btn" aria-label="Minimize">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M7 14l5-5 5 5z"/>
+              <path d="M7 10l5 5 5-5z"/>
             </svg>
           </button>
         </div>
@@ -151,6 +158,26 @@ class GlobalMusicPlayer {
               <h2 id="panel-title">Song Title</h2>
               <h3 id="panel-album">Album Name</h3>
             </div>
+            <div class="slide-up-panel-controls">
+              <button class="slide-up-control-btn" id="panel-prev-btn" aria-label="Previous track">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+                </svg>
+              </button>
+              <button class="slide-up-control-btn primary" id="panel-play-pause-btn" aria-label="Play/Pause">
+                <svg class="play-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+                <svg class="pause-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                  <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                </svg>
+              </button>
+              <button class="slide-up-control-btn" id="panel-next-btn" aria-label="Next track">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+                </svg>
+              </button>
+            </div>
           <div class="slide-up-panel-style">
             <h4>Style Prompt</h4>
             <p id="panel-style-text">No style prompt available</p>
@@ -159,7 +186,7 @@ class GlobalMusicPlayer {
           <div class="slide-up-panel-right">
             <div class="slide-up-panel-tabs">
               <button class="slide-up-tab active" data-tab="queue">Tracks</button>
-              <button class="slide-up-tab" data-tab="prompt">Prompt</button>
+              <button class="slide-up-tab prompt-tab-btn" data-tab="prompt">Prompt</button>
               <button class="slide-up-tab" data-tab="lyrics">Lyrics</button>
             </div>
             <div class="slide-up-panel-tab-content">
@@ -168,7 +195,7 @@ class GlobalMusicPlayer {
                   <p>No tracks in queue</p>
                 </div>
               </div>
-              <div id="panel-prompt-content" class="slide-up-tab-panel">
+              <div id="panel-prompt-content" class="slide-up-tab-panel prompt-tab-content">
                 <div class="slide-up-panel-prompt" id="panel-prompt-text">
                   <p>No style prompt available</p>
                 </div>
@@ -219,6 +246,9 @@ class GlobalMusicPlayer {
     this.lyricsBtn = document.getElementById('lyrics-btn');
     this.slideUpPanel = document.getElementById('slide-up-panel');
     this.panelMinimizeBtn = document.getElementById('panel-minimize-btn');
+    this.panelPlayPauseBtn = document.getElementById('panel-play-pause-btn');
+    this.panelPrevBtn = document.getElementById('panel-prev-btn');
+    this.panelNextBtn = document.getElementById('panel-next-btn');
     this.titleEl = this.playerElement.querySelector('.global-player-title');
     this.artistEl = this.playerElement.querySelector('.global-player-artist');
     this.albumArtEl = document.getElementById('player-album-art');
@@ -265,6 +295,18 @@ class GlobalMusicPlayer {
     if (this.panelMinimizeBtn && !this.panelMinimizeBtn.dataset.listenerAdded) {
       this.panelMinimizeBtn.addEventListener('click', () => this.hidePanel());
       this.panelMinimizeBtn.dataset.listenerAdded = 'true';
+    }
+    if (this.panelPlayPauseBtn && !this.panelPlayPauseBtn.dataset.listenerAdded) {
+      this.panelPlayPauseBtn.addEventListener('click', () => this.togglePlay());
+      this.panelPlayPauseBtn.dataset.listenerAdded = 'true';
+    }
+    if (this.panelPrevBtn && !this.panelPrevBtn.dataset.listenerAdded) {
+      this.panelPrevBtn.addEventListener('click', () => this.previousTrack());
+      this.panelPrevBtn.dataset.listenerAdded = 'true';
+    }
+    if (this.panelNextBtn && !this.panelNextBtn.dataset.listenerAdded) {
+      this.panelNextBtn.addEventListener('click', () => this.nextTrack());
+      this.panelNextBtn.dataset.listenerAdded = 'true';
     }
     if (this.playerElement && !this.playerElement.dataset.panelListenerAdded) {
       const handleMiniPlayerTap = (event) => {
@@ -320,8 +362,14 @@ class GlobalMusicPlayer {
     });
     this.audio.addEventListener('ended', () => this.onTrackEnded());
     this.audio.addEventListener('error', (e) => this.onError(e));
-    this.audio.addEventListener('pause', () => this.saveState());
-    this.audio.addEventListener('playing', () => this.saveState());
+    this.audio.addEventListener('pause', () => {
+      document.getElementById('global-player')?.classList.remove('playing');
+      this.saveState();
+    });
+    this.audio.addEventListener('playing', () => {
+      document.getElementById('global-player')?.classList.add('playing');
+      this.saveState();
+    });
   }
 
   playTrack(track, album = null, albumSlug = null) {
@@ -581,6 +629,20 @@ class GlobalMusicPlayer {
       playIcon.style.display = 'block';
       pauseIcon.style.display = 'none';
     }
+
+    // Also update panel play/pause button if it exists
+    if (this.panelPlayPauseBtn) {
+      const panelPlayIcon = this.panelPlayPauseBtn.querySelector('.play-icon');
+      const panelPauseIcon = this.panelPlayPauseBtn.querySelector('.pause-icon');
+
+      if (this.isPlaying) {
+        panelPlayIcon.style.display = 'none';
+        panelPauseIcon.style.display = 'block';
+      } else {
+        panelPlayIcon.style.display = 'block';
+        panelPauseIcon.style.display = 'none';
+      }
+    }
   }
 
   updateTrackInfo() {
@@ -605,6 +667,9 @@ class GlobalMusicPlayer {
           this.lyricsBtn.style.display = 'none';
         }
       }
+
+      // Update panel content if panel is open
+      this.updatePanelContent();
     }
   }
 
@@ -700,11 +765,8 @@ class GlobalMusicPlayer {
     }
   }
 
-  showPanel() {
-    if (!this.currentTrack) {
-      console.log('No track currently playing');
-      return;
-    }
+  updatePanelContent() {
+    if (!this.currentTrack) return;
 
     // Update panel content
     const panelTitle = document.getElementById('panel-title');
@@ -754,6 +816,16 @@ class GlobalMusicPlayer {
 
     // Update panel queue
     this.updatePanelQueue();
+  }
+
+  showPanel() {
+    if (!this.currentTrack) {
+      console.log('No track currently playing');
+      return;
+    }
+
+    // Update panel content
+    this.updatePanelContent();
 
     // Show panel
     this.slideUpPanel.classList.add('active');
@@ -1017,6 +1089,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const albumSlug = e.target.closest('.play-album-btn').dataset.albumSlug;
       globalPlayer.playAlbum(albumSlug);
+
+      // Open the slide-up panel after a short delay
+      setTimeout(() => {
+        globalPlayer.showPanel();
+      }, 300);
     }
 
     // Track play buttons
@@ -1059,18 +1136,18 @@ document.addEventListener('DOMContentLoaded', () => {
       globalPlayer.addToQueue(track, album, albumSlug);
     }
 
-    // Album cover clicks (navigate to album page)
+    // Album cover clicks (play album and show panel)
     if (e.target.closest('.album-cover-item') && !e.target.closest('.play-album-btn')) {
       e.preventDefault();
       const albumSlug = e.target.closest('.album-cover-item').dataset.albumSlug;
-      const albumPath = `/albums/${albumSlug}.html`;
 
-      // Use router if available, fallback to traditional navigation
-      if (window.coherenceRouter) {
-        window.coherenceRouter.navigate(albumPath);
-      } else {
-        window.location.href = albumPath;
-      }
+      // Play the album
+      globalPlayer.playAlbum(albumSlug);
+
+      // Open the slide-up panel after a short delay
+      setTimeout(() => {
+        globalPlayer.showPanel();
+      }, 300);
     }
   });
 

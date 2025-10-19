@@ -692,6 +692,7 @@ footer {
   margin-top: var(--spacing-md);
   color: var(--text-secondary);
   line-height: 1.6;
+  white-space: pre-line;
 }
 
 .album-concept p {
@@ -890,6 +891,88 @@ footer {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* Visualizer - mobile only */
+.global-player-visualizer {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  height: 40px;
+  padding: 0 var(--spacing-md);
+}
+
+/* Show visualizer on mobile, hide desktop controls */
+@media (max-width: 768px) {
+  .global-player-controls.desktop-controls {
+    display: none !important;
+  }
+
+  .global-player-visualizer.mobile-visualizer {
+    display: flex;
+  }
+}
+
+/* Show desktop controls on large screens, hide visualizer */
+@media (min-width: 769px) {
+  .global-player-controls.desktop-controls {
+    display: flex;
+  }
+
+  .global-player-visualizer.mobile-visualizer {
+    display: none;
+  }
+
+  /* Hide queue button on desktop (tracks are in slide-up panel) */
+  #queue-btn {
+    display: none;
+  }
+}
+
+.visualizer-bar {
+  width: 3px;
+  background: var(--accent-color);
+  border-radius: 2px;
+  animation: visualizer-pulse 0.8s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+.visualizer-bar:nth-child(1) {
+  animation-delay: 0s;
+  height: 12px;
+}
+
+.visualizer-bar:nth-child(2) {
+  animation-delay: 0.2s;
+  height: 20px;
+}
+
+.visualizer-bar:nth-child(3) {
+  animation-delay: 0.4s;
+  height: 16px;
+}
+
+.visualizer-bar:nth-child(4) {
+  animation-delay: 0.6s;
+  height: 24px;
+}
+
+@keyframes visualizer-pulse {
+  0%, 100% {
+    transform: scaleY(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scaleY(1.8);
+    opacity: 1;
+  }
+}
+
+/* Pause visualizer animation when not playing */
+.global-player:not(.playing) .visualizer-bar {
+  animation: none;
+  opacity: 0.3;
 }
 
 .global-player-controls {
@@ -1384,6 +1467,9 @@ body.panel-open .global-player.active {
 
 .slide-up-panel-style {
   flex: 1;
+  max-height: 275px;
+  overflow-y: auto;
+  padding-right: var(--spacing-sm);
 }
 
 .slide-up-panel-style h4 {
@@ -1439,8 +1525,44 @@ body.panel-open .global-player.active {
   justify-content: center;
   align-items: center;
   gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
   flex-shrink: 0;
+}
+
+/* Hide slide-up controls on desktop (buttons are in mini player) */
+@media (min-width: 769px) {
+  .slide-up-panel-controls {
+    display: none;
+  }
+}
+
+.slide-up-control-btn {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: var(--spacing-md);
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-up-control-btn:hover {
+  background: var(--surface);
+  transform: scale(1.05);
+}
+
+.slide-up-control-btn.primary {
+  background: var(--accent-color);
+  color: white;
+  padding: var(--spacing-lg);
+}
+
+.slide-up-control-btn.primary:hover {
+  background: #5a9069;
+  transform: scale(1.1);
 }
 
 .slide-up-view-toggle-icon {
@@ -1632,6 +1754,14 @@ body.panel-open .global-player.active {
 .slide-up-tab.active {
   color: var(--accent-color);
   border-bottom-color: var(--accent-color);
+}
+
+/* Hide Prompt tab on desktop (style prompt is visible below cover) */
+@media (min-width: 769px) {
+  .prompt-tab-btn,
+  .prompt-tab-content {
+    display: none !important;
+  }
 }
 
 .slide-up-panel-tab-content {
